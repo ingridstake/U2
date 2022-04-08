@@ -7,11 +7,12 @@ const options = {
   //look up cors
   mode: "cors" as RequestMode,
 };
+
 function App() {
   const [greeting, setGreeting] = useState("Loading")
   useEffect(() => {
     //use something like axios instead
-    fetch('http://127.0.0.1:8080/hello?myName=U2', options).then(async res => await res.text()).then(text => setGreeting(text))
+    fetch('http://localhost:8080/hello?myName=U2', options).then(async res => await res.text()).then(text => setGreeting(text))
 
   },[])
   return (
