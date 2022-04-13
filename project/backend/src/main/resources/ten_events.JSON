@@ -1,0 +1,1152 @@
+{
+  "created": "2022-04-13T02:00:01.425023+00:00",
+  "events": [    
+    {
+      "id": "7c2l1jwz37278ad",
+      "published": true,
+      "name": "Kvällstur från Härnösand",
+      "start": "2022-07-16T18:00:00+02:00",
+      "end": "2022-07-16T22:00:00+02:00",
+      "lastUpdated": "2022-03-31T12:01:00+02:00",
+      "hierarchyType": "production-child",
+      "productionParentId": "WFNUH7403MG64K7",
+      "doorsOpen": "2022-07-16T18:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/7c2l1jwz37278ad/2022-07-16/kvallstur-fran-harnosand",
+      "shopUri": "https://secure.tickster.com/7c2l1jwz37278ad",
+      "description": "<p>\r\n**H&#228;rn&#246;sand – Norafj&#228;rden – H&#246;gakustenbron, tur och retur.** Upplev H&#246;ga Kusten fr&#229;n ett unikt perspektiv ombord p&#229; &#197;dalen III. Se solen spegla sig i &#197;ngerman&#228;lvens vatten. S&#246;tvatten som f&#228;rdats fr&#229;n s&#246;dra Lappland, och h&#228;r g&#246;r sig redo att m&#246;ta havet.\r\n</p>\r\n<p>\r\nVi b&#246;rjar v&#229;r tur fr&#229;n Skeppsbron i H&#228;rn&#246;sand och &#229;ker uppstr&#246;ms. H&#228;r ser du en glimt av Bottenhavet innan du f&#229;r ta del av &#228;lvens harmoni och den gamla kulturbygden, samtidigt som du njuter av en riklig sk&#228;rg&#229;rdsbuff&#233;. Vi bjuder &#228;ven p&#229; kaffe och hembakad kaka efter maten.\r\n</p>\r\n<p>\r\nVi &#229;ker bland annat in i vackra Norafj&#228;rden d&#228;r L&#246;vviksbron v&#228;lkomnar oss med en praktfull entr&#233;. Glider l&#228;ngs strandkanten och rundar sm&#229; &#246;ar med gemytliga sommarstugor.\r\n</p>\r\n<p>\r\nV&#228;l ute ur viken tar vi sikte p&#229; H&#246;gakustenbron som &#228;r en av resans mest omtyckta sev&#228;rdheter. D&#228;r f&#229;r du p&#229; riktigt n&#228;ra h&#229;ll uppleva en av Europas l&#228;ngsta h&#228;ngbroar med ett spann p&#229; hela 1210 meter. En m&#228;ktig och uppskattad syn n&#228;r vi sakta passerar under, innan vi &#229;ter styr mot H&#228;rn&#246;sand igen.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/3c/5b3cb31e931c407bec07d9e15aa9f6b31953d9",
+      "isCollectionEvent": false,
+      "tags": [],
+      "performers": [],
+      "links": [
+        {
+          "text": "adalen3.com",
+          "uri": "https://adalen3.com/"
+        }
+      ],
+      "goods": [
+        {
+          "name": "Vuxen - Akterdäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "549",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 8-12 år - Akterdäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "239",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 2-7 år - Akterdäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "129",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 0-1 år - Akterdäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "0",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Vuxen - Restaurang",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "549",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 8-12 år - Restaurang",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "239",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 2-7 år - Restaurang",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "129",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 0-1 år - Restaurang",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "0",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Vuxen - Övre däck inne",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "549",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 8-12 år - Övre däck inne",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "239",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 2-7 år - Övre däck inne",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "129",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 0-1 år - Övre däck inne",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "0",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Vuxen - Fördäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "549",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 8-12 år - Fördäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "239",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 2-7 år - Fördäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "129",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        },
+        {
+          "name": "Barn 0-1 år - Fördäck",
+          "type": "package",
+          "description": "Båtresan tar 4 timmar och en stor skärgårdsbuffé ingår.\r\n\r\n**VIKTIG INFORMATION**\r\n\r\n- Båten lämnar kaj den tid som evenemanget börjar.\r\n- Vi öppnar för ombordstigning 45 min innan båten lämnar kaj.\r\n- Du hittar vägbeskrivning till våra kajer på www.adalen3.com.\r\n- Var gärna redo att visa QR-koden på din biljett vid påstigning.\r\n- Inga djur är tillåtna ombord.\r\n- Egen mat eller dryck får EJ tas med ombord, med undantag babymat 0-1 år.\r\n- Personal har rätt att neka för berusade gäster att kliva ombord.\r\n\r\nRullstol, rullator och barnvagn kan tas med i mån av plats, ring oss på 0612-50589 innan bokning så säkerställer vi att det fungerar.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "0",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/fa/ec80ad3441b8b000ab482fcd2be472e0ede592",
+            "large": "http://static.tickster.com/13/de9c532adabf3897025b5eb830bc908e8aa59a"
+          }
+        }
+      ],
+      "venueId": "w5wppw0lnkz09t1",
+      "organizerId": "k5g8d8gj752ab8l",
+      "childEvents": []
+    },
+    {
+      "id": "keacp1uz6pl169y",
+      "published": true,
+      "name": "THE PLAY THAT GOES WRONG",
+      "start": "2022-07-16T18:00:00+02:00",
+      "end": "2022-07-16T20:30:00+02:00",
+      "lastUpdated": "2022-04-01T10:14:00+02:00",
+      "hierarchyType": "production-child",
+      "productionParentId": "JZ95M9DF3UX6T6M",
+      "doorsOpen": "2022-07-16T17:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/keacp1uz6pl169y/2022-07-16/the-play-that-goes-wrong",
+      "shopUri": "https://secure.tickster.com/keacp1uz6pl169y",
+      "description": "<p>\r\nThe Play That Goes Wrong, eller Pj&#228;sen som g&#229;r fel, handlar om ett teaters&#228;llskap som ska s&#228;tta upp ett klassiskt, engelskt deckardrama; Mordet p&#229; Haversham Manor. Det kan bara inte g&#229; fel...! Scenen &#228;r byggd, sk&#229;despelarna kan sina repliker (n&#229;v&#228;l, n&#228;stan i alla fall) och alla st&#229;r redo n&#228;r publiken &#228;ntrar salongen. Men redan innan rid&#229;n g&#229;r upp trasslar det till sig ordentligt, och n&#228;r miss&#246;dena forts&#228;tter staplas p&#229; varandra &#246;verg&#229;r allt till en kamp mot klockan f&#246;r att klara sig tills den ber&#246;mda Damen sjungit sin sista ton. F&#246;r kom ih&#229;g, The Show Must Go On!\r\n</p>\r\n<p>\r\nDenna dr&#229;pliga f&#246;rest&#228;llning med tr&#228;ffs&#228;kert sk&#229;despel, fenomenala scenografi och m&#229;nga skratt har gjort succ&#233; p&#229; West End, Broadway och N&#246;jesteatern i Malm&#246;, och nu kommer den till en teaterlada n&#228;ra dig i Lilla Beddinge Teaters tappning. I denna tid fylld av krigshets, klimatkatastrof och pandemi &#228;r det v&#229;r uppgift att vara en samlingsplats, d&#228;r man inte fokuserar p&#229; problemen utan p&#229; gl&#228;djen att spela och bese teater. Vi ses i sommar!\r\n</p>\r\n<p>\r\nF&#246;rest&#228;llning spelas p&#229; svenska.\r\n</p>\r\n<p>\r\nTHE PLAY THAT GOES WRONG<br />\r\nby Henry Lewis, Jonathan Sayer and Henry Shields\r\n</p>\r\n<p>\r\nCopyright agency for plays by Henry Lewis, Jonathan Sayer &amp; Henry Shields<br />\r\nUnited Agents Nicki Stoddart: <a class=\"obfuscated\" href=\"mailto:nstoddart snabel-a unitedagents punkt co\" rel=\"nofollow\">nstoddart snabel-a unitedagents punkt co</a>uk<br />\r\nThe Play that Goes Wrong was first presented by Mischief Theatre under the title: The<br />\r\nMurder Before Christmas on 4th December 2012 at the Old Red Lion Theatre, London<br />\r\nThe Play that Goes Wrong transferred to the Duchess Theatre in London’s West End<br />\r\nin September 2014 and is produced by Kenny Wax Ltd and Stage Presence Ltd<br />\r\nTeaterf&#246;rlag: Nordiska ApS – K&#246;penhamn\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/75/129fc184ca128dfddba599dbaa7f0f06aae3dc",
+      "isCollectionEvent": false,
+      "tags": [
+        "lilla beddinge teater",
+        "beddinge teatern",
+        "the play that goes wrong",
+        "the play",
+        "komedi",
+        "teater",
+        "sommar",
+        "skåne"
+      ],
+      "performers": [],
+      "links": [
+        {
+          "text": "www.lillabeddingeteater.se",
+          "uri": "https://www.lillabeddingeteater.se/"
+        }
+      ],
+      "goods": [
+        {
+          "name": "Ordinarie",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "400",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/59/7393e03cbfce99c0c273eeb2630ee15d61642d",
+            "large": "http://static.tickster.com/8c/026ddf198ef03cef26bd9a7dc2e4dfe5b8168d"
+          }
+        },
+        {
+          "name": "Barnbiljett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "200",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/59/7393e03cbfce99c0c273eeb2630ee15d61642d",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "4h34rf5j9a9z8bp",
+      "organizerId": "8xcnmlw9ldhctrb",
+      "childEvents": []
+    },
+    {
+      "id": "5dubm9eudw60byg",
+      "published": true,
+      "name": "Hundraåringen, en komedi med Claes Malmberg",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T23:00:00+02:00",
+      "lastUpdated": "2022-01-26T11:27:00+01:00",
+      "hierarchyType": "production-child",
+      "productionParentId": "1MMJP7KNVBXH479",
+      "doorsOpen": "2022-07-16T18:40:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/5dubm9eudw60byg/2022-07-16/hundraaringen-en-komedi-med-claes-malmberg",
+      "shopUri": "https://secure.tickster.com/5dubm9eudw60byg",
+      "description": "<p>\r\n## En spr&#228;ngfylld komedi med Claes Malmberg i alla roller.\r\n</p>\r\n<p>\r\nEfter ett l&#229;ngt och synnerligen h&#228;ndelserikt liv hamnar Allan Karlsson p&#229; det &#228;ldrehem d&#228;r man nu f&#246;rbereder firandet av hans stora hundra&#229;rsdag. Ett spektakel s&#229; o&#246;nskat av Allan att han i st&#228;llet kliver ut genom f&#246;nstret och f&#246;rsvinner - in i ett sansl&#246;st sp&#228;nnande &#228;ventyr bland stulna pengar, kriminella Mc-g&#228;ng, korkade poliser och ett knippe nyfunna v&#228;nner – n&#228;mligen sm&#229;tjuven Julius, kiosk&#228;garen Benny och den vackra Gunilla med sin elefant.\r\n</p>\r\n<p>\r\nEn rafflande och galen kriminalhistoria som inte bara leder oss genom hela Sverige, utan &#228;ven ut i v&#228;rlden och genom ett helt sekel. F&#246;r Allans l&#229;nga liv &#228;r n&#228;mligen fyllt av h&#228;pnadsv&#228;ckande &#246;gonblick och historiska snedsteg.\r\n</p>\r\n<p>\r\nHan &#229;t med Franco, drack med Truman, liftade med Churchill och dansade med Stalin. I hundra &#229;r gjorde Allan Karlsson v&#228;rlden os&#228;ker, bara genom att vara och nu &#228;r han l&#246;s igen.\r\n</p>\r\n<p>\r\nClaes Malmberg kastar sig in i Jonas Jonassons folkk&#228;ra och fantastiska historia och &#229;terber&#228;ttar den p&#229; ett s&#228;tt som den aldrig &#229;terber&#228;ttats tidigare, n&#228;mligen fr&#229;n teaterscenen. En spr&#228;ngfylld enmanskomedi fylld av skratt, sp&#228;nning och en och annan explosion d&#228;r Claes Malmberg inte bara spelar Allan, utan &#228;ven flertalet av bokens<br />\r\nalla f&#228;rgstarka och komiska karakt&#228;rer. Alltifr&#229;n Josef Stalin, Ronald Reagan och Tage Erlander till Syster Alice, Mc-ledaren G&#228;ddan och elefanten Sonja.\r\n</p>\r\n<p>\r\nJust det – han r&#229;kar visst uppfinna atombomben ocks&#229;, bara s&#229; ni &#228;r beredda p&#229; det!\r\n</p>\r\n<p>\r\nF&#246;rest&#228;llningen &#228;r baserad p&#229; Jonas Jonassons succ&#233;roman med samma namn, som hyllades v&#228;rlden &#246;ver n&#228;r den sl&#228;pptes 2009 och som sedan dess l&#228;sts av miljoner l&#228;sare.\r\n</p>\r\n<p>\r\n2013 filmatiserades boken, som blev en lika stor succ&#233; – nu &#228;r det dags f&#246;r teaterversionen.\r\n</p>\r\n<p>\r\n**Medverkande:<br />\r\nClaes Malmberg**\r\n</p>\r\n<p>\r\n**Dramatisering &amp; regi:<br />\r\nNiklas Holtne**\r\n</p>\r\n<p>\r\nF&#246;rest&#228;llningen &#228;r ca 90 min utan paus\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/ac/f13c5e548e08519b14a55979f34d8513c46596",
+      "isCollectionEvent": false,
+      "tags": [
+        "covidpass"
+      ],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Främre parkett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "545",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Främre parkett",
+                "includingVat": "545"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        },
+        {
+          "name": "Räksmörgås med öl/vin",
+          "type": "package",
+          "description": "Brödet innehåller gluten, går att boka glutenfritt (anges i samband med att ni anger era personuppgifter i nästa steg).\r\nSmörgåsen är laktos- och mjölkproteinfritt, samt sellerifri.\r\nDillmajonäsen innehåller senap och ägg.\r\n\r\nPå plats väljer ni mellan vårt utvalda halländska öl eller en pickoloflaska av Jacobs creek vita-, röda- eller rosévin.\r\n\r\n*Maten finns tillgänglig för uthämtning 2 timmar innan föreställningens start.*",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "210",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        },
+        {
+          "name": "Bakre parkett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "495",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Bakre parkett",
+                "includingVat": "495"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        },
+        {
+          "name": "Vegetarisk smörgås med öl/vin",
+          "type": "package",
+          "description": "Det kryddiga brödet innehåller gluten, går att boka glutenfritt (anges i samband med att ni anger era personuppgifter i nästa steg).\r\nVaccaosten innehåller laktos, övrigt är laktos- och mjölkproteinfritt\r\n\r\nPå plats väljer ni mellan vårt utvalda halländska öl eller en pickoloflaska av Jacobs creek vita-, röda- eller rosévin.\r\n\r\n*Maten finns tillgänglig för uthämtning 2 timmar innan föreställningens start.*",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "210",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        },
+        {
+          "name": "Räksmörgås & alkoholfri dryck",
+          "type": "package",
+          "description": "Brödet innehåller gluten, går att boka glutenfritt (anges i samband med att ni anger era personuppgifter i nästa steg).\r\nSmörgåsen är laktos- och mjölkproteinfritt, samt sellerifri.\r\nDillmajonäsen innehåller senap och ägg.\r\n\r\nPå plats väljer ni mellan alkoholfri öl eller läsk från halländska bryggeriet Byaregården.\r\n\r\n*Maten finns tillgänglig för uthämtning 2 timmar innan föreställningens start.*",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "175",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        },
+        {
+          "name": "Veg smörgås & alkoholfri dryck",
+          "type": "package",
+          "description": "Det kryddiga brödet innehåller gluten, går att boka glutenfritt (anges i samband med att ni anger era personuppgifter i nästa steg).\r\nVaccaosten innehåller laktos, övrigt är laktos- och mjölkproteinfritt\r\n\r\nPå plats väljer ni mellan alkoholfri öl eller läsk från halländska bryggeriet Byaregården.\r\n\r\n*Maten finns tillgänglig för uthämtning 2 timmar innan föreställningens start.*",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "175",
+            "vatPercentage": "0",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        },
+        {
+          "name": "Rullstolsplats inkl. ledsagare",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "545",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Rullstolsplats",
+                "includingVat": "545"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/d7/f9adeebb697333143e0b018e988844811068e0",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "g6hrrjuvunjhl2w",
+      "organizerId": "90u6kkcelv1376p",
+      "childEvents": []
+    },
+    {
+      "id": "cde48zrg26ph8k4",
+      "published": true,
+      "name": "Uggla, Miss Li & Petter",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T23:59:00+02:00",
+      "lastUpdated": "2022-03-31T13:51:00+02:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T17:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/cde48zrg26ph8k4/2022-07-16/uggla-miss-li-and-petter",
+      "shopUri": "https://secure.tickster.com/cde48zrg26ph8k4",
+      "description": "<p>\r\nVarken Magnus Uggla, Miss Li eller Petter beh&#246;ver n&#229;gon n&#228;rmare presentation. Tillsammans har de s&#229;lt miljontals skivor, uppn&#229;tt hundratals miljoner streams och varit flitigt turnerande artister under en herrans massa &#229;r. Under f&#246;rra sommaren l&#228;rde de k&#228;nna varandra riktigt ordentligt i och med TV-succ&#233;n ”S&#229; mycket b&#228;ttres jubileumss&#228;song”, d&#229; trion stod v&#228;rdar f&#246;r varje program.\r\n</p>\r\n<p>\r\nNu &#228;r det klart att de kommer till Mariebergsskogen i Karlstad.\r\n</p>\r\n<p>\r\nKv&#228;llen blir som en festival med 3 st full&#228;ngdskonserter. Mariebergsskogen &#246;ppnar kl. 17.00. Petter &#228;r f&#246;rst ut p&#229; scenen vid 19.00. D&#228;refter spelar Miss Li och kv&#228;llen avslutas av Magnus Uggla\r\n</p>\r\n<p>\r\n*&quot;Det kommer bli magiskt att f&#229; dra ut p&#229; v&#228;garna tillsammans med Petter och Uggla i sommar. Jag &#228;lskade att spendera s&#229; mycket tid med dem p&#229; Gotland f&#246;rra &#229;ret och &#228;r j&#228;tteglad att f&#229; g&#246;ra detta ihop med dem,* h&#228;lsar Miss Li.**&quot;**\r\n</p>\r\n<p>\r\n&quot;*Det kommer bli en episk turn&#233;sommar med v&#228;rme, drag och handsprit*, forts&#228;tter Petter.&quot;\r\n</p>\r\n<p>\r\n&quot;*Det var tre &#229;r sen sist och jag &#228;r sjukt rastl&#246;s*, avslutar Magnus Uggla.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/6b/e85e1db36f84479adb9245dbefad3fa1512315",
+      "isCollectionEvent": false,
+      "tags": [
+        "covidpass"
+      ],
+      "performers": [
+        "Petter",
+        "Magnus Uggla",
+        "Miss Li"
+      ],
+      "links": [],
+      "goods": [
+        {
+          "name": "Entrébiljett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "695",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/f1/e0baab339492afd53fdd8400af1c4074ee3a7d",
+            "large": "http://static.tickster.com/f1/e0baab339492afd53fdd8400af1c4074ee3a7d"
+          }
+        },
+        {
+          "name": "VIP-biljett",
+          "type": "ticket",
+          "description": "✔ Separat VIP-entré \r\n✔ VIP bar med bra utbud \r\n✔ Restaurang med sittplatser under tak med utsikt mot scen. \r\n✔ Riktiga toaletter\r\n\r\nProgram kommer veckan innan eventet på vår Facebook & Instagram sida.\r\n\r\nBiljett återköps endast om hela festivalen ställs in ej om enstaka artister/band ställer in på grund av sjukdom eller annan orsak som vi inte kan kontrollera eller påverka. \r\n\r\nKontakta alltid biljettleverantör för återbetalning vid inställt eller flyttat evenemang.\r\n\r\nStrikt 18-års gräns. Ej minderåriga ens med föräldrars sällskap.\r\nÖverförfriskade och eller av drogpåverkade personer nekas inträde trots giltig biljett.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "1095",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/74/c7205f8ecbc015a4a33a304a0384f6be216987",
+            "large": "http://static.tickster.com/74/c7205f8ecbc015a4a33a304a0384f6be216987"
+          }
+        },
+        {
+          "name": "Super Weekend",
+          "type": "ticket",
+          "description": "Köp en superweekend-biljett som gäller för hela helgen.\r\n\r\nPassa på att även kunna gå på \"Vi som älskar 90-talet\" som arrangeras dagen innan i Mariebergsskogen + Uggla, Miss Li & Peter på lördagen.\r\n\r\nKöper du denna biljett får du ett armband som du använder som entré hela helgen.",
+          "stockStatus": "Undefined",
+          "price": {
+            "includingVat": "1295",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/f1/e0baab339492afd53fdd8400af1c4074ee3a7d",
+            "large": "http://static.tickster.com/f1/e0baab339492afd53fdd8400af1c4074ee3a7d"
+          }
+        },
+        {
+          "name": "Super Weekend VIP",
+          "type": "ticket",
+          "description": "Köp en superweekend-biljett som gäller för hela helgen.\r\n\r\nPassa på att även kunna gå på \"Vi som älskar 90-talet\" som arrangeras dagen innan i Mariebergsskogen + Uggla, Miss Li & Peter på lördagen.\r\n\r\nKöper du denna biljett får du ett armband som du använder som entré hela helgen.\r\n\r\n✔ Separat VIP-entré ✔ VIP bar med bra utbud ✔ Restaurang med sittplatser under tak med utsikt mot scen. ✔ Riktiga toaletter\r\n\r\nProgram kommer veckan innan eventet på vår Facebook & Instagram sida.\r\n\r\nBiljett återköps endast om hela festivalen ställs in ej om enstaka artister/band ställer in på grund av sjukdom eller annan orsak som vi inte kan kontrollera eller påverka.\r\n\r\nKontakta alltid biljettleverantör för återbetalning vid inställt eller flyttat evenemang.\r\n\r\nStrikt 18-års gräns. Ej minderåriga ens med föräldrars sällskap. Överförfriskade och eller av drogpåverkade personer nekas inträde trots giltig biljett.",
+          "stockStatus": "Undefined",
+          "price": {
+            "includingVat": "1995",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/f1/e0baab339492afd53fdd8400af1c4074ee3a7d",
+            "large": "http://static.tickster.com/f1/e0baab339492afd53fdd8400af1c4074ee3a7d"
+          }
+        }
+      ],
+      "venueId": "u2uynw07h28yjur",
+      "organizerId": "8evlx0r81rypl2v",
+      "childEvents": []
+    },
+    {
+      "id": "p7a6e1nefaz4zyn",
+      "published": true,
+      "name": "ALLA TIDERS ÅSA-NISSE",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T21:30:00+02:00",
+      "lastUpdated": "2022-03-31T14:59:00+02:00",
+      "hierarchyType": "production-child",
+      "productionParentId": "3N861A526WL45MA",
+      "doorsOpen": "2022-07-16T18:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/p7a6e1nefaz4zyn/2022-07-16/alla-tiders-asa-nisse",
+      "shopUri": "https://secure.tickster.com/p7a6e1nefaz4zyn",
+      "description": "<p>\r\nF&#246;rest&#228;llningen p&#229;g&#229;r i ca 2,5 timme inkl. paus.\r\n</p>\r\n<p>\r\nBarnbiljett g&#228;ller t.o.m. 16 &#229;r. Barn under 3 &#229;r, som sitter i kn&#228;t, medf&#246;ljer fritt.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/c9/d63f75317d2d3be79030221ac1cf55a72e7c32",
+      "isCollectionEvent": false,
+      "tags": [
+        "event-start-day-changed"
+      ],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Vuxen Parkett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "495",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Parkett",
+                "includingVat": "495"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/eb/922b08a68e4fee840ca1bc66d4b0ab4a99c042",
+            "large": null
+          }
+        },
+        {
+          "name": "Barn Parkett t.o.m. 16 år",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "295",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Parkett",
+                "includingVat": "295"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/eb/922b08a68e4fee840ca1bc66d4b0ab4a99c042",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "r7028jh3nnjh8fj",
+      "organizerId": "kga9dvx1mh9yzev",
+      "childEvents": []
+    },
+    {
+      "id": "r97xegnw90wzbjb",
+      "published": true,
+      "name": "Ana Diaz - Live på Sjungaregården!",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T21:00:00+02:00",
+      "lastUpdated": "2022-04-06T12:05:00+02:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T16:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/r97xegnw90wzbjb/2022-07-16/ana-diaz-live-pa-sjungaregarden",
+      "shopUri": "https://secure.tickster.com/r97xegnw90wzbjb",
+      "description": "<p>\r\nLive p&#229; Sjungareg&#229;rden sker utomhus p&#229; &#228;ngen nedanf&#246;r v&#229;r historiska g&#229;rd. D&#228;r f&#229;r man v&#228;lja mellan att st&#229; eller ta med sig en filt och s&#228;tta sig i sl&#228;nten ner mot scenen f&#246;r att avnjuta denna musikaliska kv&#228;ll.\r\n</p>\r\n<p>\r\nOm Ana diaz<br />\r\nK&#228;nsla m&#229; vara ett utslitet ord n&#228;r det kommer till musik, men ibland m&#229;ste man bara. Som med Ana Diaz. Artisten som skrev hits &#229;t storheter som Britney Spears, Jennifer Lopez och Zara Larsson innan hon best&#228;mde sig f&#246;r att kliva ut i rampljuset. N&#229;got som visade sig vara ett fantastiskt beslut. Diaz visade att hon, f&#246;rutom att vara en melodimakare i v&#228;rldsklass, ocks&#229; besitter en alldeles s&#228;llsynt f&#246;rm&#229;ga att hantera ord. En sjungen poesi som placerar lyssnaren s&#229; n&#228;ra att det n&#228;stan br&#228;nns n&#228;r Ana Diaz balanserar mellan sorg och tr&#246;st; mellan dyster diskb&#228;nksrealism och helande hoppfullhet.\r\n</p>\r\n<p>\r\nEfter att sl&#228;ppt den f&#246;rkrossande vackra singeln ’100’ 2019 kom till slut debutalbumet ’Tr&#246;st och vatten’ 2020. En skiva som, f&#246;rutom att &#228;lskas av fans s&#229;v&#228;l som kritiker, nyligen bel&#246;nades med tv&#229; Grammisar – en f&#246;r ’&#197;rets Pop’ och en f&#246;r ’&#197;rets Textf&#246;rfattare’. Ana Diaz deltog ocks&#229; ’S&#229; Mycket B&#228;ttre’ 2020, d&#228;r hon gjorde stor succ&#233; som s&#229;v&#228;l tolkare som komposit&#246;r.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/e5/b0767ed25bdb5849198dbd43b73ab18739ae2f",
+      "isCollectionEvent": false,
+      "tags": [],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Biljett + Buss fr Umeå",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "795",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/f5/8030c0c92311ffb274f1c8b5e6f9178b8e6b72",
+            "large": null
+          }
+        },
+        {
+          "name": "Ordinarie",
+          "type": "ticket",
+          "description": "Live på Sjungaregården är ett utomhusevenemang på ängen nedanför vår anrika gård. Du väljer själv om du vill stå eller varför inte ta med en skön filt och slå dig ner i slänten ner mot scenen.\r\n\r\nOm Ana Diaz\r\nKänsla må vara ett utslitet ord när det kommer till musik, men ibland måste man bara. Som med Ana Diaz. Artisten som skrev hits åt storheter som Britney Spears, Jennifer Lopez och Zara Larsson innan hon bestämde sig för att kliva ut i rampljuset. Något som visade sig vara ett fantastiskt beslut. Diaz visade att hon, förutom att vara en melodimakare i världsklass, också besitter en alldeles sällsynt förmåga att hantera ord. En sjungen poesi som placerar lyssnaren så nära att det nästan bränns när Ana Diaz balanserar mellan sorg och tröst; mellan dyster diskbänksrealism och helande hoppfullhet.\r\n\r\nEfter att släppt den förkrossande vackra singeln ’100’ 2019 kom till slut debutalbumet ’Tröst och vatten’ 2020. En skiva som, förutom att älskas av fans såväl som kritiker, nyligen belönades med två Grammisar – en för ’Årets Pop’ och en för ’Årets Textförfattare’. Ana Diaz deltog också ’Så Mycket Bättre’ 2020, där hon gjorde stor succé som såväl tolkare som kompositör.",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "465",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/0f/0c9d2e77f767620095728b62562c8d609978f2",
+            "large": "http://static.tickster.com/e6/e1310bb1becf15026c5dbd16a94aa5096872d5"
+          }
+        }
+      ],
+      "venueId": "5kfd385r9t6l3v4",
+      "organizerId": "1khe54zyvnczbht",
+      "childEvents": []
+    },
+    {
+      "id": "76kvx3rffcpej92",
+      "published": true,
+      "name": "Weeping Willows",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T22:00:00+02:00",
+      "lastUpdated": "2022-04-07T08:40:00+02:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T18:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/76kvx3rffcpej92/2022-07-16/weeping-willows",
+      "shopUri": "https://secure.tickster.com/76kvx3rffcpej92",
+      "description": "<p>\r\n## Weeping Willows p&#229; sommarturn&#233; 2022&#160;<br />\r\n## <br />\r\nNu &#228;r det dags f&#246;r det folkk&#228;ra bandet att &#229;ka ut p&#229; sommarturn&#233;! Med 8 musiker p&#229; scen –bandet, Anders Kappelin (bas), Patrik Kolar (keyboards), Goran Kajfes (trumpet) och Per &quot;Rusktr&#228;sk&quot; Johansson (saxofon och fl&#246;jt) kommer de bjuda p&#229; en storslagen sommarkv&#228;ll p&#229; Sofiero G&#229;rd den 16/7. Det borgar f&#246;r en stor musikalisk palett.&#160;\r\n</p>\r\n<p>\r\n- Vi &#228;r ett band som &#228;lskar att turnera runt och bes&#246;ka olika platser. Vi l&#228;ngtar efter sommaren d&#229; vi f&#229;r g&#246;ra precis just det, f&#246;aarhoppningsvis helt utan restriktioner, h&#228;lsar Magnus Carlson.&#160;&#160;\r\n</p>\r\n<p>\r\nEfter mycket tid i studion under pandemi&#229;ren &#228;r Weeping Willows aktuell med ny musik – ett helt nytt album kommer i h&#246;st och nya l&#229;tar sl&#228;pps redan under v&#229;ren. P&#229; Record Store Day den 23 april sl&#228;pper de &#228;ven sitt f&#246;rsta livealbum fr&#229;n de tre uts&#229;lda storslagna konserterna i Globen 2017.&#160;\r\n</p>\r\n<p>\r\nHistorien om Weeping Willows b&#246;rjade redan 1994 d&#229; bandet bildades. Den f&#246;rsta officiella singeln med namnet ”Broken Promise Land”, gavs dock ut f&#246;rst sommaren 1997. N&#229;gra m&#229;nader senare sl&#228;pptes debutalbumet med samma namn och numera &#228;r det en svensk popklassiker som har sl&#228;ppts i flera olika versioner och utg&#229;vor. Idag &#228;r Weeping Willows ett av Sveriges mest rutinerade, etablerade och folkk&#228;ra popband.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/b7/1031c9bd73f7b4ea3cccdb453a962716ff60b5",
+      "isCollectionEvent": false,
+      "tags": [
+        "pop/svenskmusik"
+      ],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Konsertbiljett - Sittande",
+          "type": "ticket",
+          "description": "**I biljetten ingår**\r\n- Konsertbiljett med sittplats",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "695",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Parkett",
+                "includingVat": "695"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/8d/fcfc2fa057e3988b134942950a86c4cf6e102d",
+            "large": null
+          }
+        },
+        {
+          "name": "Konsertbiljett - Stående",
+          "type": "ticket",
+          "description": "**I biljetten ingår**\r\n- Konsertbiljett med ståplats",
+          "stockStatus": "Undefined",
+          "price": {
+            "includingVat": "595",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/09/4c755a4d7bee94582a5aee4692a58fe14f3da4",
+            "large": null
+          }
+        },
+        {
+          "name": "Rullstolsplats / Ledsagare",
+          "type": "ticket",
+          "description": "**I biljetten ingår**\r\n- Konsertbiljett + gratis biljett för ledsagare\r\n\r\nTillgänglighet:\r\nSofiero Gård är till för alla. Gården med omgivning är med i bevarandeprogrammet för Drottninggatan och Pålsjö 1999, betecknad med Q och klassad som särskilt värdefull bebyggelse. Markförhållandena består av grusväg med potthål(emellanåt), gruslagd gårdsplan, gräsmattor och äng. RWC finns.\r\nTillgänglig parkering finns.\r\n\r\nFör att en plats till dig ska förberedas på bästa sätt vid konserter och evenemang vill vi att du hör av dig till info@sofierogard.se alternativt info@thetivoli.se \r\n\r\nMaila till samma adresser om du har frågor eller vill ha mer information gällande tillgänglighet innan ditt besök hos oss.",
+          "stockStatus": "Undefined",
+          "price": {
+            "includingVat": "595",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/ed/54e1b291770ee8352a3c972f68bb77299432e1",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "lp2uudmng3k03nv",
+      "organizerId": "6r8tgltkke04d66",
+      "childEvents": []
+    },
+    {
+      "id": "zf6p81l215gjtjj",
+      "published": true,
+      "name": "Beamy & Pete och Eldsbandet",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T21:00:00+02:00",
+      "lastUpdated": "2022-04-09T16:44:00+02:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T19:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/zf6p81l215gjtjj/2022-07-16/beamy-and-pete-och-eldsbandet",
+      "shopUri": "https://secure.tickster.com/zf6p81l215gjtjj",
+      "description": "<p>\r\n”Skapat ur v&#229;r k&#228;rlek till countrymusiken och meningsfulla texter. Vi lovar att sjunga s&#246;nder v&#229;ra hj&#228;rtan f&#246;r er skull” – B&amp;P Beamy &amp; Pete &#228;r Beatrice Rosdahls och Bj&#246;rn Peter Thisells magiska country-duo.<br />\r\nDuon framf&#246;r mest sina egna alster men ocks&#229; favoritl&#229;tar av andra artister s&#229; som Neil Young, Emmylou Harris, Courtney Marie Andrews, Bonnie Tyler, Canned Heat, Townes Van Zandt. Texterna, st&#228;ms&#229;ngen och innerligheten st&#229;r i centrum.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/f2/27ed202c1e2e05c74a8744bb5299cd333fba84",
+      "isCollectionEvent": false,
+      "tags": [],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Ordinarie",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "150",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/0c/432ed92a951434c7438a2c6c00e3affb54edb8",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "5l60ef61ak17a65",
+      "organizerId": "funpwnk560kutjb",
+      "childEvents": []
+    },
+    {
+      "id": "d7wpb25by7lgfud",
+      "published": true,
+      "name": "Gov't Mule (US)",
+      "start": "2022-07-16T19:00:00+02:00",
+      "end": "2022-07-16T22:00:00+02:00",
+      "lastUpdated": "2022-04-12T17:25:00+02:00",
+      "hierarchyType": "production-child",
+      "productionParentId": "CZEG008GFYL373Z",
+      "doorsOpen": "2022-07-16T17:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/d7wpb25by7lgfud/2022-07-16/govt-mule-us",
+      "shopUri": "https://secure.tickster.com/d7wpb25by7lgfud",
+      "description": "<p>\r\nGOV’T MULE &amp; WARREN HAYNES (US)\r\n</p>\r\n<p>\r\nSpelplats: Parksn&#228;ckan Uppsala\r\n</p>\r\n<p>\r\nDatum: 16 juli 2022\r\n</p>\r\n<p>\r\nBiljettpris: 495 sek + service\r\n</p>\r\n<p>\r\n&#197;ldersgr&#228;ns: 13 &#229;r\r\n</p>\r\n<p>\r\nArrang&#246;r: KLBR Live &amp; A Star Entertainment\r\n</p>\r\n<p>\r\nAlbumaktuella Gov&#180;t Mule kommer till Sverige med sitt ”Heavy Load Tour”. Det blir ett enda stopp i Uppsala den 16 juli.\r\n</p>\r\n<p>\r\nMed Warren Haynes i spetsen &#228;r Gov&#180;t Mule k&#228;nda f&#246;r sin st&#228;ndiga utveckling och blandning av allt fr&#229;n rock till R&amp;B, funk och jazz. Efter en mer &#228;n 25 &#229;r l&#229;ng karri&#228;r med &#246;ver 20 album presenterar de nu sitt f&#246;rsta bluesalbum ”Heavy Load Blues”.  Albumet sl&#228;pptes den 12 november 2021 och &#228;r inspelat live i bandets studio. <br />\r\n–  “For me, personally, it&#39;s kind of been on my list of things to do for years,”s&#228;ger Haynes.  \r\n</p>\r\n<p>\r\nGov&#39;t Mule som best&#229;r av Warren Haynes [s&#229;ng, gitarr], Matt Abts [trummor], Danny Louis [keyboard, gitarr och bakgrundss&#229;ng] och Jorgen Carlsson [bas] har genom sin &#228;rliga och v&#229;gade musik lyckats skapa en stabil fanbas v&#228;rlden &#246;ver. Detta har gjort dem till ett av v&#228;rldens mest tidl&#246;sa och uppskattade band vars plats bland rocklegenderna blivit orubblig. Under ledning av den GRAMMY-vinnande artisten och gitarrlegenden Warren Haynes, har de &#228;ven visat upp b&#229;de kunskap och bredd genom &#246;ver 20 studio- och livealbum, tusentals framtr&#228;danden och miljontals s&#229;lda album och singlar.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/24/9309da697fa89321134c7659f3bfad699ebeb9",
+      "isCollectionEvent": false,
+      "tags": [
+        "klbrlive",
+        "guvt mule",
+        "rock",
+        "a-star",
+        "parksnäckan",
+        "uppsala"
+      ],
+      "performers": [
+        "Guv't Mule"
+      ],
+      "links": [],
+      "goods": [
+        {
+          "name": "HKP inkl ledsagare",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "Undefined",
+          "price": {
+            "includingVat": "495",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/c7/af3aede4e5f22eec2f88ada315f080a3a9127e",
+            "large": "http://static.tickster.com/c7/af3aede4e5f22eec2f88ada315f080a3a9127e"
+          }
+        },
+        {
+          "name": "Sittplats",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "595",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": [
+              {
+                "name": "Vänster",
+                "includingVat": "595"
+              },
+              {
+                "name": "Mitten",
+                "includingVat": "595"
+              },
+              {
+                "name": "Höger",
+                "includingVat": "595"
+              }
+            ]
+          },
+          "images": {
+            "small": "http://static.tickster.com/c7/af3aede4e5f22eec2f88ada315f080a3a9127e",
+            "large": "http://static.tickster.com/c7/af3aede4e5f22eec2f88ada315f080a3a9127e"
+          }
+        },
+        {
+          "name": "Ståplats",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "Undefined",
+          "price": {
+            "includingVat": "495",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/c7/af3aede4e5f22eec2f88ada315f080a3a9127e",
+            "large": "http://static.tickster.com/c7/af3aede4e5f22eec2f88ada315f080a3a9127e"
+          }
+        }
+      ],
+      "venueId": "4fykbwf31jg29te",
+      "organizerId": "gf5dj34fjr9ddw5",
+      "childEvents": []
+    },
+    {
+      "id": "28t0mkfza7lg8c1",
+      "published": true,
+      "name": "Hälsingevind 2022 | Ljusdals Folkpark, Ljusdal",
+      "start": "2022-07-16T19:15:00+02:00",
+      "end": "2022-07-16T23:30:00+02:00",
+      "lastUpdated": "2022-04-08T10:12:00+02:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T18:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/28t0mkfza7lg8c1/2022-07-16/halsingevind-2022-ljusdals-folkpark-ljusdal",
+      "shopUri": "https://secure.tickster.com/28t0mkfza7lg8c1",
+      "description": "<p>\r\n✹ H&#196;LSINGEVIND TILL LJUSDALS FOLKPARK ✹\r\n</p>\r\n<p>\r\nFolkparksturn&#233;n i H&#228;lsingland &#228;r tillbaka som en &#229;terkommande del av sommaren. Enligt tradition st&#229;r Engmans Kapell, Per Persson &amp; Nya Packet samt Selma &amp; Gustaf f&#246;r den musikaliska inramningen.<br />\r\nProgramledare f&#246;r sommarkv&#228;llarna &#228;r Trollkarlen Jakob.\r\n</p>\r\n<p>\r\n* Ljusdals Folkpark, Ljusdal<br />\r\n* L&#246;rdag 16 juli <br />\r\n* Insl&#228;pp kl 18.00<br />\r\n* Konsertstart kl 19:15\r\n</p>\r\n<p>\r\n* Gratis f&#246;r barn upp till 12 &#229;r i m&#229;lsmans s&#228;llskap. \r\n</p>\r\n<p>\r\n* Per Persson<br />\r\nPer Persson har alltsedan solodebuten 1989 blivit en vital del av Sveriges musikliv. Med ett personligt uttryck tillika v&#228;lformulerade texter har han blivit en favorit f&#246;r m&#229;nga, inte minst bland namnkunniga artister som Lars Winnerb&#228;ck, H&#229;kan Hellstr&#246;m och Jakob Hellman. Med den sistn&#228;mnde delade Per Persson nyligen scen i programmet S&#229; mycket b&#228;ttre, i vilket de framf&#246;rde ”Tusen dagar h&#228;rifr&#229;n” tillsammans. De senaste &#229;ren har Perssons Pack utvecklats till det Nya Packet, men den musikaliska k&#228;rnan har l&#228;mnats of&#246;r&#228;ndrad och texterna lika tr&#228;ffande som alltid.\r\n</p>\r\n<p>\r\n* Engmans Kapell<br />\r\nH&#228;lsinglands egna Engmans Kapell har alltsedan starten 1995 spelat sig till en stor skara fans och fr&#228;lst hela hemlandskapet H&#228;lsingland d&#228;r de alltid drar fulla hus. De har tidigare sl&#228;ppt tre album med musik som beskrivs som ”h&#228;lsingsk folkrock”, som inneh&#229;ller samarbeten med bland andra Staffan Hellstrand, Sofia Karlsson och Per Persson (Perssons Pack) och 2020 fyllde debutalbumet ”Pensionat Liljevahls” 20 &#229;r, ett jubileum som firades med flertalet bejublade spelningar.\r\n</p>\r\n<p>\r\n* Selma &amp; Gustaf<br />\r\nSelma &amp; Gustaf har en l&#229;ng gemensam historia av att skapa musik tillsammans. De har sl&#228;ppt album och turnerat i s&#229;v&#228;l Europa som norden. Under 2021 har deras ljudbild vuxit fr&#229;n en mer jordn&#228;ra americana till att innefatta s&#229;v&#228;l synthesizers som trumpads, &#228;ven om den organiska basen stadigt utg&#246;r grunden. Den 11 november kommer de till S&#246;dra Teatern f&#246;r en spelning och med sig har de flertalet nya singlar, d&#228;ribland ”Lady” och ”Rooftop”. Biljetterna sl&#228;pps den 28 september klockan 10:00.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/9e/6e27b38cc45ac13df6a42db25ef5c5198148e2",
+      "isCollectionEvent": false,
+      "tags": [],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Barnbiljett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "0",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/57/dd2774cbd814eb47e9b47ab7e320f70de53cb0",
+            "large": "http://static.tickster.com/8f/eb154633699b03f7a03a5ae032d8ee513058aa"
+          }
+        },
+        {
+          "name": "Ordinarie biljett",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "295",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/57/dd2774cbd814eb47e9b47ab7e320f70de53cb0",
+            "large": "http://static.tickster.com/8f/eb154633699b03f7a03a5ae032d8ee513058aa"
+          }
+        }
+      ],
+      "venueId": "wlwb5l8p4l53455",
+      "organizerId": "mt38nfjafe9wfu8",
+      "childEvents": []
+    },
+    {
+      "id": "gf5jhzcehm1u9w0",
+      "published": true,
+      "name": "Smith & Thell",
+      "start": "2022-07-16T20:00:00+02:00",
+      "end": "2022-07-17T01:00:00+02:00",
+      "lastUpdated": "2021-12-19T14:40:00+01:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T20:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/gf5jhzcehm1u9w0/2022-07-16/smith-and-thell",
+      "shopUri": "https://secure.tickster.com/gf5jhzcehm1u9w0",
+      "description": "<p>\r\nSmith &amp; Thell kommer till Uddeholmsladan i sommar!\r\n</p>\r\n<p>\r\nPopduon som best&#229;r av Mary Jane Smith och Victor Thell tr&#228;ffades i sin hemstad Helsingborg och inspirerade av Bj&#246;rk, Alanis Morisette, Bon Iver och Mumford &amp; Sons har gruppen hittat sitt unika country-influerade popsound.<br />\r\nVictor Thell har skrivit och producerat musik &#229;t bland andra Alan Walker, Don Diablo, Anastacia, Danny Saucedo, Darin och Molly Sand&#233;n.\r\n</p>\r\n<p>\r\nDuon har tillsammans vunnit flera priser; Denniz Pop awards ”Rookie artist of the year” och Musexpo i Los Angeles i kategorin ”New emerging international artist” och &#229;r 2020 vann de priset &quot;&#197;rets komposit&#246;r&quot; p&#229; Grammisgalan. N&#229;gra av deras k&#228;ndaste l&#229;tar &#228;r ”Forgive me friend”, ”Year of the young” och ”Nangilima”.\r\n</p>\r\n<p>\r\nEfter en USA- och Europaturn&#233; 2021/2022 landar de i Sverige och kommer till V&#228;rmland och Uddeholmsladan. Vi &#229;terkommer med information om vilket f&#246;rband det kommer att bli.\r\n</p>\r\n<p>\r\nOm k&#246;ptrycket blir s&#229; stort som det verkar s&#229; kommer vi att f&#246;r f&#246;rsta g&#229;ngen arrangera en utomhuskonsert. Boka din biljett s&#229; att du inte missar &#229;rets event i ladan!\r\n</p>\r\n<p>\r\nServering: Matbaren och Uddeholmsbaren &#228;r &#246;ppna. B&#229;da barerna serverar &#246;l och vin. Uppst&#228;llningsplats av husbilar och husvagnar finns samt fri parkering.\r\n</p>\r\n<p>\r\nDatum: 16 juli 2022<br />\r\nTid: 20.00-01.00<br />\r\nEntr&#233;: 485 SEK + 20 SEK i serviceavgifter\r\n</p>\r\n<p>\r\nPS. Med reservation f&#246;r &#228;ndringar. Vi f&#246;ljer givetvis Folkh&#228;lsomyndighetens restriktioner avseende covid-19. Blir evenemanget inst&#228;llt p&#229; grund av corona eller av n&#229;gon annan orsak s&#229; &#229;terbetalas biljetten exklusive serviceavgifterna.\r\n</p>\r\n<p>\r\nFoto: Per Kristiansen<br />\r\nFotoredigering: P&#228;r Th&#246;rne Visa mindre\r\n</p>\r\n<p>\r\nV&#228;lkomna till Uddeholmsladan!\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/be/c26373e8dbab72a7e1e835a26124bf5399fe90",
+      "isCollectionEvent": false,
+      "tags": [
+        "Smith & Tell",
+        "Uddeholmsladan",
+        "Sveriges häftigaste lada",
+        "visitvarmland",
+        "visithagfors"
+      ],
+      "performers": [],
+      "links": [
+        {
+          "text": "Uddeholmsladans hemsida",
+          "uri": "https://www.uddeholmsladan.se/"
+        }
+      ],
+      "goods": [
+        {
+          "name": "Entré",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "485",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/b4/12a64c7421e0282476dd58686f2aba3ba70480",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "hek2lflt8hpjk08",
+      "organizerId": "4fxw38lbpc1f7gu",
+      "childEvents": []
+    },
+    {
+      "id": "xj8143n56lyaf2n",
+      "published": true,
+      "name": "58 meter upp med Linda Varg",
+      "start": "2022-07-16T20:00:00+02:00",
+      "end": "2022-07-16T22:00:00+02:00",
+      "lastUpdated": "2022-02-22T10:45:00+01:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T18:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/xj8143n56lyaf2n/2022-07-16/58-meter-upp-med-linda-varg",
+      "shopUri": "https://secure.tickster.com/xj8143n56lyaf2n",
+      "description": "<p>\r\n58 meter upp med Linda Varg\r\n</p>\r\n<p>\r\n&#197;rets allra mest mysiga, intima och exklusiva musik-upplevelse under bar himmel p&#229; Svampens magiska skybar! I 3 &#229;r har Svampens k&#246;rt artister ute p&#229; sin fantastiska skybar och vilken succ&#233; det har varit. Alla konserter har varit sluts&#229;lda p&#229; nolltid. Under &#229;ret v&#228;ntas ett 60-tal artister. \r\n</p>\r\n<p>\r\nInformation om Linda Varg: <br />\r\nLinda Varg slog igenom i platinas&#228;ljande supergruppen ”Supernatural”, och var en av de mest popul&#228;ra finalisterna i Idol. Hennes Idol-audition d&#228;r hon framf&#246;rde sin egen l&#229;t &quot;Keep going&quot; har 1,5 miljoner visningar. Lindas album ”Welcome To Bangville” debuterade p&#229; f&#246;rsta plats p&#229; iTunes Rock i Sverige, och efter det f&#246;ljde &#229;r av turn&#233;er i Sverige och &#228;ven Tyskland. Linda har nyligen signat med ett internationellt team (Amerikanskt publishing, Brittisk PR-byr&#229; och Italienskt management) och &#228;r p&#229; v&#228;g mot sitt internationella genombrott.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/4f/c23fe7cca73ef94074aab6119757f180e2654d",
+      "isCollectionEvent": false,
+      "tags": [
+        "Linda Varg",
+        "58 meter upp",
+        "Örebro",
+        "Svampen"
+      ],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Linda Varg",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "195",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/4d/9f0c10d451a333c6b2c1e3fd94cc8c27df0c35",
+            "large": null
+          }
+        }
+      ],
+      "venueId": "zn4rdy5ae2e0fvh",
+      "organizerId": "ac594w8xwyrkx0h",
+      "childEvents": []
+    },
+    {
+      "id": "23z7ktweg7rgnhc",
+      "published": true,
+      "name": "Jill Johnsson 16/7 på Skillinge Teater",
+      "start": "2022-07-16T20:00:00+02:00",
+      "end": "2022-07-16T22:00:00+02:00",
+      "lastUpdated": "2022-03-02T13:53:00+01:00",
+      "hierarchyType": "event",
+      "productionParentId": null,
+      "doorsOpen": "2022-07-16T20:00:00+02:00",
+      "infoUri": "https://www.tickster.com/sv/events/23z7ktweg7rgnhc/2022-07-16/jill-johnsson-16-7-pa-skillinge-teater",
+      "shopUri": "https://secure.tickster.com/23z7ktweg7rgnhc",
+      "description": "<p>\r\nJill Johnson &#228;r en av Sveriges mest &#228;lskade artister och har under &#229;ren satt countrymusiken och Nashville p&#229; den svenska musikkartan – bland annat genom sina m&#229;nga studioalbum, d&#228;r Jill har samarbetat med en m&#228;ngd av USA:s mest framst&#229;ende l&#229;tskrivare och artister inom genren, liksom med sina kritikerrosade och uts&#229;lda turn&#233;er. \r\n</p>\r\n<p>\r\nJill spelar p&#229; Skillinge Teaters nya sommarscen - en st&#246;rre utomhusarena dit du kan ta med dig egen picknickkorg eller klaffstol. Konserten ges annars f&#246;r st&#229;ende publik. \r\n</p>\r\n<p>\r\n&#214;verskottet fr&#229;n konserten g&#229;r oavkostat till vinterisoleringen av v&#229;r stora teaterscen.\r\n</p>\r\n<p>\r\nKomplettera dina biljetter med en avbokningsf&#246;rs&#228;kring. D&#229; ges hela biljettkostnaden &#229;ter vid ev of&#246;rutsedda avbokning av konserten.\r\n</p>",
+      "imageUrl": "https://dd16h7yl5aaam.cloudfront.net/f7/fb098afb6ed4d076ac6d1aa48e82d124060e75",
+      "isCollectionEvent": false,
+      "tags": [],
+      "performers": [],
+      "links": [],
+      "goods": [
+        {
+          "name": "Jill Johnsson 16/7 Vuxen",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "595",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/8f/ee4a7df6bb9032ea0973b433e6492b3dfc7a68",
+            "large": "http://static.tickster.com/1a/5c2d16aeb7aba5c9a2064b0421a669bb87b0c4"
+          }
+        },
+        {
+          "name": "Jill Johnsson 16/7 ungdom",
+          "type": "ticket",
+          "description": "",
+          "stockStatus": "InStock",
+          "price": {
+            "includingVat": "495",
+            "vatPercentage": "0.06",
+            "currency": "SEK",
+            "priceRegions": []
+          },
+          "images": {
+            "small": "http://static.tickster.com/8f/ee4a7df6bb9032ea0973b433e6492b3dfc7a68",
+            "large": "http://static.tickster.com/1a/5c2d16aeb7aba5c9a2064b0421a669bb87b0c4"
+          }
+        }
+      ],
+      "venueId": "mhbnfuptu1egu7d",
+      "organizerId": "u01ettg4p4adw42",
+      "childEvents": []
+    }
+  ]
+}
