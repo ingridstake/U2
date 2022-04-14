@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import EventList from './show_event';
+import JsonDataDisplay from './show_event';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <EventList />
+    <JsonDataDisplay />
   </React.StrictMode>,
   document.getElementById('root')
 );

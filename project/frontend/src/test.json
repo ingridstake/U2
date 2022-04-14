@@ -1,54 +1,61 @@
-{
-    "events": [
-        {
-            "id": 1,
-            "name": "Den stors påskäggsjakten",
-            "city": "Fjärås"
-        },
-        {
-            "id": 2,
-            "name": "KLUREDO - Lös en virtuell mordgåta i Mölndal",
-            "city": "Mölndal"
-        },
-        {
-            "id": 3,
-            "name": "Guidad slottsvisning",
-            "city": "Fjärås"
-        },
-        {
-            "id": 4,
-            "name": "Tasting - Ölprovning Saturday 16 Aprill 2022",
-            "city": "Göteborg"
-        },
-        {
-            "id": 5,
-            "name": "The Wine Mechanics Tasting - en urban vinprovning",
-            "city": "Göteborg"
-        },
-        {
-            "id": 6,
-            "name": "YaYa Men",
-            "city": "Göteborg"
-        },
-        {
-            "id": 7,
-            "name": "Dadi Freyr",
-            "city": "Göteborg"
-        },
-        {
-            "id": 8,
-            "name": "Bagageloppis Slottsskogen",
-            "city": "Göteborg"
-        },
-        {
-            "id": 9,
-            "name": "Semifinal Pixbo Wallenstam Damer",
-            "city": "Mölnlycke"
-        },
-        {
-            "id": 10,
-            "name": "FC Trollhåttan - Oskarshamn AIK",
-            "city": "Trollhättan"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "name": "Den stors påskäggsjakten",
+        "city": "Fjärås"
+    },
+
+    {
+        "id": 2,
+        "name": "KLUREDO - Lös en virtuell mordgåta i Mölndal",
+        "city": "Mölndal"
+    },
+
+    {
+        "id": 3,
+        "name": "Guidad slottsvisning",
+        "city": "Fjärås"
+    },
+
+    {
+        "id": 4,
+        "name": "Tasting - Ölprovning Saturday 16 Aprill 2022",
+        "city": "Göteborg"
+    },
+
+    {
+        "id": 5,
+        "name": "The Wine Mechanics Tasting - en urban vinprovning",
+        "city": "Göteborg"
+    },
+
+    {
+        "id": 6,
+        "name": "YaYa Men",
+        "city": "Göteborg"
+    },
+
+    {
+        "id": 7,
+        "name": "Dadi Freyr",
+        "city": "Göteborg"
+    },
+
+    {
+        "id": 8,
+        "name": "Bagageloppis Slottsskogen",
+        "city": "Göteborg"
+    },
+
+    {
+        "id": 9,
+        "name": "Semifinal Pixbo Wallenstam Damer",
+        "city": "Mölnlycke"
+    },
+    
+    {
+        "id": 10,
+        "name": "FC Trollhåttan - Oskarshamn AIK",
+        "city": "Trollhättan"
+    }
+]
