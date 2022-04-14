@@ -29,7 +29,7 @@ function JsonDataDisplay(){
  
     return(
         <>
-        <Table striped bordered hover>
+        <Table>
                 <thead>
                     <tr>
                     <th>Id</th>
