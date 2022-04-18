@@ -39,6 +39,11 @@ public class BackendApplication {
 	public JSONObject tenEventNames() {
 		return getTenEventNames();
 	}
+	@CrossOrigin
+	@GetMapping(path = "/ten_event_names_string")
+	public String tenEventNamesString() {
+		return getTenEventNames().toString();
+	}
 
 	private static String getData(){
 		try {
