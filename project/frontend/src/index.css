@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background: url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp) no-repeat 50%;
+  background-color: #0f828a;
 }
 
 code {

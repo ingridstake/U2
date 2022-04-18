@@ -1,19 +1,9 @@
 import React from "react";
-import test from "./test.json";
-import './show_events.css';
+import test from "../test.json";
+import './style/show_events.css';
 import Table from "react-bootstrap/Table";
 
-/*
-function EventList() {
-    const listItems = test.map((event) =>
-    <li>{event}</li>
-    );
-    return (
-        <ul>{listItems}</ul>
-    );
-}
-*/
-//hej!
+
 function JsonDataDisplay(){
     const DisplayData=test.map(
         (test)=>{

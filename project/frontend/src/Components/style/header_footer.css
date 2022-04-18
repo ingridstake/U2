@@ -1,0 +1,16 @@
+.header {
+    height: 80px;
+    width: auto;
+    background-color: white;
+    position: sticky;
+    padding-top: 0%;
+    top: 0;
+}
+
+.footer {
+    background-color: #243846;
+    width: fill;
+    height: 200px;
+    position: fixed;
+    bottom: 0px;
+}

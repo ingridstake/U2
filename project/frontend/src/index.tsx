@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import JsonDataDisplay from './show_event';
+import JsonDataDisplay from './Components/show_event';
+import Header from './Components/header';
+import Footer from './Components/footer';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    
     <JsonDataDisplay />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
