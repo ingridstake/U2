@@ -17,6 +17,14 @@ public class BackendApplication {
 
 	public static void main(String[] args) {
 		APIDump = APIDataService.getData();
+		JSONObject tenEventNames = null;
+		try {
+			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
+			var hej= Basics.getTenEvents(events);
+			int i = 1;
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
 
 		SpringApplication.run(BackendApplication.class, args);
 	}
@@ -51,5 +59,31 @@ public class BackendApplication {
 			e.printStackTrace();
 		}
 		return tenEventNames.toString();
+	}
+
+	@CrossOrigin
+	@GetMapping(path = "/ten_events_string")
+	public String tenEventsString() {
+		JSONObject tenEvents = null;
+		try {
+			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
+			tenEvents = Basics.getTenEvents(events);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return tenEvents.toString();
+	}
+
+	@CrossOrigin
+	@GetMapping(path = "/ten_events")
+	public JSONObject tenEvents() {
+		JSONObject tenEvents = null;
+		try {
+			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
+			tenEvents = Basics.getTenEvents(events);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return tenEvents;
 	}
 }

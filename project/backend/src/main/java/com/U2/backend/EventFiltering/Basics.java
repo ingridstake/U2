@@ -20,4 +20,27 @@ public class Basics {
         }
         return  null;
     }
+
+    public static JSONObject getTenEvents(JSONArray events){
+        try {
+            var eventObject = new JSONObject();
+            var eventArray = new org.json.JSONArray();
+            for (int i = 0; i < 100; i++) {
+                var temp = new JSONObject();
+                temp.put("name", ((JSONObject)events.get(i)).get("name"));
+                temp.put("id", i+1);
+                if (((JSONObject)events.get(i)).has("venue")){
+                    temp.put("location",((JSONObject)((JSONObject)events.get(i)).get("venue")).get("city").toString());
+                } else {
+                    temp.put("location", "no city");
+                }
+                eventArray.put(temp);
+            }
+            eventObject.put("events", eventArray);
+            return eventObject;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return  null;
+    }
 }
