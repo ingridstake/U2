@@ -1,4 +1,5 @@
 body {
+  height: max-content;
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,8 +7,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background: url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp) no-repeat 50%;
+  background-image: url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: -20px;
   background-color: #0f828a;
+  /*min-height: 66.66vh;*/
+
 }
 
 code {

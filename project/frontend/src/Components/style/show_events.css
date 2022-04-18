@@ -5,6 +5,10 @@
 th {
   width: auto;
   background-color: turquoise;
+  padding: 2px;
+}
+td {
+  padding: 10px 7px;
 }
 
 table, th, td {
@@ -13,11 +17,15 @@ table, th, td {
   border-width: 1px;
   border-collapse: collapse;
   overflow: auto;
-  margin: auto;
-}
+  margin: 50px auto 50px auto;
+  font-size: 20px;
+  }
 
 tr:nth-child(even){
   background-color: lightgray;
+}
+tr:nth-child(odd){
+  background-color: white;
 }
 
 tr:hover {background-color: turquoise;}

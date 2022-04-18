@@ -5,7 +5,7 @@ import './style/header_footer.css';
 function Footer() {
     return (
         <>
-        <Navbar className="footer" >
+        <Navbar className="footer">
           
         </Navbar>
         </>
