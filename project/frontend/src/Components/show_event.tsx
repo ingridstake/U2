@@ -4,11 +4,11 @@ import './style/show_events.css';
 import Table from "react-bootstrap/Table";
 
 
-function JsonDataDisplay(){
+function JsonDataDisplay() {
     const DisplayData=test.map(
         (test)=>{
             return(
-                <tr>
+                <tr key={test.id}>
                     <td>{test.id}</td>
                     <td>{test.name}</td>
                     <td>{test.city}</td>
@@ -19,7 +19,7 @@ function JsonDataDisplay(){
  
     return(
         <>
-        <Table >
+            <Table >
                 <thead>
                     <tr>
                     <th>Id</th>
@@ -28,12 +28,9 @@ function JsonDataDisplay(){
                     </tr>
                 </thead>
                 <tbody>
-                 
                     {DisplayData}
-                    
                 </tbody>
-        </Table> 
-        
+            </Table>
         </>
     );
  }

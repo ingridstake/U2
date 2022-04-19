@@ -14,13 +14,9 @@ function Greeting_text() {
             <br />
             Vad är du intresserad av?
             </h1>
-
         </div>
-       
     </>
-
     )
-    
 }
 
 export default Greeting_text;
