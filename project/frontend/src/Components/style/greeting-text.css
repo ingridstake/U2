@@ -15,5 +15,6 @@ h1 {
     background-repeat: no-repeat;
     height: 50vh;
     background-size: cover;
+    background-position-y: -200px;
     display: grid;
 }
