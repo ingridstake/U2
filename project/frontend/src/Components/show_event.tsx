@@ -1,5 +1,5 @@
 import React from "react";
-import test from "../test.json";
+import test from "../Resources/test.json";
 import './style/show_events.css';
 import Table from "react-bootstrap/Table";
 
