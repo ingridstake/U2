@@ -19,7 +19,7 @@ function JsonDataDisplay(){
  
     return(
         <>
-        <Table>
+        <Table >
                 <thead>
                     <tr>
                     <th>Id</th>
@@ -37,5 +37,6 @@ function JsonDataDisplay(){
         </>
     );
  }
+
 
 export default JsonDataDisplay;
