@@ -7,11 +7,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-image: url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp);
+  /*background-image: url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp);
   background-repeat: no-repeat;
   background-size: contain;
+  
   background-position-y: -20px;
+  
   background-color: #0f828a;
+  */
   /*min-height: 66.66vh;*/
 
 }

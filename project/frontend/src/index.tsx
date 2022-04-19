@@ -5,11 +5,12 @@ import JsonDataDisplay from './Components/show_event';
 import Header from './Components/header';
 import Footer from './Components/footer';
 import reportWebVitals from './reportWebVitals';
+import Greeting_text from './Components/greeting-text'
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    
+    <Greeting_text />
     <JsonDataDisplay />
     <Footer />
   </React.StrictMode>,
