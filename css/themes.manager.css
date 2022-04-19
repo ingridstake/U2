@@ -1,0 +1,95 @@
+.t-manager {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .t-manager {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .t-manager {
+        font-size: 16px;
+    }
+}
+
+.t-manager .o-grid--narrow {
+    max-width: 720px;
+}
+
+.t-manager .c-table__body th th,
+.t-manager .c-table__body td th,
+.t-manager .c-table__body th td,
+.t-manager .c-table__body td td {
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.t-manager .c-pill--bordered {
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: 2px;
+}
+
+.t-manager .tag-list.o-cropped {
+    margin: 0;
+    padding-left: 0;
+    background: none;
+}
+
+.t-manager button.c-pill {
+    margin: 2px 2px 2px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.t-manager button.c-pill.not-in-filter {
+    opacity: 0.4;
+}
+
+.t-manager button.c-pill.not-in-filter:hover {
+    opacity: 0.8;
+}
+
+.t-manager .c-tile__title + .c-pill {
+    margin-left: 1em;
+}
+
+.t-manager .c-switch:not(:hover) .c-switch__state,
+.t-manager .c-switch:not(:hover) .c-switch__button::before {
+    transition: none;
+}
+
+.t-manager table input.is-updated {
+    box-shadow: 0px 0px 0px 2px #ffb71b;
+}
+
+.t-manager table input:invalid {
+    box-shadow: 0px 0px 0px 2px #d6334c;
+}
+
+.t-manager table tr.is-updated > th:first-child {
+    border-left: 0.4rem solid #ffd72e;
+    padding-left: 0.3rem;
+}
+
+.t-manager table span.is-updated .c-switch__state {
+    background: #ffd72e;
+}
+
+.t-manager .c-table__head th span {
+    cursor: pointer;
+}
+
+.t-manager .sorted-asc {
+    border-bottom: #485c6a solid 3px;
+}
+
+.t-manager .sorted-desc {
+    border-top: #485c6a solid 3px;
+}
+
+.t-manager .c-table--sticky .wide {
+    min-width: 20rem;
+}

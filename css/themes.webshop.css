@@ -1,0 +1,1048 @@
+/* Logo sizes */
+.t-webshop #header .small,
+.t-webshop #header .medium,
+.t-webshop #header .large {
+    padding-top: 4vm; /* IE 9 support */
+    padding-bottom: 4vm; /* IE 9 support */
+    padding-top: 4vmin;
+    padding-bottom: 4vmin;
+}
+
+.t-webshop #header .auto {
+    padding: 0;
+}
+
+.t-webshop #header .small img {
+    max-height: 40px;
+}
+
+.t-webshop #header .medium img {
+    max-height: 50px;
+}
+
+.t-webshop #header .large img {
+    max-height: 100px;
+}
+
+.t-webshop #header .auto img {
+    max-width: 100%;
+    max-height: none;
+}
+
+@media screen and (min-width: 768px) {
+    .t-webshop #header .small img {
+        max-height: 80px;
+    }
+
+    .t-webshop #header .medium img {
+        max-height: 100px;
+    }
+
+    .t-webshop #header .large img {
+        max-height: 200px;
+    }
+}
+
+@media screen and (min-width: 976px) {
+    .t-webshop #header .auto img {
+        max-width: calc(920px + 4vw);
+    }
+}
+
+/* Page specifics: */
+.t-webshop .c-article__body {
+    max-width: none;
+}
+
+.t-webshop .c-article__body.truncated {
+    position: relative;
+    height: 5.5em;
+    max-height: 60vh;
+    overflow: hidden;
+}
+
+.t-webshop .c-article__body .btn-show-truncated-text {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 4em);
+    width: 8em;
+    z-index: 1;
+}
+
+.t-webshop .c-article__body.truncated .btn-show-truncated-text {
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+.t-webshop .c-article__body.truncated::after {
+    content: '';
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.t-webshop .c-pill {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.t-webshop .u-float--right {
+    float: right;
+    clear: right;
+}
+
+.t-webshop .c-list--inline .u-float--right {
+    padding-right: 0;
+}
+
+.t-webshop td > .c-form-control {
+    padding-top: 2px;
+}
+
+.t-webshop #datepickerWrapper {
+    margin: 30px auto 20px;
+}
+
+.t-webshop #datepickerWrapper .c-button {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.t-webshop #datepickerWrapper input {
+    left: 50%;
+}
+
+/* Support pages */
+.t-webshop #GXStepSupport h1 {
+    margin-top: 0;
+}
+
+/* Select event, Season cards and Products */
+.t-webshop #CreditPointsInformation .u-font--largest,
+.t-webshop #ArticlePoolInformation .u-font--largest {
+    font-size: 6rem;
+}
+
+.t-webshop #SelectProductGroup #DocumentContent > .o-grid {
+    width: calc(100% + 0.5rem);
+    max-width: calc(100% + 0.5rem);
+    margin: 0 -0.25rem;
+}
+
+.t-webshop .product-type .c-card__image img {
+    width: 100%;
+}
+
+.t-webshop #SelectProductGroup .c-card__foot {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.t-webshop td:empty {
+    display: none;
+    padding: 0;
+}
+
+.t-webshop #SelectEventTable + .c-pager {
+    margin-bottom: 1.5rem;
+}
+
+.t-webshop #SelectEvent tr.c-tile {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.t-webshop #SelectEvent td.c-tile__head {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.t-webshop #SelectEvent .event-information-wrapper {
+    width: 100%;
+}
+
+.t-webshop .VariantTypeCell.c-tile__head .c-form-control {
+    min-width: 230px;
+}
+
+.t-webshop #GXStepProducts td.c-tile__head {
+    padding-right: 1em;
+}
+
+@media screen and (min-width: 768px) {
+    .t-webshop td:first-child:empty {
+        display: table-cell;
+        width: 104px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .t-webshop #checkoutCart .DistributionMethodLegendExt {
+        margin-bottom: -6px;
+    }
+}
+
+.t-webshop .POSTableRow:not(.POSVariantRow),
+.t-webshop .POSTableRow:not(.POSVariantRow) {
+    position: relative;
+}
+
+.t-webshop tr + .POSVariantRow,
+.t-webshop tr + .POSVariantChildRow {
+    margin-top: -1rem;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    box-shadow: inset 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+}
+
+.t-webshop tr.POSVariantRow,
+.t-webshop tr.POSVariantChildRow {
+    border-radius: 0;
+    margin-bottom: 8px;
+    box-shadow: none;
+}
+
+.t-webshop tr.POSVariantChildRow {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.t-webshop tr.c-tile {
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row wrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.t-webshop td.c-tile__head {
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 10em;
+}
+
+.t-webshop .ImageHeaderCell,
+.t-webshop .ImageCell {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.t-webshop td.event-campaigns {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.t-webshop td.event-buy {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    text-align: right;
+}
+
+.t-webshop td.event-buy .c-pill {
+    margin-top: 5px;
+}
+
+.t-webshop .QuantityCell {
+    max-width: 120px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}
+
+.t-webshop tr:not(.c-tile):not(.c-table__row) th,
+.t-webshop tr:not(.c-tile):not(.c-table__row) td {
+    padding: 1rem;
+}
+
+.t-webshop td.c-tile__image {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-bottom: 6px;
+}
+
+.t-webshop td.event-date {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    min-width: 8em;
+    font-weight: 600;
+}
+
+.t-webshop td span.event-date {
+    opacity: 0.7;
+}
+
+.t-webshop td.event-date .time {
+    display: block;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 569px) {
+    .t-webshop td.event-date .weekday {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+}
+
+.t-webshop .PriceCell,
+.t-webshop .StockLevelCell {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+    padding-right: 1rem;
+}
+
+@media screen and (max-width: 575.98px) {
+    .t-webshop .ImageHeaderCell,
+    .t-webshop .ImageCell {
+        width: 64px;
+    }
+
+    .t-webshop .c-avatar--large {
+        max-width: 44px;
+        max-height: 44px;
+    }
+
+    .t-webshop .c-thumb--large {
+        max-width: 74px;
+        max-height: 44px;
+    }
+
+    .t-webshop .c-thumb--square.c-thumb--large {
+        max-width: 44px;
+    }
+}
+
+.t-webshop #FormWrapper {
+    padding-bottom: 0;
+}
+
+.t-webshop #ShoppingCart * {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.t-webshop #ShoppingCart .c-button {
+    position: relative;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.t-webshop #ShoppingCart .quantity,
+.t-webshop #ShoppingCart .sum {
+    padding-left: 4px;
+}
+
+.t-webshop td span.mobile-only {
+    display: block;
+    opacity: 0.7;
+}
+
+.t-webshop .has-sticky-stepnavigation #StepNavigation {
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 64px;
+    margin: 1rem -2vw 0;
+    z-index: 2;
+    padding: 0.8rem 2vw;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 -3px 25px rgba(0, 0, 0, 0.12);
+}
+
+.t-webshop #StepNavigationList {
+    width: 100%;
+    margin-left: 0;
+    list-style: none;
+}
+
+.t-webshop .has-sticky-stepnavigation #StepNavigationList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.t-webshop #StepNavigationListItemNext,
+.t-webshop #StepNavigationListItemCheckout {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-left: auto;
+    z-index: 1;
+}
+
+.t-webshop #ShoppingCart {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.t-webshop .StepNavigationListItem {
+    position: relative;
+}
+
+.bump {
+    -webkit-animation: bump 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1;
+    animation: bump 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1;
+}
+
+.bump::before {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    background: #0069a6;
+    display: block;
+    content: "";
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: ping 0.8s ease-in-out forwards 1;
+    animation: ping 0.8s ease-in-out forwards 1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@-webkit-keyframes bump {
+    0% {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0px, var(--y), 0px);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+@keyframes bump {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    75% {
+        transform: translate3d(0px, var(--y), 0px);
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes ping {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+        opacity: 0.8;
+    }
+
+    80% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(2.2);
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+@keyframes ping {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+        opacity: 0.8;
+    }
+
+    80% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(2.2);
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+/* Table reservation */
+@media screen and (max-width: 575.98px) {
+    .t-webshop #GXStepTableReservation .gfs-wrapper {
+        overflow: hidden;
+    }
+}
+
+.t-webshop #GXStepTableReservation .c-tile__head {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}
+
+.t-webshop #GXStepTableReservation .c-tile > .DocumentMessage {
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 0.6rem 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #fff;
+    font-size: 0.85rem;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.t-webshop #GXStepTableReservation .c-tile > .ErrorMessage {
+    background: #ffec99;
+}
+
+.t-webshop #GXStepTableReservation .sold-out > .c-card__body:last-child,
+.t-webshop #GXStepTableReservation .disabled > .c-card__body:last-child {
+    opacity: 0.5;
+}
+
+.t-webshop #GXStepTableReservation .sold-out .button,
+.t-webshop #GXStepTableReservation .disabled .button {
+    font-style: italic;
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.t-webshop #GXStepTableReservation .ticket-row .c-tile__head {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row wrap;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.t-webshop #GXStepTableReservation .ticket-row .c-tile__title {
+    width: 100%;
+}
+
+.t-webshop #GXStepTableReservation .ticket-row .c-tile__foot {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.t-webshop #GXStepTableReservation .estimated-total-price.c-box {
+    margin-top: -1rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.t-webshop .c-box--small small {
+    font-size: inherit;
+}
+
+.t-webshop #StepNavigation .c-card {
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 575.98px) {
+    .t-webshop .c-card__body--has-tabs {
+        padding: 0.4rem;
+    }
+
+    .t-webshop .c-card .o-cropped {
+        -webkit-align-self: normal;
+        -ms-flex-item-align: normal;
+        align-self: normal;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .t-webshop .c-card .o-cropped {
+        overflow: visible;
+    }
+
+    .t-webshop #GXStepTableReservation #ctl00_mainContent_Step1 {
+        position: relative;
+    }
+
+    .t-webshop #GXStepTableReservation .gfs-wrapper .c-form-control--group {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+    }
+
+    .t-webshop #GXStepTableReservation .gfs-wrapper .c-label-button {
+        width: 21%;
+    }
+
+    .t-webshop #GXStepTableReservation .step-one-gfs-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.t-webshop #GXStepTableReservation tr.c-tile {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+/* Checkout */
+.t-webshop #CheckoutTable th,
+.t-webshop #CheckoutTable td {
+    padding: 0.5rem 0.15rem;
+}
+
+.t-webshop #CheckoutTable .POSTableRow {
+    vertical-align: middle;
+}
+
+.t-webshop #CheckoutTable .QuantityHeaderCell,
+.t-webshop #CheckoutTable .QuantityCell {
+    max-width: 170px;
+    padding-right: 40px;
+}
+
+.t-webshop .original-price {
+    font-weight: normal;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.t-webshop .POSTableFooterRow {
+    margin-top: -1px;
+    border-top: 2px solid;
+    padding: 2px 0 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    vertical-align: bottom;
+}
+
+.t-webshop #GXStepOnePageCheckout .ChildRow .NameCell {
+    padding-left: 2em;
+}
+
+.t-webshop .POSTableFooterRow td {
+    border-top: none;
+}
+
+.t-webshop .RowTotalSumCell {
+    line-height: 1.2;
+    text-indent: 0.6ex;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 575.98px) {
+    .t-webshop #CheckoutTable,
+    .t-webshop #ReceiptTable {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .t-webshop #CheckoutTable .c-table__row,
+    .t-webshop #ReceiptTable .c-table__row {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .t-webshop #CheckoutTable .c-table__row td,
+    .t-webshop #ReceiptTable .c-table__row td {
+        border-top: none;
+    }
+
+    .t-webshop #checkoutCart .c-form-control.c-form-control--inline {
+        padding-right: 0;
+    }
+
+    .t-webshop #CheckoutTable .RowTotalSumCell,
+    .t-webshop #ReceiptTable .RowTotalSumCell {
+        width: 100%;
+    }
+
+    .t-webshop .c-box .c-tabs {
+        margin: 0 -15px;
+        text-align: center;
+    }
+
+    .t-webshop .c-box .c-tabs__tab {
+        font-size: 0.7rem;
+    }
+}
+
+.t-webshop #GXStepOnePageCheckout dd + dt {
+    margin-top: 1em;
+}
+
+/* TEMP CSS (remove when new Thank you page is deployed */
+.t-webshop .UnitPriceHeaderCell,
+.t-webshop .RowVATPortionHeaderCell,
+.t-webshop .RowTotalHeaderCell,
+.t-webshop .UnitPriceCell,
+.t-webshop .VATPortionCell,
+.t-webshop .RowTotalCell,
+.t-webshop .VATTotalSumCell,
+.t-webshop .DiscountTotalSumCell,
+.t-webshop .FreightVATTotalSumCell,
+.t-webshop .FreightTotalSumCell,
+.t-webshop .RowTotalVatSumCell,
+.t-webshop .RowTotalSumCell {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.t-webshop .DiscountTotalSumCell,
+.t-webshop .FreightTotalSumCell,
+.t-webshop .RowTotalCell {
+    font-weight: 500;
+    font-size: 1.2333rem; /* --font-size-l */
+    line-height: 1.1;
+}
+
+.t-webshop #GXStepOnePageCheckout .c-table__row .NameCell,
+.t-webshop #GXStepReceipt .c-table__row .NameCell {
+    font-weight: 500;
+    word-break: break-all;
+    word-break: break-word;
+    font-size: 1rem;
+}
+
+.t-webshop #GXStepOnePageCheckout .POSTableDiscountRow td,
+.t-webshop #GXStepReceipt .POSTableDiscountRow td {
+    width: 100%;
+}
+
+.t-webshop #GXStepOnePageCheckout .POSTableDiscountRow td,
+.t-webshop #GXStepReceipt .POSTableDiscountRow td,
+.t-webshop #GXStepOnePageCheckout .paymentmethod td {
+    border-top: none;
+}
+
+@media screen and (max-width: 767.98px) {
+    .t-webshop #CheckoutTable tr.c-table__row:first-child td {
+        border-top: none;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .t-webshop #GXStepOnePageCheckout .c-table__body,
+    .t-webshop #GXStepReceipt .c-table__body {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+
+    .t-webshop #GXStepOnePageCheckout .c-table__row .RowTotalCell,
+    .t-webshop #GXStepReceipt .c-table__row .RowTotalCell {
+        width: 100%;
+        border-bottom: 1px dashed;
+    }
+
+    .t-webshop #GXStepOnePageCheckout .NameCell,
+    .t-webshop #GXStepReceipt .NameCell {
+        width: 100%;
+    }
+}
+
+.t-webshop #GXStepOnePageCheckout .NameCell .event-desc,
+.t-webshop #GXStepReceipt .NameCell .event-desc {
+    margin: 0.7em 0 0.3em;
+}
+
+.t-webshop #GXStepOnePageCheckout .NameCell strong,
+.t-webshop #GXStepReceipt .NameCell strong {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 1.1;
+}
+
+.t-webshop #GXStepOnePageCheckout .c-plus-minus .c-button.remove {
+    margin: 0 calc(-1em - 24px) 0 4px;
+    padding: 8px;
+}
+
+.t-webshop #GXStepOnePageCheckout .c-plus-minus .c-button.remove:empty::before {
+    display: inline-block;
+    content: '✕';
+    vertical-align: text-bottom;
+}
+
+.t-webshop #GXStepOnePageCheckout #btnDiscountCode {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.t-webshop #GXStepOnePageCheckout dt,
+.t-webshop #GXStepOnePageCheckout dd {
+    margin-left: 0;
+}
+
+.t-webshop #GXStepOnePageCheckout dt.c-toggle {
+    display: table-cell;
+    font-weight: bold;
+}
+
+.t-webshop #GXStepOnePageCheckout .o-grid td {
+    padding: 0;
+}
+
+.t-webshop #GXStepOnePageCheckout td[colspan="2"] {
+    margin: -15px 0 0;
+}
+
+.t-webshop #GXStepOnePageCheckout #ctl00_mainContent_TPURowLookupBtn {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding-bottom: 0.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .t-webshop #GXStepOnePageCheckout #ctl00_mainContent_TPURowSSN:not(.u-hidden) + tr.u-hidden {
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+}
+
+.t-webshop #GXStepOnePageCheckout #PurchaserInformationTable {
+    margin-bottom: 0;
+}
+
+.t-webshop #GXStepOnePageCheckout #PurchaserInformationTableWrapper {
+    margin: 0 -0.5rem;
+}
+
+.t-webshop #GXStepOnePageCheckout .intl-tel-input {
+    width: 100%;
+}
+
+.t-webshop #GXStepOnePageCheckout .paymentmethod {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0.25em;
+}
+
+.t-webshop #GXStepOnePageCheckout .paymentmethod label.hidden {
+    margin-top: -22px;
+}
+
+.t-webshop #GXStepOnePageCheckout .paymentMethodRadioCell,
+.t-webshop #GXStepOnePageCheckout .paymentMethodInfoCell {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.t-webshop #GXStepOnePageCheckout #emailSuggestionLink {
+    padding: 3px 12px;
+    background: #ffec99;
+}
+
+.t-webshop #GXStepOnePageCheckout .u-text--center .c-button--primary {
+    min-width: 240px;
+    margin: 1em 0;
+}
+
+@media screen and (min-width: 768px) {
+    .t-webshop #GXStepOnePageCheckout .col-left.o-grid__col-sm-6.c-box {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .t-webshop #GXStepOnePageCheckout .col-right.o-grid__col-sm-6.c-box {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.t-webshop #GXStepOnePageCheckout .c-list .comment-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    border-bottom: 1px dashed #ececec;
+}
+
+.t-webshop #GXStepOnePageCheckout .comment-wrapper .c-button {
+    margin: 6px 0 0;
+}
+
+/* Payment card logos */
+.t-webshop #GXStepOnePageCheckout .cardrow {
+    position: relative;
+}
+
+.t-webshop #GXStepOnePageCheckout .paymentlogowrapper {
+    padding: 5px 0 5px 10px;
+}
+
+.t-webshop #cardNumberAddon {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 47px;
+    height: 36px;
+    background-image: url('https://d2achxtbi7ezvk.cloudfront.net/images/creditcards.png');
+    background-repeat: no-repeat;
+    background-position: 0 0; /* move every icon by "-53px 0" */
+    background-size: 950px auto;
+}
+
+.t-webshop #GXStepOnePageCheckout .visa_electron {
+    background-position: -53px 0;
+}
+
+.t-webshop #GXStepOnePageCheckout .visa {
+    background-position: -106px 0;
+}
+
+.t-webshop #GXStepOnePageCheckout .mastercard {
+    background-position: -371px 0;
+}
+
+.t-webshop #GXStepOnePageCheckout .maestro {
+    background-position: -424px 0;
+}
+
+.t-webshop #GXStepOnePageCheckout .discover {
+    background-position: -530px 0;
+}
+
+.t-webshop #GXStepOnePageCheckout .valid::after {
+    position: absolute;
+    top: 19px;
+    left: 31px;
+    display: block;
+    content: '✔️';
+}
+
+.t-webshop .u-text--pencil {
+    padding-left: 2em;
+    white-space: nowrap;
+}
+
+.t-webshop .u-text--pencil::before {
+    content: '✏️';
+    position: absolute;
+    margin-top: 2px;
+    font-size: 1.05em;
+    text-indent: -1.5em;
+}
+
+/* IE fixes */
+@media only screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    .t-webshop .c-section--twothirds {
+        height: auto;
+    }
+
+    .t-webshop tr.c-tile {
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .t-webshop #PurchaserInformationTable,
+    .t-webshop #GXStepOnePageCheckout .o-grid td {
+        display: block;
+    }
+}
+
+.t-webshop .cancel-wrapper {
+    margin: 1rem 0;
+}
+
+.t-webshop .cancel-wrapper .c-button--negative {
+    color: #fff;
+    background: #d6334c;
+    border: 1px solid;
+}
