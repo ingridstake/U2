@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import './style/header_footer.css';
-import tickster_logo from './img/logo_tickster_color.svg';
+import ticksterLogo from '../Resources/img/logo_tickster_color.svg';
 
 function Header() {
     return (
@@ -10,7 +10,7 @@ function Header() {
         <Navbar className="header" >
           <Container>
             <Navbar.Brand href="#Home">
-                <img src={tickster_logo}  />
+                <img alt="Tickster logo" src={ticksterLogo}/>
             </Navbar.Brand>
           </Container>
         </Navbar>

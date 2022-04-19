@@ -5,14 +5,14 @@ import JsonDataDisplay from './Components/show_event';
 import Header from './Components/header';
 import Footer from './Components/footer';
 import reportWebVitals from './reportWebVitals';
-import Greeting_text from './Components/greeting-text'
+import GreetingText from './Components/greeting-text'
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(<>
-  <Header />
-  <Greeting_text />
-  <JsonDataDisplay />
-  <Footer />
+  <Header/>
+  <GreetingText/>
+  <JsonDataDisplay/>
+  <Footer/>
 </>);
 
 // If you want to start measuring performance in your app, pass a function
