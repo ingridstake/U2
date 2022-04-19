@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-const options = {
-  //look att http methods if u dont understand this
-  method: "GET",
-  //look up cors
-  mode: "cors" as RequestMode,
-};
-function App() {
-  const [greeting, setGreeting] = useState("Loading")
-  useEffect(() => {
-    //use something like axios instead
-    fetch('http://127.0.0.1:8080/hello?myName=U2', options).then(async res => await res.text()).then(text => setGreeting(text))
+import React from 'react';
+import Footer from './Components/footer';
+import GreetingText from './Components/greeting-text';
+import Header from './Components/header';
+import JsonDataDisplay from './Components/show_event';
 
-  },[])
+export default function App() {
   return (
     <>
-    <p>{greeting}</p>
+      <Header />
+      <GreetingText />
+      <JsonDataDisplay />
+      <Footer />
     </>
   );
 }
 
-export default App;
