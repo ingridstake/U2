@@ -21,21 +21,22 @@ public class Basics {
         return  null;
     }
 
-    public static JSONObject getTenEvents(JSONArray events){
+    public static JSONObject getTenEvents(JSONArray events, JSONArray venues){
         try {
             var eventObject = new JSONObject();
             var eventArray = new org.json.JSONArray();
+            var venueService = ServiceFactory.CreateVenueSearchService(venues);
+
             for (int i = 0; i < 100; i++) {
                 var temp = new JSONObject();
                 temp.put("name", ((JSONObject)events.get(i)).get("name"));
                 temp.put("id", i+1);
-                if (((JSONObject)events.get(i)).has("venue")){
-                    temp.put("location",((JSONObject)((JSONObject)events.get(i)).get("venue")).get("city").toString());
-                } else {
-                    temp.put("location", "no city");
-                }
+
+                var venueId= ((JSONObject)events.get(i)).get("venueId").toString();
+                temp.put("city", venueService.getVenueCity(venueId));
                 eventArray.put(temp);
             }
+
             eventObject.put("events", eventArray);
             return eventObject;
         } catch (JSONException e) {
