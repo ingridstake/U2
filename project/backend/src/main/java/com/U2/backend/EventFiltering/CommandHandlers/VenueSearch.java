@@ -25,7 +25,6 @@ public class VenueSearch implements IVenueSearch {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         return null;
     }
 

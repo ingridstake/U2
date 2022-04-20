@@ -17,16 +17,7 @@ public class BackendApplication {
 
 	public static void main(String[] args) {
 		APIDump = APIDataService.getData();
-		/*
-		JSONObject tenEventNames = null;
-		try {
-			var venues = (JSONArray)(new JSONObject(APIDump)).get("venues");
-			var str = Basics.getVenueName("cz7kd22tt48lhpk", venues);
-			int i = 1;
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-*/
+
 		SpringApplication.run(BackendApplication.class, args);
 	}
 
