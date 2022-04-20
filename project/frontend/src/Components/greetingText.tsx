@@ -1,8 +1,8 @@
 import React from "react";
-import './style/greeting-text.css';
+import './style/greetingText.css';
 
 
-function Greeting_text() {
+function GreetingText() {
     return (
     <>
         <div className="text">
@@ -18,4 +18,4 @@ function Greeting_text() {
     )
 }
 
-export default Greeting_text;
+export default GreetingText;

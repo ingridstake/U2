@@ -1,6 +1,6 @@
 import React from "react";
 import test from "../Resources/test.json";
-import './style/show_events.css';
+import './style/showEvents.css';
 import Table from "react-bootstrap/Table";
 
 
