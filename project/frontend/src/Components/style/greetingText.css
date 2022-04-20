@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+    vertical-align: auto;
+    font-size:xx-large;
+    color: white;
+    font-weight: 300;
+    vertical-align: middle;
+    margin-top: 0;
+    user-select: none;
+    align-self: center;
+}
+
+.text {
+    background-image: url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp);
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: cover;
+    background-position-y: -200px;
+    display: grid;
+}

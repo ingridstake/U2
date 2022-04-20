@@ -1,0 +1,32 @@
+.show_event {
+    background-color: #0f828a;
+  }
+
+th {
+  width: auto;
+  background-color: turquoise;
+  padding: 2px;
+}
+td {
+  padding: 10px 7px;
+}
+
+table, th, td {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-width: 1px;
+  border-collapse: collapse;
+  overflow: auto;
+  margin: 50px auto 50px auto;
+  font-size: 20px;
+  }
+
+tr:nth-child(even){
+  background-color: lightgray;
+}
+
+tr:nth-child(odd){
+  background-color: white;
+}
+
+tr:hover {background-color: turquoise;}
