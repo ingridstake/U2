@@ -1,7 +1,6 @@
 import React from "react";
 import './style/greetingText.css';
 
-
 function GreetingText() {
     return (
     <>

@@ -3,7 +3,6 @@ import test from "../Resources/test.json";
 import './style/showEvents.css';
 import Table from "react-bootstrap/Table";
 
-
 function JsonDataDisplay() {
     const DisplayData=test.map(
         (test)=>{
@@ -34,6 +33,5 @@ function JsonDataDisplay() {
         </>
     );
  }
-
 
 export default JsonDataDisplay;
