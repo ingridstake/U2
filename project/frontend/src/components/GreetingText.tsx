@@ -1,5 +1,5 @@
 import React from "react";
-import './style/greetingText.css';
+import '../styles/greetingText.css';
 
 function GreetingText() {
     return (

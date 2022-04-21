@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
-import './style/headerFooter.css';
-import ticksterLogo from '../Resources/img/logo_tickster_color.svg';
+import '../styles/headerFooter.css';
+import ticksterLogo from '../resources/images/logo_tickster_color.svg';
 
 function Header() {
     return (

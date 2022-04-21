@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from './Components/footer';
-import GreetingText from './Components/greetingText';
-import Header from './Components/header';
-import JsonDataDisplay from './Components/showEvents';
+import Footer from './components/Footer';
+import GreetingText from './components/GreetingText';
+import Header from './components/Header';
+import JsonDataDisplay from './components/ShowEvents';
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import test from "../Resources/test.json";
-import './style/showEvents.css';
+import test from "../resources/test.json";
+import '../styles/showEvents.css';
 import Table from "react-bootstrap/Table";
 
 function JsonDataDisplay() {
