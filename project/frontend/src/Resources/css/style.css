@@ -1,0 +1,117 @@
+﻿ body {
+    background: #FFF;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.2;
+    margin: 0 20px;
+}
+
+.gxRefNo { font-weight: bold; }
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    margin: 0;
+    padding: 15px 0 5px 0;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+h2
+{
+    font-size: 1.3em;
+}
+
+h2.faq,
+h3
+{
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+h2.faq,
+h3.faq
+{
+    border-bottom: 3px solid #000;
+    margin-bottom: 10px;
+}
+
+h4
+{
+    font-size: 1em;
+    line-height: 1em;
+}
+
+dt
+{
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-style: italic;
+    font-weight: bold;
+}
+dd
+{
+    margin: 0;
+    padding: 0 0 20px 20px;
+}
+
+ #GXStepSupport #DocumentWrapper {
+     max-width: 640px;
+     margin: 0 auto;
+ }
+
+#DocumentContent p, #DocumentContent li
+{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#DocumentContent a
+{
+    color: #000;
+    font-weight: bold;
+}
+
+#DocumentContent a:hover
+{
+    text-decoration: none;
+}
+
+#DocumentHeader
+{
+    border-bottom: 3px solid #000;
+}
+
+#Navigation ol
+{
+    list-style: none;
+    list-style-type: none;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+
+#Navigation li
+{
+    
+}
+
+#Navigation a
+{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    width: 230px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#Navigation a:hover
+{
+    text-decoration: underline;
+}
+
+@media only screen and (max-device-width: 640px) {
+
+}

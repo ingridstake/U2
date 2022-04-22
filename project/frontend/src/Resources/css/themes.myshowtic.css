@@ -1,0 +1,272 @@
+@font-face {
+    font-family: proxima;
+    src: url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-bold.eot');
+    /* stylelint-disable-next-line declaration-colon-newline-after, value-list-comma-newline-after */
+    src: local('☺'), url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-bold.eot?#iefix') format('embedded-opentype'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-bold.woff') format('woff'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: proxima;
+    src: url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-sbold.eot');
+    /* stylelint-disable-next-line declaration-colon-newline-after, value-list-comma-newline-after */
+    src: local('☺'), url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-sbold.eot?#iefix') format('embedded-opentype'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-sbold.woff') format('woff'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-sbold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: proxima;
+    src: url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-reg.eot');
+    /* stylelint-disable-next-line declaration-colon-newline-after, value-list-comma-newline-after */
+    src: local('☺'), url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-reg.eot?#iefix') format('embedded-opentype'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-reg.woff') format('woff'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-reg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: proxima;
+    src: url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-light.eot');
+    /* stylelint-disable-next-line declaration-colon-newline-after, value-list-comma-newline-after */
+    src: local('☺'), url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-light.eot?#iefix') format('embedded-opentype'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-light.woff') format('woff'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/proxima/proxima-nova-light.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: knockout;
+    src: url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/knockout/knockout-htf30-juniorwelterwt-webfont.eot');
+    /* stylelint-disable-next-line declaration-colon-newline-after, value-list-comma-newline-after */
+    src: local('☺'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/knockout/knockout-htf30-juniorwelterwt-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/knockout/knockout-htf30-juniorwelterwt-webfont.woff') format('woff'),
+        url('https://dvpb50v9lhj6e.cloudfront.net/content/themes/showtic/assets/dist/fonts/knockout/knockout-htf30-juniorwelterwt-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.t-myshowtic {
+    background-color: #411540;
+    background-image: linear-gradient(-142deg, rgba(0, 0, 0, 0.5), transparent 15%, transparent 0), linear-gradient(-124deg, #411540, #9e5d9b 94%);
+    background-repeat: no-repeat;
+}
+
+.t-myshowtic > body {
+    font-family: proxima, sans-serif;
+}
+
+.t-myshowtic #topbar {
+    max-width: 1480px;
+    min-height: 5.4rem;
+    margin: 0 auto;
+}
+
+.t-myshowtic .logo {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.t-myshowtic .logo img {
+    display: block;
+    width: 149px;
+    height: 50px;
+}
+
+.t-myshowtic .is-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1480px;
+    min-height: 3.8rem;
+    z-index: 101;
+    background: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    transition: 0.8s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+}
+
+.t-myshowtic .is-sticky .o-grid > :first-child {
+    align-items: center;
+    flex-direction: row;
+}
+
+.t-myshowtic .is-sticky .c-button {
+    margin: 24px 24px 0 0;
+}
+
+@media screen and (max-width: 575.98px) {
+    .t-myshowtic .o-grid__col-xs-1 {
+        justify-content: center;
+    }
+
+    .t-myshowtic .o-grid__col-xs-1 .c-button--has-icon {
+        padding-left: 0.8em;
+    }
+}
+
+/* Headers */
+.t-myshowtic h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.t-myshowtic h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Sections */
+.t-myshowtic .c-section {
+    max-width: 1480px;
+    margin: 0 auto;
+    border-bottom-right-radius: 4.4px;
+    border-bottom-left-radius: 4.4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.38), 0 7px 18px 0 rgba(0, 0, 0, 0.39);
+}
+
+/* stylelint-disable-next-line selector-no-qualifying-type */
+.t-myshowtic footer.c-section {
+    margin: 30px auto;
+    border-top-right-radius: 4.4px;
+    border-top-left-radius: 4.4px;
+    fill: #fff;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: none;
+}
+
+.t-myshowtic footer .o-grid--direction-row p {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.t-myshowtic footer .o-grid__col-2 {
+    font-size: 0.9rem;
+}
+
+.t-myshowtic footer .c-tabs__tab {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.t-myshowtic footer a:not([class]) {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.t-myshowtic .c-section__body {
+    max-width: 1090px;
+}
+
+.t-myshowtic .c-section:last-of-type .c-section__body {
+    max-width: 1280px;
+}
+
+/* Buttons, Tabs */
+.t-myshowtic .c-button {
+    border-radius: 4.4px;
+}
+
+.t-myshowtic .c-button:not(.c-button--ghost),
+.t-myshowtic .c-tabs__tab.c-button {
+    padding: 7px 14px 6px;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: proxima, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #fff;
+    color: #93278f;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transform: none;
+    transition: 0.25s;
+    appearance: none;
+}
+
+.t-myshowtic .c-button--primary:not(.c-button--ghost) {
+    color: #fff;
+    background: #93278f;
+}
+
+.t-myshowtic .c-tabs__tab {
+    color: #131e29;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: proxima, sans-serif;
+}
+
+.t-myshowtic .c-tabs__tab--selected {
+    color: #93278f;
+}
+
+.t-myshowtic .c-tabs__tab::after {
+    background: #93278f;
+}
+
+.t-myshowtic .c-tabs__tab.c-button::after {
+    display: none;
+    transition: none;
+}
+
+.t-myshowtic .c-tabs__tab.c-button:hover,
+.t-myshowtic .c-tabs__tab.c-button:focus,
+.t-myshowtic .c-tabs__tab--selected.c-button {
+    background: #93278f;
+    color: #fff;
+    transform: none;
+}
+
+.t-myshowtic .c-tabs__tab.c-button:first-child {
+    border-top-left-radius: 4.4px;
+    border-bottom-left-radius: 4.4px;
+}
+
+.t-myshowtic .c-tabs__tab.c-button:last-child {
+    border-top-right-radius: 4.4px;
+    border-bottom-right-radius: 4.4px;
+}
+
+/* Labels and Tables */
+.t-myshowtic .c-label,
+.t-myshowtic .c-table__caption,
+.t-myshowtic .c-table th {
+    color: #93278f;
+    font-family: knockout, sans-serif;
+}
+
+.t-myshowtic .c-form-control input[type='checkbox'] ~ label::before,
+.t-myshowtic .c-form-control input[type='radio'] ~ label::before,
+.t-myshowtic .c-form-control input[type='checkbox'] ~ label::after,
+.t-myshowtic .c-form-control input[type='radio'] ~ label::after {
+    border-color: #93278f;
+}
+
+/* Cards */
+.t-myshowtic .c-card,
+.t-myshowtic .c-tile {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4.4px;
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+.t-myshowtic .c-section:not(footer) {
+    background-color: #fff;
+}

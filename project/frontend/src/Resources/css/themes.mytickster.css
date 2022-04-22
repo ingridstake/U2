@@ -1,0 +1,174 @@
+.t-mytickster {
+    background-color: #243846; /* grey-darkest */
+}
+
+.t-mytickster > body {
+    background-color: #edeeee;
+}
+
+.t-mytickster #header {
+    color: #243846; /* grey-darkest */
+    background: #ffd72e; /* yellow-base */
+}
+
+.t-mytickster #header nav a {
+    color: inherit;
+}
+
+.t-mytickster #header .o-grid {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.t-mytickster .logo svg,
+.t-mytickster .logo img {
+    display: block;
+    margin: 0 auto;
+    max-height: 44px;
+}
+
+.t-mytickster .logo svg {
+    fill: #243846; /* grey-darkest */
+}
+
+.t-mytickster nav.c-tabs {
+    text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+    .t-mytickster .logo svg,
+    .t-mytickster .logo img {
+        max-height: 88px;
+        margin-left: 0;
+    }
+
+    .t-mytickster #header .o-grid__col-sm-8 {
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .t-mytickster .o-grid__col-auto:only-child .o-grid__col-auto:only-child {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .t-mytickster .o-grid__col-auto:only-child .o-grid__col-auto + .o-grid__col-auto {
+        margin-left: 1rem;
+    }
+}
+
+/* Statuses on "Transfer multiple season card tickets" */
+.t-mytickster .c-tile__foot .c-form-control {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.t-mytickster .u-font--largest {
+    font-size: 6rem !important;
+}
+
+.t-mytickster footer {
+    background-color: #243846;
+    color: #a5a9ac;
+    fill: currentColor;
+}
+
+.t-mytickster footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.t-mytickster footer a:hover,
+.t-mytickster footer a:focus,
+.t-mytickster footer a:active {
+    color: #1ccfc9;
+}
+
+.t-mytickster .truncated {
+    position: relative;
+    height: 5.5em;
+    max-height: 60vh;
+    overflow: hidden;
+}
+
+.t-mytickster .truncated .btn-show-truncated-text {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 4em);
+    width: 8em;
+    margin-bottom: 0.5em;
+    z-index: 1;
+}
+
+.t-mytickster .truncated::after {
+    content: '';
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(transparent, #edeeee);
+}
+
+/* Payment plan */
+.t-mytickster #payment-plan-table col {
+    width: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+    .t-mytickster #payment-plan-table col {
+        width: 10rem;
+    }
+}
+
+.t-mytickster #payment-plan-table col:last-child {
+    width: auto;
+}
+
+.t-mytickster #payment-plan-table td:nth-child(2),
+.t-mytickster #payment-plan-table input[type="number"] {
+    text-align: right;
+}
+
+.t-mytickster #payment-plan-table .payment-date {
+    vertical-align: middle;
+}
+
+.t-mytickster #payment-plan-table .c-progress {
+    display: inline-block;
+}
+
+.t-mytickster #payment-plan-table .c-progress--disabled {
+    width: 100%;
+    opacity: 0.7;
+    filter: grayscale(1);
+}
+
+.t-mytickster #payment-plan-table .c-details .c-box {
+    position: absolute;
+    z-index: 1;
+    margin-top: 0;
+    max-width: 84vw;
+}
+
+.t-mytickster #payment-plan-table input[type="range"] {
+    position: relative;
+    left: -5px;
+    bottom: -18px;
+    z-index: 1;
+    opacity: 0;
+    cursor: col-resize;
+}

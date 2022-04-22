@@ -1,0 +1,12 @@
+/* stylelint-disable-next-line selector-no-qualifying-type */
+main.c-section {
+    color: inherit;
+    background-color: #bfdfd3; /* green-lightest */
+}
+
+.t-tickster-com .logo svg {
+    display: block;
+    width: 100px;
+    height: 40px;
+    fill: #485c6a; /* grey-darker */
+}

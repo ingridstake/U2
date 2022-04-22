@@ -1,0 +1,209 @@
+/* UI framework overrides */
+main.c-section {
+    color: inherit;
+    background-color: #d2f9f8; /* turquoise-lightest */
+}
+
+/* Theme specific markup and overrides */
+.t-tickster-com {
+    background-color: #243846; /* grey-darkest */
+}
+
+.t-tickster-com > body {
+    background-color: #fff;
+}
+
+.t-tickster-com #topbar {
+    min-height: 9.8rem;
+}
+
+.t-tickster-com .logo {
+    display: inline-block;
+    margin: 5px auto -5px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 576px) {
+    .t-tickster-com #topbar {
+        min-height: 4.3rem;
+    }
+
+    .t-tickster-com .logo {
+        margin: 5px 13px 5px 21px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .t-tickster-com #topbar {
+        min-height: 4.15rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .t-tickster-com #topbar {
+        min-height: 3.95rem;
+    }
+}
+
+.t-tickster-com .logo svg {
+    display: block;
+    width: 120px;
+    height: 40px;
+    fill: #243846; /* grey-darkest */
+}
+
+.t-tickster-com .is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    background: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    transition: 0.8s transform cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+}
+
+@media screen and (min-width: 1200px) {
+    html.lity-active .is-sticky {
+        padding-right: 16px;
+    }
+}
+
+.t-tickster-com .is-sticky .c-tabs {
+    margin: 0 24px 0 12px;
+}
+
+.t-tickster-com .quick-search {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .t-tickster-com .quick-search {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 170px;
+        width: 280px;
+        height: 40px;
+        transition: 0.2s width cubic-bezier(0.645, 0.045, 0.355, 1); /* easeInOutCubic */
+        z-index: 1;
+    }
+
+    .t-tickster-com .quick-search.is-minified {
+        width: 0;
+    }
+
+    .t-tickster-com .quick-search svg {
+        fill: #a5a9ac;
+    }
+
+    .t-tickster-com .quick-search.is-minified input[type='search'] {
+        width: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .t-tickster-com .quick-search input[type='search'] {
+        position: absolute;
+        width: 100%;
+        top: 2px;
+        padding: 8px 15px;
+    }
+
+    .t-tickster-com .quick-search .c-button {
+        position: absolute;
+        top: 3px;
+        right: -45px;
+        padding: 8px 0 8px 2.3em;
+        box-shadow: none;
+        overflow: visible;
+        transform: none;
+        z-index: 1;
+    }
+
+    .t-tickster-com .is-sticky .o-grid > div {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .t-tickster-com [itemtype$='Event'] .c-article__title {
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .t-tickster-com .is-sticky .c-tabs {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .t-tickster-com .is-sticky .o-grid__col-12 {
+        align-items: center;
+    }
+
+    .t-tickster-com .quick-search {
+        padding-left: 0.8em;
+    }
+}
+
+.t-tickster-com .is-sticky .o-grid--align-end .c-button {
+    margin: 8px 20px 0 0;
+}
+
+@media screen and (max-width: 575.98px) {
+    /* Make pay button fixed at the bottom on event page */
+    .t-tickster-com [itemtype$='Event'] .c-article .c-button--primary {
+        position: fixed;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        width: auto;
+        margin: 0;
+        border-radius: 6px;
+        box-shadow: 0 -3px 25px rgba(0, 0, 0, 0.12);
+        font-size: 1.4rem;
+        z-index: 2;
+    }
+
+    /* Hackish way to avoid overlap of cookie message and fixed pay button */
+    .t-tickster-com [itemtype$='Event'] ~ footer + .u-position--bottom {
+        bottom: 3.7rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .t-tickster-com .c-article__meta {
+        margin-bottom: 2rem;
+    }
+}
+
+.t-tickster-com .c-article__meta--alt {
+    padding: 10px 0;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+}
+
+.t-tickster-com .c-article__meta--alt .o-grid {
+    max-width: 41.5rem;
+    margin: auto;
+}
+
+.t-tickster-com footer {
+    background-color: #243846;
+    color: #a5a9ac;
+    fill: currentColor;
+}
+
+.t-tickster-com footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.t-tickster-com footer a:hover,
+.t-tickster-com footer a:focus,
+.t-tickster-com footer a:active {
+    color: #1ccfc9;
+}
