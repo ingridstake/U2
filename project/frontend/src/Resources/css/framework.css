@@ -24,6 +24,38 @@
     /* Animation */ /* easeInOutCubic */
 
     /* Viewports */
+    --blue-darker: #0069a6;
+    --turquoise-base: #1ccfc9;
+    --yellow-base: #ffd72e;
+    --grey-darkest: #243846;
+    --blue-base: #1aabff;
+    --blue-darkest: #004166;
+    --blue-lighter: #80d0ff;
+    --blue-lightest: #d6f0ff;
+    --turquoise-darker: #0f828a;
+    --turquoise-darkest: #0b5f65;
+    --turquoise-lighter: #8ff0ec;
+    --turquoise-lightest: #d2f9f8;
+    --yellow-darker: #ffb71b;
+    --yellow-darkest: #8e5e1a;
+    --yellow-lighter: #ffec99;
+    --yellow-lightest: #fff8db;
+    --grey-base: #a3aaaf;
+    --grey-dark: #6b7780;
+    --grey-darker: #485c6a;
+    --grey-lighter: #ced2d4;
+    --grey-lightest: #ececec;
+    --grey-white: #f7f7f7;
+    --green-base: #00804f;
+    --green-darker: #00663f;
+    --green-lighter: #66b395;
+    --green-lightest: #bfdfd3;
+    --red-base: #d6334c;
+    --red-darker: #962435;
+    --red-lighter: #eb7577;
+    --red-lightest: #f3c2c9;
+    --black: #131e29;
+    --white: #fff;
 }
 
 /**

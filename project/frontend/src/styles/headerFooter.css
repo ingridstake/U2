@@ -1,11 +1,31 @@
+@import "variables.css";
+
 .header {
-    height: 80px;
+    height: 80px; /*when screen-width < 576px, height: 60px;*/
     width: auto;
     background-color: white;
     position: sticky;
     top: 0;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
+}
+
+.logo {
+    position: fixed;
+    height: 80px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--grey-darkest), var(--black));
+    box-shadow: 0 3px 5px rgb(0 0 0 / 12%),0 4px 8px rgb(0 0 0 / 10%);
+    z-index: 102;
+}
+
+.logo img {
+    height: 60px;
+    width: 170px;
 }
 
 .footer {
@@ -15,4 +35,21 @@
     position:static;
     bottom: 0;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 576px) { 
+    .header {
+        height: 60px;
+    }
+
+    .logo {
+        height: 60px;
+        width: 170px;
+    }
+
+    .logo img {
+        width: 140px;
+        height: 40px;
+    }
+
 }
