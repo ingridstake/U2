@@ -5,58 +5,27 @@ import Table from "react-bootstrap/Table";
 import axios from 'axios';
 
 
-function JsonDataDisplay() {
+export default function JsonDataDisplay() {
 
     const [appState, setAppState] = useState({
-        
         loading: false,
-        events: [] as any[],
-      });
-    
-    /*
+        events: [] as any[]
+    });
+
     useEffect(() => {
-        //setAppState({ loading: true });
-        const apiUrl = 'http://127.0.0.1:8080/ten_events_string';
-        axios.get(apiUrl).then((events) => {
-          const allEvents = events.data;
-          //setAppState({ loading: false, events: allEvents });
-        });
-      });           // [setAppState]
-      */
-    
-    useEffect(() => { 
-        setAppState({ loading: true, events: [] });
-        let allEvents = [
-            {
-            id: '',
-            name: '',
-            city: '',
-            },]
-        
+        setAppState({loading: true, events: []});
         const apiUrl = 'http://127.0.0.1:8080/ten_events_string';
         axios.get(apiUrl).then(res => {
-            const newItem = {
-              id: res.data.id,
-              name: res.data.name,
-              city: res.data.city,
-            };
-            allEvents.push(newItem);
-         })
-        
-        /*.then((events) => {
-          const allEvents = events.data;
-          console.log(allEvents);
-          */
-          setAppState({ loading: false, events: allEvents });
-        
-        //});
-       
-    }, [setAppState]);
+            const allEvents = res.data
+            setAppState({ loading: false, events: allEvents });
+        })
+    }, [setAppState])
 
-    const DisplayData=appState.events.map(
-        (events)=>{
+
+    const displayData = appState.events.map(
+        (events) => {
             return(
-                <tr key={events.id}>
+                <tr key = {events.id}>
                     <td>{events.id}</td>
                     <td>{events.name}</td>
                     <td>{events.city}</td>
@@ -76,11 +45,9 @@ function JsonDataDisplay() {
                     </tr>
                 </thead>
                 <tbody>
-                    {DisplayData}
+                    {displayData}
                 </tbody>
             </Table>
         </>
     );
  }
-
-export default JsonDataDisplay;
