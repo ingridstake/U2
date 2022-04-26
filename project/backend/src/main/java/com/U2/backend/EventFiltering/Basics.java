@@ -21,9 +21,9 @@ public class Basics {
         return  null;
     }
 
-    public static JSONObject getTenEvents(JSONArray events, JSONArray venues){
+    public static JSONArray getTenEvents(JSONArray events, JSONArray venues){
         try {
-            var eventObject = new JSONObject();
+            //var eventObject = new JSONObject();
             var eventArray = new org.json.JSONArray();
             var venueService = ServiceFactory.CreateVenueSearchService(venues);
 
@@ -37,8 +37,8 @@ public class Basics {
                 eventArray.put(temp);
             }
 
-            eventObject.put("events", eventArray);
-            return eventObject;
+            //eventObject.put("events", eventArray);
+            return eventArray; //eventObject;
         } catch (JSONException e) {
             e.printStackTrace();
         }

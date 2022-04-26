@@ -56,7 +56,7 @@ public class BackendApplication {
 	@CrossOrigin
 	@GetMapping(path = "/ten_events_string")
 	public String tenEventsString() {
-		JSONObject tenEvents = null;
+		JSONArray tenEvents = null;
 		try {
 			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
 			var venues = (JSONArray)(new JSONObject(APIDump)).get("venues");
@@ -69,8 +69,8 @@ public class BackendApplication {
 
 	@CrossOrigin
 	@GetMapping(path = "/ten_events")
-	public JSONObject tenEvents() {
-		JSONObject tenEvents = null;
+	public JSONArray tenEvents() {
+		JSONArray tenEvents = null;
 		try {
 			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
 			var venues = (JSONArray)(new JSONObject(APIDump)).get("venues");
