@@ -1,32 +1,32 @@
-.show_event {
-    background-color: #0f828a;
-  }
+@import "variables.css";
 
-th {
-  width: auto;
-  background-color: turquoise;
-  padding: 2px;
-}
-td {
-  padding: 10px 7px;
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-table, th, td {
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.4);
-  border-width: 1px;
-  border-collapse: collapse;
-  overflow: auto;
-  margin: 50px auto 50px auto;
-  font-size: 20px;
-  }
+.card {
+  width: 20vw;
+  height: 204px;
+  padding: 8px;
+  background-color: var(--grey-darkest);
+  margin: 20px;
 
-tr:nth-child(even){
-  background-color: lightgray;
+  max-width: 100%; /* [1] */
+  border-radius: 6px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
+  color: #243846;
+  background-color: #fff;
+  transition: 0.25s box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-tr:nth-child(odd){
-  background-color: white;
+.card-grid h1 {
+  font-size: 24px;
+  color: black;
 }
 
-tr:hover {background-color: turquoise;}
+.card-grid p {
+  font-size: 18px;
+}
