@@ -10,4 +10,9 @@ class BackendApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	void fuskTest(){
+		assert (true);
+	}
+
 }
