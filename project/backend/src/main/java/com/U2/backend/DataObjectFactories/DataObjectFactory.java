@@ -1,5 +1,6 @@
 package com.U2.backend.DataObjectFactories;
 
+import com.U2.backend.DataObjectContracts.HierarchyType;
 import com.U2.backend.DataObjectContracts.IEvent;
 import com.U2.backend.DataObjectContracts.IVenue;
 import com.U2.backend.DataObjects.Event;
@@ -51,12 +52,25 @@ public class DataObjectFactory {
     private void buildEvents(JSONArray events) throws JSONException {
         var eventList = new ArrayList<IEvent>();
         for (int i = 0; i < events.length(); i++) {
-            var event = (JSONObject) events.get(i);
-            var venueId = event.get("venueId").toString();
-            var venue = _venues.stream().filter(v -> v.getId().equals(venueId)).findFirst().orElse(null);
+            var JSONevent = (JSONObject) events.get(i);
+            var venueId = JSONevent.getString("venueId");
 
-            eventList.add(new Event(event.get("id").toString(), venue,
-                    event.get("name").toString(), event.get("imageUrl").toString()));
+            var event = readEvent(JSONevent);
+
+            if (event.isPublished()){
+                eventList.add(event);
+            }
         }
+    }
+
+    private IEvent readEvent(JSONObject event) throws JSONException {
+        var venueId = event.get("venueId").toString();
+        var venue = _venues.stream().filter(v -> v.getId().equals(venueId)).findFirst().orElse(null);
+
+        return new Event(event.getString("id"), event.getBoolean("published"), event.getString("start"),
+                event.getString("end"), event.getString("doorsOpen"), event.getString("infoUri"),
+                event.getString("description"), event.getString("productionParentId"),
+                HierarchyType.readHierarchyType(event.getString("hierarchyType")), venue,
+                event.getString("name"), event.getString("imageUrl"));
     }
 }
