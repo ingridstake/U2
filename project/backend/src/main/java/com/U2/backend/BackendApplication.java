@@ -1,5 +1,8 @@
 package com.U2.backend;
 
+import com.U2.backend.DataObjectContracts.IEvent;
+import com.U2.backend.DataObjectContracts.IVenue;
+import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import com.U2.backend.EventFiltering.Basics;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,14 +12,18 @@ import org.springframework.web.bind.annotation.*;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
 @SpringBootApplication
 @RestController
 public class BackendApplication {
 
+	private static List<IEvent> events;
 	private static String APIDump;
 
 	public static void main(String[] args) {
-		APIDump = APIDataService.getData();
+		 APIDump = APIDataService.getData();
+		 events = DataObjectFactory.getEvents(APIDump);
 
 		SpringApplication.run(BackendApplication.class, args);
 	}
