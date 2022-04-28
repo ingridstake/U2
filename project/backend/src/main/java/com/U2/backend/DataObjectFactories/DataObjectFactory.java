@@ -63,6 +63,8 @@ public class DataObjectFactory {
                 eventList.add(event);
             }
         }
+
+        _events = eventList;
     }
 
     private IEvent readEvent(JSONObject event) throws JSONException {
