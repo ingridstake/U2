@@ -8,10 +8,6 @@
 }
 
 .card {
-  /*
-  width: 20vw;
-  height: 204px;
-  */
   padding: 8px;
   background-color: var(--grey-darkest);
   margin: 20px;
