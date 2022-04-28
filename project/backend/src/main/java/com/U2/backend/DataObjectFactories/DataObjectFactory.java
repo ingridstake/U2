@@ -47,6 +47,8 @@ public class DataObjectFactory {
             venueList.add(new Venue(venue.get("id").toString(), venue.get("city").toString(),
                     venue.get("address").toString(), venue.get("name").toString()));
         }
+
+        _venues = venueList;
     }
 
     private void buildEvents(JSONArray events) throws JSONException {
