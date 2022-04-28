@@ -1,32 +1,86 @@
-.show_event {
-    background-color: #0f828a;
-  }
+@import "variables.css";
 
-th {
-  width: auto;
-  background-color: turquoise;
-  padding: 2px;
-}
-td {
-  padding: 10px 7px;
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-table, th, td {
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.4);
-  border-width: 1px;
-  border-collapse: collapse;
-  overflow: auto;
-  margin: 50px auto 50px auto;
-  font-size: 20px;
-  }
+.card {
+  padding: 8px;
+  background-color: var(--grey-darkest);
+  margin: 20px;
 
-tr:nth-child(even){
-  background-color: lightgray;
+  max-width: 100%; /* [1] */
+  border-radius: 6px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
+  color: #243846;
+  background-color: #fff;
+  transition: 0.25s box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-tr:nth-child(odd){
-  background-color: white;
+.c-title h1 {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  padding-top: 35%;
+  bottom: 0;
+  padding: 4px 10px;
+  width: 90%;
+
 }
 
-tr:hover {background-color: turquoise;}
+
+.card-grid p {
+  font-size: 18px;
+}
+
+.card-grid img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.c-title {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  background: linear-gradient(190deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 90%)),
+  linear-gradient(170deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 50%));
+  opacity: 9;
+  z-index: 100;
+  margin-top: -15rem;
+  position: absolute;
+  vertical-align: text-bottom;
+}
+
+.c-body {
+  display: block;
+  position: relative;
+
+}
+.c-footer {
+  min-height: 4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+}
+button {
+  width: 3.3em;
+  height: 3.3em;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: var(--co-accent);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: 0;
+  border: none;
+  font-size: .85em;
+
+}
