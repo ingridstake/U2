@@ -9,6 +9,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    z-index: 1000;
 }
 
 .logo {

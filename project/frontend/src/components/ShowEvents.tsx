@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CardGroup from "react-bootstrap/CardGroup";
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
 
 
 export default function JsonDataDisplay() {
@@ -31,11 +32,15 @@ export default function JsonDataDisplay() {
                     {Array.from({ length: 1 }).map((_, index) => (
                         <Col>
                             <Card  key={e.id}>
-                                <Card.Img variant="top" src="holder.js/100px160" />
-                                <Card.Body>
-                                    <Card.Title><h1>titel:{e.name}</h1> </Card.Title>
-                                    <Card.Text><p>Eventet äger rum i {e.city}</p></Card.Text>
+                                <Card.Body className='c-body'>
+                                    <Card.Img variant="top" src={e.image} />
+                                    <Card.Title className='c-title'><h1>{e.name}</h1> </Card.Title>
                                 </Card.Body>
+                                
+                                <Card.Footer className='c-footer'>
+                                    <Button>Köp</Button>
+                                    <Card.Text><p>{e.date}, {e.city}</p></Card.Text>
+                                </Card.Footer>
                             </Card>
                         </Col>
                     ))}

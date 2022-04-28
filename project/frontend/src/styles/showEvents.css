@@ -8,8 +8,10 @@
 }
 
 .card {
+  /*
   width: 20vw;
   height: 204px;
+  */
   padding: 8px;
   background-color: var(--grey-darkest);
   margin: 20px;
@@ -22,11 +24,67 @@
   transition: 0.25s box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.card-grid h1 {
+.c-title h1 {
   font-size: 24px;
-  color: black;
+  color: white;
+  position: absolute;
+  padding-top: 35%;
+  bottom: 0;
+  padding: 4px 10px;
+  width: 90%;
+
 }
+
 
 .card-grid p {
   font-size: 18px;
+}
+
+.card-grid img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.c-title {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  background: linear-gradient(190deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 90%)),
+  linear-gradient(170deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 50%));
+  opacity: 9;
+  z-index: 100;
+  margin-top: -15rem;
+  position: absolute;
+  vertical-align: text-bottom;
+}
+
+.c-body {
+  display: block;
+  position: relative;
+
+}
+.c-footer {
+  min-height: 4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+}
+button {
+  width: 3.3em;
+  height: 3.3em;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: var(--co-accent);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: 0;
+  border: none;
+  font-size: .85em;
+
 }
