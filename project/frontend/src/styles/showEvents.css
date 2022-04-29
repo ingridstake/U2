@@ -8,16 +8,16 @@
 }
 
 .card {
-  padding: 8px;
   background-color: var(--grey-darkest);
   margin: 20px;
-
   max-width: 100%; /* [1] */
-  border-radius: 6px;
+  width: 27rem;
+  border-radius: var(--r-m);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
   color: #243846;
   background-color: #fff;
   transition: 0.25s box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden;
 }
 
 .c-title h1 {
@@ -31,16 +31,12 @@
 
 }
 
-
-.card-grid p {
-  font-size: 18px;
-}
-
 .card-grid img {
   height: 15rem;
   width: 100%;
   object-fit: cover;
   z-index: 1;
+  overflow: hidden;
 }
 
 .c-title {
@@ -53,27 +49,35 @@
   z-index: 100;
   margin-top: -15rem;
   position: absolute;
+  top:15rem;
   vertical-align: text-bottom;
 }
 
 .c-body {
   display: block;
   position: relative;
-
+  height: 15rem;
 }
 .c-footer {
-  min-height: 4rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  vertical-align: middle;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  padding: var(--space-s) var(--space-l);
+  border-top: 1px dashed rgba(0,0,0,.1);
+  color: var(--co-text-dim);
+  font-family: var(--roboto-mono);
+  letter-spacing: normal;
+  word-spacing: normal;
 }
+.c-footer p {
+  font-size: var(--fs-xxs);
+  word-break: break-word;
+  margin: 0px;
+}
+
 button {
   width: 3.3em;
   height: 3.3em;
-  margin: 10px;
+  margin-right: 10px;
   border-radius: 50%;
   background-color: var(--co-accent);
   color: white;
