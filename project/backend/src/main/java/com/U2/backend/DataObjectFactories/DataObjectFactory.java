@@ -77,4 +77,14 @@ public class DataObjectFactory {
                 HierarchyType.readHierarchyType(event.getString("hierarchyType")), venue,
                 event.getString("name"), event.getString("imageUrl"));
     }
+
+    private JSONArray convertToJSONArray() {
+        JSONArray jsonArray = new JSONArray();
+        for (IEvent event : _events) {
+            jsonArray.put(event.getId());
+            jsonArray.put(event.getName());
+            jsonArray.put(event.getVenue());
+        }
+        return jsonArray;
+    }
 }
