@@ -14,7 +14,8 @@ import java.util.List;
 
 public class DataObjectFactory {
 
-    private List<IEvent> _events;
+    public JSONArray jsonArray;
+    private static List<IEvent> _events;
     private List<IVenue> _venues;
 
     public static List<IEvent> getEvents(String APIData){
@@ -78,12 +79,12 @@ public class DataObjectFactory {
                 event.getString("name"), event.getString("imageUrl"));
     }
 
-    private JSONArray convertToJSONArray() {
+    public static JSONArray convertToJSONArray() throws JSONException {
         JSONArray jsonArray = new JSONArray();
         for (IEvent event : _events) {
             jsonArray.put(event.getId());
             jsonArray.put(event.getName());
-            jsonArray.put(event.getVenue());
+            jsonArray.put(event.getVenue().getCity());
         }
         return jsonArray;
     }

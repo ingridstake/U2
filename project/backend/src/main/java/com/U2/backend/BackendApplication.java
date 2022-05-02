@@ -20,12 +20,16 @@ public class BackendApplication {
 
 	private static List<IEvent> events;
 	private static String APIDump;
+	private static JSONArray jsonArray;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws JSONException {
 		 APIDump = APIDataService.getData();
 		 events = DataObjectFactory.getEvents(APIDump);
+		 jsonArray = DataObjectFactory.convertToJSONArray();
 
 		SpringApplication.run(BackendApplication.class, args);
+
+		System.out.println(jsonArray);
 	}
 
 	@CrossOrigin
