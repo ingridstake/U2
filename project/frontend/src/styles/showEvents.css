@@ -1,32 +1,90 @@
-.show_event {
-    background-color: #0f828a;
-  }
+@import "variables.css";
 
-th {
-  width: auto;
-  background-color: turquoise;
-  padding: 2px;
-}
-td {
-  padding: 10px 7px;
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-table, th, td {
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.4);
-  border-width: 1px;
-  border-collapse: collapse;
-  overflow: auto;
-  margin: 50px auto 50px auto;
-  font-size: 20px;
-  }
-
-tr:nth-child(even){
-  background-color: lightgray;
+.card {
+  background-color: var(--grey-darkest);
+  margin: 20px;
+  max-width: 100%; /* [1] */
+  width: 27rem;
+  border-radius: var(--r-m);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
+  color: #243846;
+  background-color: #fff;
+  transition: 0.25s box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden;
 }
 
-tr:nth-child(odd){
-  background-color: white;
+.c-title h1 {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  padding-top: 35%;
+  bottom: 0;
+  padding: 4px 10px;
+  width: 90%;
+
 }
 
-tr:hover {background-color: turquoise;}
+.card-grid img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.c-title {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  background: linear-gradient(190deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 90%)),
+  linear-gradient(170deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 50%));
+  opacity: 9;
+  z-index: 100;
+  margin-top: -15rem;
+  position: absolute;
+  top:15rem;
+  vertical-align: text-bottom;
+}
+
+.c-body {
+  display: block;
+  position: relative;
+  height: 15rem;
+}
+.c-footer {
+  display: flex;
+  align-items: center;
+  padding: var(--space-s) var(--space-l);
+  border-top: 1px dashed rgba(0,0,0,.1);
+  color: var(--co-text-dim);
+  font-family: var(--roboto-mono);
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+.c-footer p {
+  font-size: var(--fs-xxs);
+  word-break: break-word;
+  margin: 0px;
+}
+
+button {
+  width: 3.3em;
+  height: 3.3em;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--co-accent);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: 0;
+  border: none;
+  font-size: .85em;
+
+}

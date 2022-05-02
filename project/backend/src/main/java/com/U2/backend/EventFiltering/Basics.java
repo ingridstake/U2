@@ -31,6 +31,8 @@ public class Basics {
                 var temp = new JSONObject();
                 temp.put("name", ((JSONObject)events.get(i)).get("name"));
                 temp.put("id", i+1);
+                temp.put("image", ((JSONObject) events.get(i)).get("imageUrl"));
+                temp.put("date", ((JSONObject) events.get(i)).get("start"));
 
                 var venueId= ((JSONObject)events.get(i)).get("venueId").toString();
                 temp.put("city", venueService.getVenueCity(venueId));
