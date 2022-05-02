@@ -1,5 +1,8 @@
 package com.U2.backend;
 
+import com.U2.backend.DataObjectContracts.IEvent;
+import com.U2.backend.DataObjectContracts.IVenue;
+import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,11 +14,12 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.zip.GZIPInputStream;
 
 public class APIDataService {
 
-    public static String getData(){
+    public APIDataService() {
         try {
 
             var client = HttpClient.newHttpClient();
@@ -38,7 +42,7 @@ public class APIDataService {
 
             HttpResponse<InputStream> apiResponse = client.send(apiRequest, HttpResponse.BodyHandlers.ofInputStream());
             GZIPInputStream gzipInputStream = new GZIPInputStream(apiResponse.body());
-            return new String(gzipInputStream.readAllBytes(), StandardCharsets.UTF_8);
+            DataObjectFactory.getEvents(new String(gzipInputStream.readAllBytes(), StandardCharsets.UTF_8));
 
         } catch (URISyntaxException e) {
             e.printStackTrace();
@@ -49,6 +53,13 @@ public class APIDataService {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return null;
+    }
+
+    public List<IEvent> getEvents(){
+        return DataObjectFactory.getEvents();
+    }
+
+    public List<IVenue> getVenues(){
+        return DataObjectFactory.getVenues();
     }
 }

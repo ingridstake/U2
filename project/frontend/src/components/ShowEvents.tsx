@@ -33,7 +33,7 @@ export default function JsonDataDisplay() {
                         <Col>
                             <Card  key={e.id}>
                                 <Card.Body className='c-body'>
-                                    <Card.Img variant="top" src={e.image} />
+                                    <Card.Img variant="top" src={e.imageUrl} />
                                     <Card.Title className='c-title'><h1>{e.name}</h1> </Card.Title>
                                 </Card.Body>
                                 

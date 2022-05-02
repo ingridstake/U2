@@ -1,5 +1,8 @@
 package com.U2.backend;
 
+import com.U2.backend.DataObjectContracts.IEvent;
+import com.U2.backend.DataObjectContracts.IVenue;
+import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import com.U2.backend.EventFiltering.Basics;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,16 +12,23 @@ import org.springframework.web.bind.annotation.*;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
 @SpringBootApplication
 @RestController
 public class BackendApplication {
 
-	private static String APIDump;
+	private static List<IEvent> events;
+	private static List<IVenue> venues;
 
-	public static void main(String[] args) {
-		APIDump = APIDataService.getData();
+	public static void main(String[] args) throws JSONException {
+
+		 var dataService = new APIDataService();
+		 events = dataService.getEvents();
+		 venues = dataService.getVenues();
 
 		SpringApplication.run(BackendApplication.class, args);
+
 	}
 
 	@CrossOrigin
@@ -28,56 +38,14 @@ public class BackendApplication {
 	}
 
 	@CrossOrigin
-	@GetMapping(path = "/ten_event_names")
-	public JSONObject tenEventNames() {
-		JSONObject tenEventNames = null;
-		try {
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			tenEventNames = Basics.getTenEventNames(events);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return tenEventNames;
-	}
-
-	@CrossOrigin
-	@GetMapping(path = "/ten_event_names_string")
-	public String tenEventNamesString() {
-		JSONObject tenEventNames = null;
-		try {
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			tenEventNames = Basics.getTenEventNames(events);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return tenEventNames.toString();
-	}
-
-	@CrossOrigin
 	@GetMapping(path = "/ten_events_string")
 	public String tenEventsString() {
-		JSONArray tenEvents = null;
 		try {
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			var venues = (JSONArray)(new JSONObject(APIDump)).get("venues");
-			tenEvents = Basics.getTenEvents(events,venues);
+			var temp = events.subList(0,100);
+			 return DataObjectFactory.convertToJSONString(temp);
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		return tenEvents.toString();
-	}
-
-	@CrossOrigin
-	@GetMapping(path = "/ten_events")
-	public JSONArray tenEvents() {
-		JSONArray tenEvents = null;
-		try {
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			var venues = (JSONArray)(new JSONObject(APIDump)).get("venues");
-			tenEvents = Basics.getTenEvents(events,venues);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return tenEvents;
+		return null;
 	}
 }
