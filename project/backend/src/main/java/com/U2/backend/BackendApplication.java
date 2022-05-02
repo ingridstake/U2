@@ -4,6 +4,7 @@ import com.U2.backend.DataObjectContracts.IEvent;
 import com.U2.backend.DataObjectContracts.IVenue;
 import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import com.U2.backend.EventFiltering.Basics;
+import com.U2.backend.EventFiltering.EasyCategorization;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.springframework.boot.SpringApplication;
@@ -26,7 +27,6 @@ public class BackendApplication {
 		 var dataService = new APIDataService();
 		 events = dataService.getEvents();
 		 venues = dataService.getVenues();
-
 		SpringApplication.run(BackendApplication.class, args);
 
 	}
@@ -47,5 +47,12 @@ public class BackendApplication {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@CrossOrigin
+	@GetMapping(path = "/vowel_events")
+	public String vowelEventsString() {
+		var temp = events.subList(0,100);
+		return EasyCategorization.getCategorization(temp);
 	}
 }
