@@ -36,36 +36,7 @@ public class BackendApplication {
 	public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
 		return String.format("Hello %s!", name);
 	}
-/*
-	@CrossOrigin
-	@GetMapping(path = "/ten_event_names")
-	public JSONObject tenEventNames() {
-		JSONObject tenEventNames = null;
-		try {
-			var ev = events.subList(0,10);
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			tenEventNames = Basics.getTenEventNames(events);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return tenEventNames;
-	}
 
- */
-/*
-	@CrossOrigin
-	@GetMapping(path = "/ten_event_names_string")
-	public String tenEventNamesString() {
-		JSONObject tenEventNames = null;
-		try {
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			tenEventNames = Basics.getTenEventNames(events);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return tenEventNames.toString();
-	}
-*/
 	@CrossOrigin
 	@GetMapping(path = "/ten_events_string")
 	public String tenEventsString() {
@@ -77,20 +48,4 @@ public class BackendApplication {
 		}
 		return null;
 	}
-/*
-	@CrossOrigin
-	@GetMapping(path = "/ten_events")
-	public JSONArray tenEvents() {
-		JSONArray tenEvents = null;
-		try {
-			var events = (JSONArray)(new JSONObject(APIDump)).get("events");
-			var venues = (JSONArray)(new JSONObject(APIDump)).get("venues");
-			tenEvents = Basics.getTenEvents(events,venues);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return tenEvents;
-	}
-	
- */
 }

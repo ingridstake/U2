@@ -96,6 +96,12 @@ public class DataObjectFactory {
         return jsonArray.toString();
     }
 
+    /**
+     * Converts a list of Events to a json array that is then returned as a string.
+     * @param events The list of events to be converted
+     * @return a string that contains the json array
+     * @throws JSONException
+     */
     public static String convertToJSONString(List<IEvent> events) throws JSONException {
 
         JSONArray jsonArray = new JSONArray();
