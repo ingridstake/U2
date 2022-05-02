@@ -105,6 +105,7 @@ public class DataObjectFactory {
             temp.put("id", event.getId());
             temp.put("city", event.getVenue().getCity());
             temp.put("imageUrl", event.getImageUrl());
+            temp.put("date", event.getStart());
             jsonArray.put(temp);
         }
         return jsonArray.toString();
