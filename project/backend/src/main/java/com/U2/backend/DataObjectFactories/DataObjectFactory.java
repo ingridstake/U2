@@ -14,9 +14,8 @@ import java.util.List;
 
 public class DataObjectFactory {
 
-    public JSONArray jsonArray;
     private static List<IEvent> _events;
-    private List<IVenue> _venues;
+    private static List<IVenue> _venues;
 
     public static List<IEvent> getEvents(String APIData){
         var instant = new DataObjectFactory();
@@ -34,6 +33,14 @@ public class DataObjectFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static List<IEvent> getEvents(){
+        return _events;
+    }
+
+    public static List<IVenue> getVenues(){
+        return _venues;
     }
 
 
@@ -79,13 +86,27 @@ public class DataObjectFactory {
                 event.getString("name"), event.getString("imageUrl"));
     }
 
-    public static JSONArray convertToJSONArray() throws JSONException {
+    public static String convertToJSONArrayString() throws JSONException {
         JSONArray jsonArray = new JSONArray();
         for (IEvent event : _events) {
             jsonArray.put(event.getId());
             jsonArray.put(event.getName());
             jsonArray.put(event.getVenue().getCity());
         }
-        return jsonArray;
+        return jsonArray.toString();
+    }
+
+    public static String convertToJSONString(List<IEvent> events) throws JSONException {
+
+        JSONArray jsonArray = new JSONArray();
+        for (var event : events) {
+            var temp = new JSONObject();
+            temp.put("name", event.getName());
+            temp.put("id", event.getId());
+            temp.put("city", event.getVenue().getCity());
+            temp.put("imageUrl", event.getImageUrl());
+            jsonArray.put(temp);
+        }
+        return jsonArray.toString();
     }
 }
