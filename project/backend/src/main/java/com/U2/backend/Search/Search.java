@@ -4,22 +4,16 @@ import com.U2.backend.APIDataService;
 import com.U2.backend.DataObjectContracts.IEvent;
 import com.U2.backend.DataObjectContracts.IVenue;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.document.*;
+import org.apache.lucene.index.*;
+import org.apache.lucene.queries.mlt.MoreLikeThis;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.*;
 import org.apache.lucene.store.ByteBuffersDirectory;
 import org.apache.lucene.store.Directory;
+import org.apache.lucene.util.PagedBytes;
+import org.apache.lucene.util.packed.PackedInts;
 import org.json.JSONException;
 
 import java.io.IOException;
@@ -37,28 +31,33 @@ public class Search {
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         IndexWriter w = new IndexWriter(index, config);
 
+
+
         var dataService = new APIDataService();
         events = dataService.getEvents();
+        List<IEvent> tenEvents = events.subList(0,100);
 
-
-        addDoc(w, events.get(0).getName(), events.get(0).getId());
-        addDoc(w, events.get(1).getName(), events.get(1).getId());
-        addDoc(w, events.get(2).getName(), events.get(2).getId());
-        addDoc(w, events.get(3).getName(), events.get(3).getId());
+        for (IEvent event : tenEvents) {
+            addDoc(w,  event.getName(), event.getId(), event.getDescription());
+        }
         w.close();
+
 
         //String querystr = args.length > 0 ? args[0] : "lucene";
         //Query q = new QueryParser("title", analyzer).parse(querystr);
 
-        String querystr2 = args.length > 0 ? args[0] : "b*";
-        Query q2 = new QueryParser("name", analyzer).parse(querystr2);
+        //String querystr2 = (args.length > 0 ? args[0] : "p*")  (args.length > 0 ? args[0] : "j*");
+        //Query q2 = new QueryParser("name", analyzer).parse(querystr2);
 
-        int hitsPerPage = 10;
+        //Term term = new Term("name", "*r");
+        Query query = new QueryParser("name", analyzer).parse("p*");
+
+
+        int hitsPerPage = 100;
         IndexReader reader = DirectoryReader.open(index);
         IndexSearcher searcher = new IndexSearcher(reader);
-        TopDocs docs = searcher.search(q2, hitsPerPage);
+        TopDocs docs = searcher.search(query, hitsPerPage);
         ScoreDoc[] hits = docs.scoreDocs;
-
 
         System.out.println("Found " + hits.length + " hits.");
 
@@ -70,12 +69,14 @@ public class Search {
         reader.close();
     }
 
-    public static void addDoc(IndexWriter w, String name, String id) throws IOException {
+    public static void addDoc(IndexWriter w, String name, String id, String description) throws IOException {
         Document doc = new Document();
         doc.add(new TextField("name", name, Field.Store.YES));
         doc.add(new StringField("id", id, Field.Store.YES));
+        doc.add(new TextField("description", description, Field.Store.YES));
         w.addDocument(doc);
     }
+
 
 
     /*
