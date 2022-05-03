@@ -118,6 +118,12 @@ public class DataObjectFactory {
         return jsonArray.toString();
     }
 
+    /**
+     * Converts a HashMap of categories with Lists of IEvents to a json array that is returned as a string.
+     * @param categories is the HashMap to be converted.
+     * @return a String that contains the json array
+     * @throws JSONException
+     */
     public static String populatedCategoriesToJSONString(HashMap<String,List<IEvent>> categories) throws JSONException {
 
         JSONArray jsonArray = new JSONArray();
