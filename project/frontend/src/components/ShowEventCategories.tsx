@@ -2,6 +2,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 //import { Image } from "semantic-ui-react";
 import { Image } from 'react-bootstrap';
+import JsonDataDisplay from './ShowEvents';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const responsive = {
   desktop: {
@@ -35,9 +38,23 @@ const images = [
   "https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 ];
 
-// Because this is an inframe, so the SSR mode doesn't not do well here.
-// It will work on real devices.
-const Simple = ({ /*deviceType*/ }) => {
+//const cat = [];
+
+export default function DataCat() {
+  const [appState, setAppState] = useState({
+    loading: false,
+    cat: [] as any[]
+  });
+
+  useEffect(() => {
+      setAppState({loading: true, cat: []});
+      const apiUrl = 'http://127.0.0.1:8080/vowel_events';
+      axios.get(apiUrl).then(res => {
+          const allCategories = res.data
+          setAppState({ loading: false, cat: allCategories });  
+      })
+  }, [setAppState])
+
   return (
     <Carousel
       ssr
@@ -57,6 +74,34 @@ const Simple = ({ /*deviceType*/ }) => {
       })}
     </Carousel>
   );
+
+}
+
+
+// Because this is an inframe, so the SSR mode doesn't not do well here.
+// It will work on real devices.
+/*
+const Simple = ({  }) => {
+  return (
+    <Carousel
+      ssr
+      partialVisbile
+      deviceType={deviceType}
+      itemClass="image-item"
+      responsive={responsive}
+    >
+      {images.slice(0, 5).map(image => {
+        return (
+          <Image
+            draggable={false}
+            style={{ width: "100%", height: "100%" }}
+            src={image}
+          />
+        );
+      })}
+    </Carousel>
+  );
 };
 
 export default Simple;
+*/
