@@ -1,0 +1,71 @@
+*************
+Backend Guide
+*************
+
+This document contains a description of the basic structure of the backend for this project. It aims to facilitate
+development of future features and to explain some design decisions made.
+
+TLDR
+****
+    * JSON should ONLY be handled within the DataObjectFactory-class.
+
+    * Use the interfaces for DataObjects and Services/CommandHandlers whenever possible.
+
+    * All events are retrieved from the API and put into a list of IEvents that is stored in the Backend as soon as
+            it is started, use this list instead of new calls to the API!
+
+    * Data should contain everything tha concerns storing and translating data from different formats.
+
+    * Services should contain everything that concerns manipulating the data/list of data.
+
+    * Backed should only contain methods that concerns receiving http-requests, these methods has no responsibility
+            in operating data but merely redirect the request to the service or dataObject that knows how to deal
+            with it.
+
+
+Structure of the project
+************************
+    +Data : Contains all two folders and one file that covers all functionality of data objects (such as Events,
+                Venues) in the project.
+
+        +DataObjectContracts (folder) : Holds interfaces for all dataObjects in this project and is preferably
+                                        what should be used outside the Data-directory in order to maintain
+                                        abstraction of the actual data.
+
+        +DataObjects (folder) : Holds the classes that implements interfaces from DataObjectContracts and thus
+                                        provide the functionality required to handle the data.
+
+        +DataObjectFactory (file) : Holds factory methods required for any interpretation of JSON, or creating
+                                        instances of the dataObjects, again, this is to maintain
+                                        abstraction of the data. (this enables us to avoid any dependencies on
+                                        the DataObject-classes anywhere outside the Data directory.) The purpose
+                                        of the dataObject => JSON-methods is that you should be able to just send
+                                        in a list of that contains just the instances of for example IEvent that
+                                        should be part of the response and that they should be "translated" correctly.
+                                        A similar procedure could be created for categories if that would become
+                                        relevant.
+
+
+    +Services : Contains two folders and a file that covers all aspects of service objects within this project
+                (such as search and categorize)
+
+        +CommandContracts (folder) : In this folder are all interfaces defined for the different services (command
+                                        handlers), use these when referring to services in the rest of the application.
+
+        +CommandHandlers (folder) : Contains all classes that provides some kind of service, they should each implement
+                                        an interface from CommandContracts - All service methods should preferably be
+                                        non-static so that an instance has to be created (using the factory) before
+                                        being able to deliver the service. These classes should not be referred to
+                                        outside the Services folder (use the interfaces instead)
+
+        +ServiceFactory (file) : This is where all service instances are created, the factory methods should be static
+                                        and return an instance of the interface of the service rather than the actual
+                                        service class.
+
+    +BackendApplication (file) : See this as the interface of the backend, or some kind of facade if you will. In this
+                                        file, all kinds of requests the backend can handle is found. No actual
+                                        operations are carried trough here, but the request (plus any additional
+                                        parameters) is forwarded to the correct service. Note that any response sent
+                                        to the frontend needs to be sent in a JSON formatted string. When this file
+                                        is run, a call will be made to the API that gathers the data, which is then
+                                        translated into DataObjects and stored in the variable "events".

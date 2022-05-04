@@ -1,0 +1,22 @@
+
+Data
+****
+This folder contains all functionality concerning data storage / data conversion (JSON => DataObjects and vice versa).
+
+Contents:
+
+    +DataObjectContracts (folder) : Holds interfaces for all dataobjects in this project and is preferably what
+                                     should be used outside the Data-directory in order to maintain abstraction
+                                     of the actual data.
+
+    +DataObjects (folder) : Holds the classes that implements interfaces from DataObjectContracts and thus provide
+                                     the functionality required to hadle the data.
+
+    +DataObjectFactory (file) : Holds factory methods required for any interpretation of JSON, or creating intstances
+                                     of any of the dataobjects, again, this is to maintain abstraction of the data.
+                                     (this enables us to avoid any dependcies on the DataObject-classes anywhere
+                                     outside the Data directory.) The purpose for the dataObject => JSON-methods
+                                     is that you should be able to just send in a list of that contains just the
+                                     instances of for example IEvent that should be part of the response and that
+                                     they should be "translated" correctly. A similar procedure could be created
+                                     for categories if that would become relevant.
