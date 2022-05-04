@@ -11,25 +11,21 @@ import { category } from './Models';
  * Used in Carousel.
  */
 const responsive = {
-  desktop1: {
-    breakpoint: { max: 3000, min: 1518 },
+  desktopBig: {
+    breakpoint: { max: 3000, min: 1200 },
     items: 4,
-    paritialVisibilityGutter: 60
   },
-  desktop2: {
-    breakpoint: { max: 1518, min: 1024 },
+  desktopSmall: {
+    breakpoint: { max: 1200, min: 768 },
     items: 3,
-    paritialVisibilityGutter: 60
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 767, min: 576 },
     items: 2,
-    paritialVisibilityGutter: 50
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 575, min: 0 },
     items: 1,
-    paritialVisibilityGutter: 30
   }
 };
 

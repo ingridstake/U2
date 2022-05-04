@@ -9,14 +9,14 @@ import { event } from "./Models";
 export const EventCard = (e: event) => {
     return (
     <Card>
-        <Card.Body className='c-body'>
+        <Card.Body>
             <Card.Img variant="top" src={e.imageUrl} />
-            <Card.Title className='c-title'><h1>{e.name}</h1> </Card.Title>
+            <Card.Title><h5>{e.name}</h5> </Card.Title>
         </Card.Body>
 
-        <Card.Footer className='c-footer'>
+        <Card.Footer>
             <Button>Köp</Button>
-            <Card.Text><p>{e.date}, {e.city}</p></Card.Text>
+            <Card.Text>{e.date}, {e.city}</Card.Text>
         </Card.Footer>
     </Card>
     )
