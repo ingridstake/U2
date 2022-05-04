@@ -21,36 +21,25 @@ import java.util.List;
 
 public class Search {
 
-    private static List<IEvent> events;
-
-
-    public static void main(String[] args) throws IOException, ParseException {
+    public static String performSearch(List<IEvent> events, String searchParam) {
         StandardAnalyzer analyzer = new StandardAnalyzer();
         Directory index = new ByteBuffersDirectory();
 
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        IndexWriter w = new IndexWriter(index, config);
+        IndexWriter w = null;
+        try {
+            w = new IndexWriter(index, config);
 
 
-
-        var dataService = new APIDataService();
-        events = dataService.getEvents();
-        List<IEvent> tenEvents = events.subList(0,100);
+        List<IEvent> tenEvents = events.subList(0,10);
 
         for (IEvent event : tenEvents) {
             addDoc(w,  event.getName(), event.getId(), event.getDescription());
         }
         w.close();
 
-
-        //String querystr = args.length > 0 ? args[0] : "lucene";
-        //Query q = new QueryParser("title", analyzer).parse(querystr);
-
-        //String querystr2 = (args.length > 0 ? args[0] : "p*")  (args.length > 0 ? args[0] : "j*");
-        //Query q2 = new QueryParser("name", analyzer).parse(querystr2);
-
         //Term term = new Term("name", "*r");
-        Query query = new QueryParser("name", analyzer).parse("p*");
+        Query query = new QueryParser("name", analyzer).parse(searchParam + "*");
 
 
         int hitsPerPage = 100;
@@ -67,6 +56,12 @@ public class Search {
             System.out.println((i + 1) + ". " + d.get("id") + "\t" + d.get("name"));
         }
         reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static void addDoc(IndexWriter w, String name, String id, String description) throws IOException {
