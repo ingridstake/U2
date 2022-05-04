@@ -32,14 +32,14 @@ export default function JsonDataDisplay() {
                     {Array.from({ length: 1 }).map((_, index) => (
                         <Col>
                             <Card  key={e.id}>
-                                <Card.Body className='c-body'>
+                                <Card.Body>
                                     <Card.Img variant="top" src={e.imageUrl} />
-                                    <Card.Title className='c-title'><h1>{e.name}</h1> </Card.Title>
+                                    <Card.Title><h1>{e.name}</h1> </Card.Title>
                                 </Card.Body>
                                 
-                                <Card.Footer className='c-footer'>
+                                <Card.Footer>
                                     <Button>Köp</Button>
-                                    <Card.Text><p>{e.date}, {e.city}</p></Card.Text>
+                                    <Card.Text><span>{e.date}, {e.city}</span></Card.Text>
                                 </Card.Footer>
                             </Card>
                         </Col>

@@ -11,25 +11,21 @@ import '../styles/showEventCat.css';
 
 
 const responsive = {
-  desktop1: {
-    breakpoint: { max: 3000, min: 2012 },
+  desktopBig: {
+    breakpoint: { max: 3000, min: 1200 },
     items: 4,
-    paritialVisibilityGutter: 60
   },
-  desktop2: {
-    breakpoint: { max: 2012, min: 1024 },
+  desktopSmall: {
+    breakpoint: { max: 1200, min: 768 },
     items: 3,
-    paritialVisibilityGutter: 60
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 767, min: 576 },
     items: 2,
-    paritialVisibilityGutter: 50
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 575, min: 0 },
     items: 1,
-    paritialVisibilityGutter: 30
   }
 };
 
@@ -66,14 +62,14 @@ export default function DataCat() {
           {c.events.map((e: { imageUrl: string; name: string; date: string; city: string; }) => {
               return (
                 <Card>
-                    <Card.Body className='c-body'>
+                    <Card.Body>
                         <Card.Img variant="top" src={e.imageUrl} />
-                        <Card.Title className='c-title'><h1>{e.name}</h1> </Card.Title>
+                        <Card.Title><h5>{e.name}</h5> </Card.Title>
                     </Card.Body>
                     
-                    <Card.Footer className='c-footer'>
+                    <Card.Footer>
                         <Button>Köp</Button>
-                        <Card.Text><p>{e.date}, {e.city}</p></Card.Text>
+                        <Card.Text>{e.date}, {e.city}</Card.Text>
                     </Card.Footer>
                 </Card>
               );
