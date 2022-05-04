@@ -1,81 +1,10 @@
-
-/*.carousel {
-    width: 80vw;
-    padding: 0px 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    margin: 30px auto 30px auto;
+.cat-title{
+    margin-left: 50px;
+    font-weight: 300;
+    color: var(--blue-lightest);
+    font-size: 24pt;
+    margin-block-end: 0;
 }
-
-.carousel ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    will-change: transform, transition;
-    transition: transform 400ms ease-in-out 0s;
-    overflow: unset;
-    transform: translate3d(-724px, 0px, 0px);
-}
-*/
-.carousel li {
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    flex: 1 1 auto;
-    position: relative;
-    width: 452px;
-    padding: 10px;
-}
-/*
-.react-multiple-carousel__arrow {
-    position: absolute;
-    outline: 0;
-    transition: all .5s;
-    border-radius: 35px;
-    z-index: 1;
-    border: 0;
-    background: rgba(0,0,0,0.5);
-    min-width: 43px;
-    min-height: 43px;
-    opacity: 1;
-    cursor: pointer;
-}
-
-.react-multiple-carousel__arrow::before {
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    font-family: revicons;
-    text-align: center;
-    z-index: 2;
-    position: relative;
-}
-
-.react-multiple-carousel__arrow--left {
-    left: -10px;
-    top: 45%;
-
-}
-.react-multiple-carousel__arrow--right {
-    right: calc(4% + 1px);
-    top: 45%;
-}
-
-*/
-
-
-
-
-
-
-
 
 @font-face{
     font-family:"revicons";
@@ -89,6 +18,7 @@
     overflow:hidden;
     position:relative;
     margin: 30px;
+    margin-top: 0px;
 }
 .react-multi-carousel-track{
     list-style:none;
