@@ -1,0 +1,36 @@
+
+.SearchBar {
+    text-align: left;
+    margin-top: 3px;
+    border-radius: 6px;
+    box-shadow: 0 13px 25px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    height: 30px;
+    background: #fff;
+  
+    font-size: 1rem;
+    cursor: default;
+    vertical-align: baseline;
+    width: 30%;
+    margin: auto;
+  }
+
+.InputText {
+    /*width: 500px;
+    height: 30px; */
+    text-align: left;
+    margin-top: 3px;
+    border-radius: 6px;
+    box-shadow: 0 13px 25px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    height: 30px;
+    background: #fff;
+   
+
+    font-size: 1rem;
+    cursor: default;
+    vertical-align: baseline;
+    width: 100%;
+    margin: auto;
+
+}
