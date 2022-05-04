@@ -3,6 +3,7 @@ package com.U2.backend.Search;
 import com.U2.backend.APIDataService;
 import com.U2.backend.DataObjectContracts.IEvent;
 import com.U2.backend.DataObjectContracts.IVenue;
+import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
@@ -17,6 +18,7 @@ import org.apache.lucene.util.packed.PackedInts;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Search {
@@ -31,14 +33,13 @@ public class Search {
             w = new IndexWriter(index, config);
 
 
-        List<IEvent> tenEvents = events.subList(0,10);
+        List<IEvent> hundredEvents = events.subList(0,100);
 
-        for (IEvent event : tenEvents) {
-            addDoc(w,  event.getName(), event.getId(), event.getDescription());
+        for (IEvent event : hundredEvents) {
+            addDoc(w, event.getId());
         }
         w.close();
 
-        //Term term = new Term("name", "*r");
         Query query = new QueryParser("name", analyzer).parse(searchParam + "*");
 
 
@@ -48,27 +49,33 @@ public class Search {
         TopDocs docs = searcher.search(query, hitsPerPage);
         ScoreDoc[] hits = docs.scoreDocs;
 
-        System.out.println("Found " + hits.length + " hits.");
+        //System.out.println("Found " + hits.length + " hits.");
 
+        List<String> hitsId = new ArrayList<>();
         for(int i=0;i<hits.length;++i) {
             int docId = hits[i].doc;
             Document d = searcher.doc(docId);
-            System.out.println((i + 1) + ". " + d.get("id") + "\t" + d.get("name"));
+            hitsId.add(d.get("id"));
         }
+        var eventHits = events.stream().filter(e -> hitsId.contains(e.getId())).toList();
+        DataObjectFactory.convertToJSONString(eventHits);
+
         reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
         return null;
     }
 
-    public static void addDoc(IndexWriter w, String name, String id, String description) throws IOException {
+    public static void addDoc(IndexWriter w, String id) throws IOException {
         Document doc = new Document();
-        doc.add(new TextField("name", name, Field.Store.YES));
-        doc.add(new StringField("id", id, Field.Store.YES));
-        doc.add(new TextField("description", description, Field.Store.YES));
+        //doc.add(new TextField("name", name, Field.Store.YES));
+        doc.add(new TextField("id", id, Field.Store.YES));
+        //doc.add(new TextField("description", description, Field.Store.YES));
         w.addDocument(doc);
     }
 
