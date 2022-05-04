@@ -24,15 +24,16 @@
     overflow: unset;
     transform: translate3d(-724px, 0px, 0px);
 }
-
+*/
 .carousel li {
     transform-style: preserve-3d;
     backface-visibility: hidden;
     flex: 1 1 auto;
     position: relative;
     width: 452px;
+    padding: 10px;
 }
-
+/*
 .react-multiple-carousel__arrow {
     position: absolute;
     outline: 0;
@@ -66,8 +67,8 @@
     right: calc(4% + 1px);
     top: 45%;
 }
-*/
 
+*/
 
 
 

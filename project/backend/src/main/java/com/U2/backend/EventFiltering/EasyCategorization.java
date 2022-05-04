@@ -33,7 +33,6 @@ public class EasyCategorization {
      * @return a Lists of IEvents which name starts with a vowels
      */
     private static List<IEvent> getVowelEvents(List<IEvent> events) {
-        System.out.println("test");
         String vowels = "aeiouåäö";
         var t = events.stream().filter(e -> vowels.contains(String.valueOf(e.getName().charAt(0)).toLowerCase())).toList();
 
@@ -46,7 +45,6 @@ public class EasyCategorization {
      * @return a Lists of IEvents which name starts with a consonants
      */
     private static List<IEvent> getConsonantsEvents(List<IEvent> events) {
-        System.out.println("test");
         String consonants = "qwrtpsdfghjklzxcvbnm";
         var t = events.stream().filter(e -> consonants.contains(String.valueOf(e.getName().charAt(0)).toLowerCase())).toList();
 

@@ -1,10 +1,14 @@
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 //import { Image } from "semantic-ui-react";
-import { Image } from 'react-bootstrap';
+import { Image, ListGroup, ListGroupItem } from 'react-bootstrap';
 import JsonDataDisplay from './ShowEvents';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import '../styles/showEvents.css';
+import '../styles/showEventCat.css';
+
 
 const responsive = {
   desktop: {
@@ -56,23 +60,36 @@ export default function DataCat() {
   }, [setAppState])
 
   return (
-    <Carousel
-      ssr
-      partialVisbile
-      /*deviceType={deviceType}*/
-      itemClass="image-item"
-      responsive={responsive}
-    >
-      {images.slice(0, 5).map(image => {
-        return (
-          <Image
-            draggable={false}
-            style={{ width: "100%", height: "100%" }}
-            src={image}
-          />
-        );
-      })}
-    </Carousel>
+    <ListGroup>
+      {appState.cat.map(c => (
+        <ListGroupItem><h1>{c.category}</h1>
+          <Carousel
+            //ssr
+            partialVisbile
+            /*deviceType={deviceType}*/
+            //itemClass="image-item"
+            responsive={responsive} 
+            className="carousel"
+          >
+          {c.events.map((e: { imageUrl: string; name: string; date: string; city: string; }) => {
+              return (
+                <Card>
+                    <Card.Body className='c-body'>
+                        <Card.Img variant="top" src={e.imageUrl} />
+                        <Card.Title className='c-title'><h1>{e.name}</h1> </Card.Title>
+                    </Card.Body>
+                    
+                    <Card.Footer className='c-footer'>
+                        <Button>Köp</Button>
+                        <Card.Text><p>{e.date}, {e.city}</p></Card.Text>
+                    </Card.Footer>
+                </Card>
+              );
+            })}
+          </Carousel>
+        </ListGroupItem>
+        ))}
+    </ListGroup>
   );
 
 }
@@ -105,3 +122,21 @@ const Simple = ({  }) => {
 
 export default Simple;
 */
+
+/*
+          {c.event.map((e: { imageUrl: string | undefined; }) => {
+            return (
+              <Card>
+                  <Card.Body className='c-body'>
+                      <Card.Img variant="top" src={e.imageUrl} />
+                      <Card.Title className='c-title'><h1>{"hello"}</h1> </Card.Title>
+                  </Card.Body>
+                  
+                  <Card.Footer className='c-footer'>
+                      <Button>Köp</Button>
+                      <Card.Text><p>{"hej"}, {"hola"}</p></Card.Text>
+                  </Card.Footer>
+              </Card>
+            );
+          })}
+          */
