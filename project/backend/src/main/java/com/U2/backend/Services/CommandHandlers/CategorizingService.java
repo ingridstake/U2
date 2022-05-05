@@ -53,12 +53,7 @@ public class CategorizingService implements ICategorizingService {
                 categoryCount++;
             }
 
-            if(isFoodAndWineEvent(ev)) {
-                foodWineEvents.addEvent(ev);
-                categoryCount++;
-                if(categoryCount >= categoryCountLimit)
-                    continue;
-            }
+            
 
             if(isSportEvent(ev)) {
                 sportEvents.addEvent(ev);
@@ -76,6 +71,13 @@ public class CategorizingService implements ICategorizingService {
 
             if(isArtExhibitionEvent(ev)) {
                 artExhibitionEvents.addEvent(ev);
+                categoryCount++;
+                if(categoryCount >= categoryCountLimit)
+                    continue;
+            }
+
+            if(isFoodAndWineEvent(ev)) {
+                foodWineEvents.addEvent(ev);
                 categoryCount++;
                 if(categoryCount >= categoryCountLimit)
                     continue;
@@ -116,7 +118,9 @@ public class CategorizingService implements ICategorizingService {
                 e.getName().toLowerCase().contains("musikalen") ||
                 e.getDescription().toLowerCase().contains("standup") ||
                 e.getName().toLowerCase().contains("standup") ||
-                e.getDescription().toLowerCase().contains("föreställning")) && !isConcertEvent(e) && !isFoodAndWineEvent(e));
+                e.getDescription().toLowerCase().contains("föreställning")) &&
+                !e.getName().toLowerCase().contains("pausbeställning") &&
+                !isConcertEvent(e));
     }
 
     private boolean isSportEvent(IEvent e) {
@@ -133,7 +137,9 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains("komposition") ||
                 e.getDescription().toLowerCase().contains("band") ||
                 e.getDescription().toLowerCase().contains("liveband") ||
-                e.getDescription().toLowerCase().contains("album");
+                e.getDescription().toLowerCase().contains("album") ||
+                e.getDescription().toLowerCase().contains("låtar") ||
+                e.getDescription().toLowerCase().contains("lp");
     }
 
     private boolean isFoodAndWineEvent(IEvent e){
@@ -150,16 +156,19 @@ public class CategorizingService implements ICategorizingService {
                 !e.getDescription().toLowerCase().contains("musikalen") &&
                 !e.getName().toLowerCase().contains("loppis") &&
                 !e.getDescription().toLowerCase().contains("loppis") &&
+                !e.getDescription().toLowerCase().contains("folkets park") &&
+                !isTheatreEvent(e) && 
                 !isConcertEvent(e) &&
-                !isShowEvent(e));
+                !isShowEvent(e) &&
+                !isArtExhibitionEvent(e));
     }
 
     private boolean isArtExhibitionEvent(IEvent e){
-        return e.getDescription().toLowerCase().contains("utstä") ||
+        return e.getDescription().toLowerCase().contains("utställning") ||
                 e.getDescription().toLowerCase().contains("museum") ||
                 e.getDescription().toLowerCase().contains("visning") ||
-                e.getDescription().toLowerCase().contains("art") ||
-                e.getName().toLowerCase().contains("art") ||
+                e.getDescription().toLowerCase().contains(" art") ||
+                e.getName().toLowerCase().contains(" art") ||
                 e.getDescription().toLowerCase().contains("konst") ||
                 e.getName().toLowerCase().contains("konst");
     }
