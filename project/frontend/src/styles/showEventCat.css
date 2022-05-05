@@ -1,5 +1,7 @@
 .cat-title{
-    margin-left: 50px;
+    /*margin: 50px auto 0 auto;
+    width: 90vw;*/
+    padding: 10px;
     font-weight: 300;
     color: var(--blue-lightest);
     font-size: 24pt;
@@ -11,6 +13,11 @@
     fallback:fallback;
     src:url("./revicons.woff") format('woff'),url("./revicons.ttf") format('ttf'),url("./revicons.eot") format('ttf')
 }
+.list-group-item{
+    width: 90vw;
+    margin: 0 auto;
+}
+
 /*Carousel*/
 .react-multi-carousel-list{
     display:flex;
@@ -19,7 +26,7 @@
     position:relative;
     margin: auto;
     margin-top: 0px;
-    max-width: 90vw;
+    /*max-width: 90vw;*/
 }
 /*ul*/
 .react-multi-carousel-track{
