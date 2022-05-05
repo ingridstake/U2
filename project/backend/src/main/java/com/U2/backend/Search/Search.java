@@ -1,20 +1,15 @@
 package com.U2.backend.Search;
 
-import com.U2.backend.APIDataService;
 import com.U2.backend.DataObjectContracts.IEvent;
-import com.U2.backend.DataObjectContracts.IVenue;
 import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
-import org.apache.lucene.queries.mlt.MoreLikeThis;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.ByteBuffersDirectory;
 import org.apache.lucene.store.Directory;
-import org.apache.lucene.util.PagedBytes;
-import org.apache.lucene.util.packed.PackedInts;
 import org.json.JSONException;
 
 import java.io.IOException;
@@ -36,7 +31,7 @@ public class Search {
         List<IEvent> hundredEvents = events.subList(0,100);
 
         for (IEvent event : hundredEvents) {
-            addDoc(w, event.getId());
+            addDoc(w, event.getName(), event.getId(), event.getDescription());
         }
         w.close();
 
@@ -71,30 +66,21 @@ public class Search {
         return null;
     }
 
-    public static void addDoc(IndexWriter w, String id) throws IOException {
+    public static void addDoc(IndexWriter w, String name, String id, String description) throws IOException {
         Document doc = new Document();
-        //doc.add(new TextField("name", name, Field.Store.YES));
+        doc.add(new TextField("name", name, Field.Store.YES));
         doc.add(new TextField("id", id, Field.Store.YES));
-        //doc.add(new TextField("description", description, Field.Store.YES));
+        doc.add(new TextField("description", description, Field.Store.YES));
         w.addDocument(doc);
     }
 
-
-
     /*
-    //RAMDirectory ramDirectory = new RAMDirectory();
-    //Directory memoryIndex = new RAMDirectory();
-    StandardAnalyzer analyzer = new StandardAnalyzer();
-    IndexWriterConfig indexWriterConfig = new IndexWriterConfig(analyzer);
-    IndexWriter writter = new IndexWriter(memoryIndex, indexWriterConfig);
-    Document document = new Document();
-
-    document.add()
-    document.add(new TextField("title",title, Field.Store.YES));
-    document.add(new TextField("body", body, Field.Store.YES));
-
-    writter.addDocument(document);
-    writter.close();
+    private static List<IEvent> events;
+    public static void main(String[] args) {
+        var dataService = new APIDataService();
+        events = dataService.getEvents();
+        performSearch(events, "p");
+    }
 
      */
 }

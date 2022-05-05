@@ -41,7 +41,7 @@ public class BackendApplication {
 	@CrossOrigin
 	@GetMapping(path = "/search")
 	public String search(@RequestParam(value = "param", defaultValue = "") String param) {
-		return Search.performSearch(events, param);
+		return Search.performSearch(events, "p");
 	}
 
 	@CrossOrigin
