@@ -18,6 +18,11 @@ public class DataObjectFactory {
     private static List<IEvent> _events;
     private static List<IVenue> _venues;
 
+    /**
+     *Takes in API data and coordinates procedures to create a representation of the data using IEvent and IVenue
+     * @param APIData is the JSONObject string containing all data from the API
+     * @return
+     */
     public static List<IEvent> getEvents(String APIData){
         var instant = new DataObjectFactory();
 
@@ -47,6 +52,11 @@ public class DataObjectFactory {
 
     private DataObjectFactory(){}
 
+    /**
+     * Iterates all venues from the parameter JSONArray, interprets them as IVenue and puts them in a list that is assigned to the instance variable _venues of the DataObjectFactory
+     * @param venues is the JSONArray of venues to be interpreted.
+     * @throws JSONException
+     */
     private void buildVenues(JSONArray venues) throws JSONException {
 
         var venueList = new ArrayList<IVenue>();
@@ -60,6 +70,11 @@ public class DataObjectFactory {
         _venues = venueList;
     }
 
+    /**
+     * Iterates all events from the parameter JSONArray, interprets them as IEvents and puts them in a list that is assigned to the instance variable _events of the DataObjectFactory
+     * @param events is the JSONArray of events to be interpreted.
+     * @throws JSONException
+     */
     private void buildEvents(JSONArray events) throws JSONException {
         var eventList = new ArrayList<IEvent>();
         for (int i = 0; i < events.length(); i++) {
@@ -76,6 +91,14 @@ public class DataObjectFactory {
         _events = eventList;
     }
 
+    /**
+     * Interprets a json object as an Event and returns it.
+     * @param event is a JSON object representation of an event. The object should contain following:
+     *              "venueId", "id", "published", "start", "description", "productionParentId","hierarchyType",
+     *              "name", "infoUri" and "imageUrl"
+     * @return returns an instance of IEvent that stores all data form the JSON object
+     * @throws JSONException
+     */
     private IEvent readEvent(JSONObject event) throws JSONException {
         var venueId = event.get("venueId").toString();
         var venue = _venues.stream().filter(v -> v.getId().equals(venueId)).findFirst().orElse(null);
@@ -87,6 +110,11 @@ public class DataObjectFactory {
                 event.getString("name"), event.getString("imageUrl"));
     }
 
+    /**
+     * Converts all event attributes to a json array that is returned as a string
+     * @return s string representation of the json array of all event attributes
+     * @throws JSONException
+     */
     public static String convertToJSONArrayString() throws JSONException {
         JSONArray jsonArray = new JSONArray();
         for (IEvent event : _events) {
@@ -100,7 +128,7 @@ public class DataObjectFactory {
     /**
      * Converts a list of Events to a json array that is then returned as a string.
      * @param events The list of events to be converted
-     * @return a string that contains the json array
+     * @return a string that contains the json array representation of the input list
      * @throws JSONException
      */
     public static String convertToJSONString(List<IEvent> events) throws JSONException {

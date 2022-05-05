@@ -1,0 +1,18 @@
+
+Services
+********
+This folder contains all functionality that concerns operating on / filtering data.
+
+Contents:
+
+CommandContracts (folder) : In this folder are all intefaces defined for the different services (command handlers),
+                            use these when refering to services in the rest of the application.
+
+CommandHandlers (folder) : Contains all classes that provides some kind of service, they should each implement a
+                            interface from CommandContracts - All servicemethods should perferable be non-static
+                            so that an instance has to be created (using the factory) before being able to deliver
+                            the service. These classes should not be refered to outside the Services folder
+                            (use the intefaces instead)
+
+ServiceFactory (file) : This is where all service instances are created, the factory methods should be static and
+                        return an instance of the interface of the service rather than the actual service class.
