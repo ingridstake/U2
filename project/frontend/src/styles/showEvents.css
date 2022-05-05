@@ -9,74 +9,86 @@
 
 .card {
   background-color: var(--grey-darkest);
-  margin: 20px;
-  max-width: 100%; /* [1] */
-  width: 27rem;
+  margin: 0 10px;
+  min-width: 230px;
+  max-width: 420px;
   border-radius: var(--r-m);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.1);
   color: #243846;
   background-color: #fff;
   transition: 0.25s box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow: hidden;
+  align-self: center;
+  justify-self: center;
 }
 
-.c-title h1 {
-  font-size: 24px;
+.card-title h5 {
+  font-size: var(--fs-m);
+  left: 0;
   color: white;
   position: absolute;
-  padding-top: 35%;
   bottom: 0;
-  padding: 4px 10px;
-  width: 90%;
-
+  margin: 0;
+  line-height: var(--lh-s);
+  letter-spacing: var(--ls--xs);
+  padding: 15px;
 }
 
 .card-grid img {
-  height: 15rem;
+  height: 240px;
   width: 100%;
   object-fit: cover;
   z-index: 1;
   overflow: hidden;
 }
 
-.c-title {
-  height: 15rem;
-  width: 100%;
+.card-img-top {
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-title {
+  height: 208px;
   object-fit: cover;
   background: linear-gradient(190deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 90%)),
   linear-gradient(170deg,rgb(19 30 41 / 0),rgb(19 30 41 / 10%),rgb(19 30 41 / 50%));
   opacity: 9;
   z-index: 100;
-  margin-top: -15rem;
+  margin-top: -240px;
   position: absolute;
-  top:15rem;
+  top:240px;
   vertical-align: text-bottom;
+  padding: 16px;
+  right: 0;
+  left: 0;
 }
 
-.c-body {
+.card-body {
   display: block;
   position: relative;
-  height: 15rem;
+  height: 240px;
+  min-width: 230px;
 }
-.c-footer {
+.card-footer {
   display: flex;
   align-items: center;
   padding: var(--space-s) var(--space-l);
   border-top: 1px dashed rgba(0,0,0,.1);
   color: var(--co-text-dim);
   font-family: var(--roboto-mono);
-  letter-spacing: normal;
+  letter-spacing: 1px;
   word-spacing: normal;
 }
-.c-footer p {
+
+.card-text {
   font-size: var(--fs-xxs);
   word-break: break-word;
-  margin: 0px;
+  margin: 0;
 }
 
-button {
-  width: 3.3em;
-  height: 3.3em;
+.card-footer button {
+  min-width: 45px;
+  min-height: 45px;
   margin-right: 10px;
   border-radius: 50%;
   background-color: var(--co-accent);
@@ -86,5 +98,29 @@ button {
   text-decoration: 0;
   border: none;
   font-size: .85em;
+
+}
+
+@media screen and (max-width:768px) {
+
+  .card-img-top {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-title{
+    height: 90px;
+    margin-top: -120px;
+    top: 120px;
+    padding: 15px;
+  }
+  .c-body{
+    height: 120px;
+  }
+
+  .card-title h1{
+    font-size: var(--fs-m);
+  }
 
 }

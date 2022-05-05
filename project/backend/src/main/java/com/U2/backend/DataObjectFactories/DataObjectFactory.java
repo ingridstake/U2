@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class DataObjectFactory {
@@ -113,6 +114,37 @@ public class DataObjectFactory {
             temp.put("imageUrl", event.getImageUrl());
             temp.put("date", event.getStart());
             jsonArray.put(temp);
+        }
+        return jsonArray.toString();
+    }
+
+    /**
+     * Converts a HashMap of categories with Lists of IEvents to a json array that is returned as a string.
+     * @param categories is the HashMap to be converted.
+     * @return a String that contains the json array
+     * @throws JSONException
+     */
+    public static String populatedCategoriesToJSONString(HashMap<String, List<IEvent>> categories) throws JSONException {
+
+        JSONArray jsonArray = new JSONArray();
+
+        for (var category : categories.keySet()) {
+            var cat = new JSONObject();
+            cat.put("category", category);
+            JSONArray eventArray = new JSONArray();
+
+            for (var event : categories.get(category)) {
+                var temp = new JSONObject();
+                temp.put("name", event.getName());
+                temp.put("id", event.getId());
+                temp.put("city", event.getVenue().getCity());
+                temp.put("imageUrl", event.getImageUrl());
+                temp.put("date", event.getStart());
+                temp.put("description", event.getDescription());
+                eventArray.put(temp);
+            }
+            cat.put("events", eventArray);
+            jsonArray.put(cat);
         }
         return jsonArray.toString();
     }

@@ -1,9 +1,11 @@
-import React from "react";
-import { Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import '../styles/headerFooter.css';
 import ticksterLogo from '../resources/images/logo_tickster_white.svg';
 
+/**
+ * A header with Tickster's logo.
+ * @returns a header
+ */
 function Header() {
     return (
         <>
