@@ -4,6 +4,9 @@ import com.U2.backend.DataObjectContracts.IEvent;
 import com.U2.backend.DataObjectContracts.IVenue;
 import com.U2.backend.DataObjectFactories.DataObjectFactory;
 import com.U2.backend.EventFiltering.EasyCategorization;
+import com.U2.backend.EventFiltering.Basics;
+import com.U2.backend.Search.Search;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -39,6 +42,12 @@ public class BackendApplication {
 	@GetMapping(path = "/hello")
 	public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
 		return String.format("Hello %s!", name);
+	}
+
+	@CrossOrigin
+	@GetMapping(path = "/search")
+	public String search(@RequestParam(value = "param", defaultValue = "") String param) {
+		return Search.performSearch(events, "p");
 	}
 
 	@CrossOrigin
