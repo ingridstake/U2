@@ -21,7 +21,7 @@ public class APIDataService {
 
     public APIDataService() {
         try {
-
+            // Retrieve the url to the API dump
             var client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(new URI("https://api.tickster.com/sv/api/0.4/events/dump/upcoming?key=38a79e4a7f000b4f"))
@@ -35,6 +35,7 @@ public class APIDataService {
             var urlObj = new JSONObject( org.apache.commons.text.StringEscapeUtils.unescapeJava(response.body()));
             var apiUrl = urlObj.get("uri").toString();
 
+            // Retrieve data from the api url
             HttpRequest apiRequest = HttpRequest.newBuilder()
                     .uri(new URI(apiUrl))
                     .GET()
@@ -42,6 +43,8 @@ public class APIDataService {
 
             HttpResponse<InputStream> apiResponse = client.send(apiRequest, HttpResponse.BodyHandlers.ofInputStream());
             GZIPInputStream gzipInputStream = new GZIPInputStream(apiResponse.body());
+
+            //Create venues and events from the api data
             DataObjectFactory.getEvents(new String(gzipInputStream.readAllBytes(), StandardCharsets.UTF_8));
 
         } catch (URISyntaxException e) {
