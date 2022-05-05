@@ -115,7 +115,8 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains("musikalen") ||
                 e.getName().toLowerCase().contains("musikalen") ||
                 e.getDescription().toLowerCase().contains("standup") ||
-                e.getName().toLowerCase().contains("standup")) && !isConcertEvent(e) && !isFoodAndWineEvent(e));
+                e.getName().toLowerCase().contains("standup") ||
+                e.getDescription().toLowerCase().contains("föreställning")) && !isConcertEvent(e) && !isFoodAndWineEvent(e));
     }
 
     private boolean isSportEvent(IEvent e) {
@@ -129,7 +130,10 @@ public class CategorizingService implements ICategorizingService {
     private boolean isConcertEvent(IEvent e){
         return e.getDescription().toLowerCase().contains("konsert") ||
                 e.getName().toLowerCase().contains("konsert") ||
-                e.getDescription().toLowerCase().contains("komposition");
+                e.getDescription().toLowerCase().contains("komposition") ||
+                e.getDescription().toLowerCase().contains("band") ||
+                e.getDescription().toLowerCase().contains("liveband") ||
+                e.getDescription().toLowerCase().contains("album");
     }
 
     private boolean isFoodAndWineEvent(IEvent e){
@@ -146,11 +150,12 @@ public class CategorizingService implements ICategorizingService {
                 !e.getDescription().toLowerCase().contains("musikalen") &&
                 !e.getName().toLowerCase().contains("loppis") &&
                 !e.getDescription().toLowerCase().contains("loppis") &&
-                !isConcertEvent(e));
+                !isConcertEvent(e) &&
+                !isShowEvent(e));
     }
 
     private boolean isArtExhibitionEvent(IEvent e){
-        return e.getDescription().toLowerCase().contains("utst") ||
+        return e.getDescription().toLowerCase().contains("utstä") ||
                 e.getDescription().toLowerCase().contains("museum") ||
                 e.getDescription().toLowerCase().contains("visning") ||
                 e.getDescription().toLowerCase().contains("art") ||
@@ -161,10 +166,10 @@ public class CategorizingService implements ICategorizingService {
 
     private boolean isGiftCardEvent(IEvent e){
 
-        return e.getDescription().toLowerCase().contains("presentkort") ||
+        return ((e.getDescription().toLowerCase().contains("presentkort") ||
                 e.getName().toLowerCase().contains("presentkort") ||
                 e.getDescription().toLowerCase().contains("gavekort") ||
-                e.getName().toLowerCase().contains("gavekort");
+                e.getName().toLowerCase().contains("gavekort")) && !isShowEvent(e));
     }
 
     private boolean isNotSellable(IEvent e) {
