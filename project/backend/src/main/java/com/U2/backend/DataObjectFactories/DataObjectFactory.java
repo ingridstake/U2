@@ -5,8 +5,6 @@ import com.U2.backend.DataObjectContracts.IEvent;
 import com.U2.backend.DataObjectContracts.IVenue;
 import com.U2.backend.DataObjects.Event;
 import com.U2.backend.DataObjects.Venue;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.index.IndexableField;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
