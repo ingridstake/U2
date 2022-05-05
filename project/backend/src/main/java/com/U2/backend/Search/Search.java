@@ -27,7 +27,6 @@ public class Search {
         try {
             w = new IndexWriter(index, config);
 
-
         List<IEvent> hundredEvents = events.subList(0,100);
 
         for (IEvent event : hundredEvents) {
@@ -36,7 +35,6 @@ public class Search {
         w.close();
 
         Query query = new QueryParser("name", analyzer).parse(searchParam + "*");
-
 
         int hitsPerPage = 100;
         IndexReader reader = DirectoryReader.open(index);
@@ -81,6 +79,5 @@ public class Search {
         events = dataService.getEvents();
         performSearch(events, "p");
     }
-
      */
 }

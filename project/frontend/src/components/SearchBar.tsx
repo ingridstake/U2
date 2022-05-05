@@ -25,7 +25,6 @@ export default function SearchBar() {
       }, (error) => {
         console.log(error);
       });
-    
       */
 
       useEffect(() => {
@@ -37,6 +36,7 @@ export default function SearchBar() {
             setAppState({ loading: false, result: allResults});
         })
     }, [setAppState])
+
     /*
     axios.get('http://127.0.0.1:8080/search').then(res => {
         const result = res.data;
@@ -44,12 +44,9 @@ export default function SearchBar() {
     })
     */
 
-
-
     return (
     <div className="SearchBar">
         <input className="InputText" type="search" placeholder="Vadsomhelst..." onChange={getInputValue}  />
     </div>
-
     );
 }
