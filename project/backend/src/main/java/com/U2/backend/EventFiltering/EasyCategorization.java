@@ -18,6 +18,9 @@ public class EasyCategorization {
         var categoryMap = new HashMap<String,List<IEvent>>();
         categoryMap.put("vowels", getVowelEvents(events));
         categoryMap.put("consonants", getConsonantsEvents(events));
+        categoryMap.put("theatres", getTheatreEvents(events));
+        categoryMap.put("sports", getSportEvents(events));
+
         String s = null;
         try {
             s = DataObjectFactory.populatedCategoriesToJSONString(categoryMap);
@@ -50,4 +53,21 @@ public class EasyCategorization {
 
         return t;
     }
+
+    private static List<IEvent> getTheatreEvents(List<IEvent> events) {
+        System.out.println("test1");
+        String searchString = "teat";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+    private static List<IEvent> getSportEvents(List<IEvent> events) {
+        System.out.println("test2");
+        String searchString = "sport";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
 }

@@ -124,13 +124,13 @@ public class DataObjectFactory {
      * @return a String that contains the json array
      * @throws JSONException
      */
-    public static String populatedCategoriesToJSONString(HashMap<String,List<IEvent>> categories) throws JSONException {
+    public static String populatedCategoriesToJSONString(HashMap<String, List<IEvent>> categories) throws JSONException {
 
         JSONArray jsonArray = new JSONArray();
 
         for (var category : categories.keySet()) {
             var cat = new JSONObject();
-            cat.put("category",category);
+            cat.put("category", category);
             JSONArray eventArray = new JSONArray();
 
             for (var event : categories.get(category)) {
@@ -140,6 +140,7 @@ public class DataObjectFactory {
                 temp.put("city", event.getVenue().getCity());
                 temp.put("imageUrl", event.getImageUrl());
                 temp.put("date", event.getStart());
+                temp.put("description", event.getDescription());
                 eventArray.put(temp);
             }
             cat.put("events", eventArray);
