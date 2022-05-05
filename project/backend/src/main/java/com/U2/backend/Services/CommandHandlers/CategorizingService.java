@@ -157,14 +157,16 @@ public class CategorizingService implements ICategorizingService {
                 !e.getName().toLowerCase().contains("loppis") &&
                 !e.getDescription().toLowerCase().contains("loppis") &&
                 !e.getDescription().toLowerCase().contains("folkets park") &&
-                !isTheatreEvent(e) && 
+                !isArtExhibitionEvent(e) &&
+                !isTheatreEvent(e) &&
                 !isConcertEvent(e) &&
-                !isShowEvent(e) &&
-                !isArtExhibitionEvent(e));
+                !isSportEvent(e) && 
+                !isShowEvent(e));
     }
 
     private boolean isArtExhibitionEvent(IEvent e){
         return e.getDescription().toLowerCase().contains("utställning") ||
+                e.getName().toLowerCase().contains("utställning") ||
                 e.getDescription().toLowerCase().contains("museum") ||
                 e.getDescription().toLowerCase().contains("visning") ||
                 e.getDescription().toLowerCase().contains(" art") ||
