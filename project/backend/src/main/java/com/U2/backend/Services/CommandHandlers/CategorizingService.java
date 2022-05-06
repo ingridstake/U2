@@ -49,10 +49,24 @@ public class CategorizingService implements ICategorizingService {
                 continue;
             }
 
-            if(isEducationalEvent(ev)) {
-                educationalEvents.addEvent(ev);
+            if(isTheatreEvent(ev)) {
+                theatreEvents.addEvent(ev);
                 categoryCount++;
-                if (categoryCount >= categoryCountLimit)
+            }
+
+            
+
+            if(isSportEvent(ev)) {
+                sportEvents.addEvent(ev);
+                categoryCount++;
+                if(categoryCount >= categoryCountLimit)
+                    continue;
+            }
+
+            if(isConcertEvent(ev)) {
+                concertEvents.addEvent(ev);
+                categoryCount++;
+                if(categoryCount >= categoryCountLimit)
                     continue;
             }
 
@@ -63,8 +77,8 @@ public class CategorizingService implements ICategorizingService {
                     continue;
             }
 
-            if(isSportEvent(ev)) {
-                sportEvents.addEvent(ev);
+            if(isFoodAndWineEvent(ev)) {
+                foodWineEvents.addEvent(ev);
                 categoryCount++;
                 if(categoryCount >= categoryCountLimit)
                     continue;
@@ -77,22 +91,10 @@ public class CategorizingService implements ICategorizingService {
                     continue;
             }
 
-            if(isTheatreEvent(ev)) {
-                theatreEvents.addEvent(ev);
+            if(isEducationalEvent(ev)) {
+                educationalEvents.addEvent(ev);
                 categoryCount++;
-            }
-
-            if(isConcertEvent(ev)) {
-                concertEvents.addEvent(ev);
-                categoryCount++;
-                if(categoryCount >= categoryCountLimit)
-                    continue;
-            }
-
-            if(isFoodAndWineEvent(ev)) {
-                foodWineEvents.addEvent(ev);
-                categoryCount++;
-                if(categoryCount >= categoryCountLimit)
+                if (categoryCount >= categoryCountLimit)
                     continue;
             }
 
@@ -194,7 +196,8 @@ public class CategorizingService implements ICategorizingService {
     private boolean isConcertEvent(IEvent e){
         return (e.getDescription().toLowerCase().contains("konsert") ||
                 e.getName().toLowerCase().contains("konsert") ||
-                e.getDescription().toLowerCase().contains("komposition") ||
+                e.getName().toLowerCase().contains("nattklubb") ||
+                e.getDescription().toLowerCase().contains("komposition ") ||
                 e.getDescription().toLowerCase().contains("band ") ||
                 e.getDescription().toLowerCase().contains("liveband") ||
                 e.getDescription().toLowerCase().contains("album") ||
@@ -229,5 +232,5 @@ public class CategorizingService implements ICategorizingService {
                 !isSportEvent(e) && 
                 !isShowEvent(e));
     }
-    //endregion
+    //endregion1
 }
