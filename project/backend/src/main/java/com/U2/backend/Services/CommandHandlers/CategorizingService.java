@@ -181,9 +181,8 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains(" art ") ||
                 e.getName().toLowerCase().contains(" art ") ||
                 e.getDescription().toLowerCase().contains("konst ") ||
-                e.getName().toLowerCase().contains("konst")) &&
+                e.getName().toLowerCase().contains("konst") &&
                 !e.getName().toLowerCase().contains("vandring");
-
     }
 
     private boolean isGiftCardEvent(IEvent e){
@@ -217,8 +216,6 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains(" kurs ") ||
                 e.getDescription().toLowerCase().contains("konferens")) &&
                 !e.getName().toLowerCase().contains("handel"));
-
-
     }
     //endregion
 }
