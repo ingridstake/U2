@@ -1,9 +1,7 @@
 package com.U2.backend.Data;
 
-import com.U2.backend.Data.DataObjectContracts.HierarchyType;
-import com.U2.backend.Data.DataObjectContracts.ICategory;
-import com.U2.backend.Data.DataObjectContracts.IEvent;
-import com.U2.backend.Data.DataObjectContracts.IVenue;
+import com.U2.backend.Data.DataObjectContracts.*;
+import com.U2.backend.Data.DataObjects.CategoryTag;
 import com.U2.backend.Data.DataObjects.Event;
 import com.U2.backend.Data.DataObjects.Venue;
 import org.json.JSONArray;
@@ -27,6 +25,14 @@ public class DataObjectFactory {
     public static List<IVenue> getVenues(){
         return venues;
     }
+    //endregion
+
+    //region Public Methods for creating dataObjects
+
+    public static ICategoryTag createCategoryTag(String tagName){
+        return new CategoryTag(tagName);
+    }
+
     //endregion
 
     //region Public methods for reading JSON
@@ -137,11 +143,17 @@ public class DataObjectFactory {
         var venueId = event.get("venueId").toString();
         var venue = venues.stream().filter(v -> v.getId().equals(venueId)).findFirst().orElse(null);
 
+        var temp = event.getJSONArray("tags");
+        var tags = new ArrayList<String>();
+        for (int i = 0; i < temp.length(); i++) {
+            tags.add(temp.getString(i));
+        }
+
         return new Event(event.getString("id"), event.getBoolean("published"), event.getString("start"),
                 event.getString("end"), event.getString("doorsOpen"), event.getString("infoUri"),
                 event.getString("description"), event.getString("productionParentId"),
                 HierarchyType.readHierarchyType(event.getString("hierarchyType")), venue,
-                event.getString("name"), event.getString("imageUrl"));
+                event.getString("name"), event.getString("imageUrl"), tags);
     }
     //endregion
 
@@ -195,9 +207,19 @@ public class DataObjectFactory {
             var categoryObject = new JSONObject();
             categoryObject.put("name", category.getName());
             categoryObject.put("events", getEventJSON(category.getEvents()));
+            categoryObject.put("tags", listOfStringsToJSON(category.getTags()));
             categoryArray.put(categoryObject);
         }
         return categoryArray;
+    }
+
+    private static JSONArray listOfStringsToJSON(List<String> list){
+        var arr = new JSONArray();
+        for (var string : list) {
+            arr.put(string);
+        }
+
+        return arr;
     }
     //endregion
 }

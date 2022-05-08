@@ -4,93 +4,97 @@ import com.U2.backend.Data.DataObjectContracts.HierarchyType;
 import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectContracts.IVenue;
 
+import java.util.List;
+
 public class Event implements IEvent {
-    private String _id;
-    private boolean _published;
-    private String _start;
-    private String _end;
-    private String _doorsOpen;
-    private String _infoUri;
-    private String _description;
-    private String _productionParentId;
-    private IVenue _venue;
-    private String _name;
-    private String _imageUrl;
-    private HierarchyType _hierarchyType;
+    private String id;
+    private boolean published;
+    private String start;
+    private String end;
+    private String doorsOpen;
+    private String infoUri;
+    private String description;
+    private String productionParentId;
+    private IVenue venue;
+    private String name;
+    private String imageUrl;
+    private HierarchyType hierarchyType;
+    private List<String> tags;
 
     public Event (String id, boolean published, String start, String end, String doorsOpen, String infoUri, String description,
-                  String productionParentId, HierarchyType hierarchyType,  IVenue venue, String name, String imageUrl){
-        _id = id;
-        _venue = venue;
-        _name = name;
-        _imageUrl = imageUrl;
-        _published = published;
-        _start = start;
-        _end = end;
-        _doorsOpen = doorsOpen;
-        _infoUri = infoUri;
-        _description = description;
-        _productionParentId = productionParentId;
-        _hierarchyType = hierarchyType;
+                  String productionParentId, HierarchyType hierarchyType,  IVenue venue, String name, String imageUrl, List<String> tags){
+        this.id = id;
+        this.venue = venue;
+        this.name = name;
+        this.imageUrl = imageUrl;
+        this.published = published;
+        this.start = start;
+        this.end = end;
+        this.doorsOpen = doorsOpen;
+        this.infoUri = infoUri;
+        this.description = description;
+        this.productionParentId = productionParentId;
+        this.hierarchyType = hierarchyType;
+        this.tags = tags;
     }
 
     @Override
     public String getId() {
-        return _id;
+        return id;
     }
 
     @Override
     public IVenue getVenue() {
-        return _venue;
+        return venue;
     }
 
     @Override
     public String getName() {
-        return _name;
+        return name;
     }
 
     @Override
     public String getImageUrl() {
-        return _imageUrl;
+        return imageUrl;
     }
 
     @Override
     public boolean isPublished() {
-        return _published;
+        return published;
     }
 
     @Override
     public String getStart() {
-        return _start;
+        return start;
     }
 
     @Override
     public String getEnd() {
-        return _end;
+        return end;
     }
 
     @Override
     public String getDoorsOpen() {
-        return _doorsOpen;
+        return doorsOpen;
     }
 
     @Override
     public String getInfoUri() {
-        return _infoUri;
+        return infoUri;
     }
 
     @Override
     public String getDescription() {
-        return _description;
+        return description;
     }
 
     @Override
     public String getProductionParentId() {
-        return _productionParentId;
+        return productionParentId;
     }
 
     @Override
     public HierarchyType getHierarchyType() {
-        return _hierarchyType;
+        return hierarchyType;
     }
 }

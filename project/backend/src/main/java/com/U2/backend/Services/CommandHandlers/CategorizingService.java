@@ -28,11 +28,9 @@ public class CategorizingService implements ICategorizingService {
         categoryMap.put("sports", getSportEvents());
 
         String s = null;
-        try {
-            s = DataObjectFactory.populatedCategoriesToJSONString(categoryMap);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
+        s = DataObjectFactory.populatedCategoriesToJSONString(categoryMap);
+
         return s;
     }
 
