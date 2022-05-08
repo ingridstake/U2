@@ -1,6 +1,6 @@
-package com.U2.backend.DataObjects;
+package com.U2.backend.Data.DataObjects;
 
-import com.U2.backend.DataObjectContracts.IVenue;
+import com.U2.backend.Data.DataObjectContracts.IVenue;
 
 public class Venue implements IVenue {
     private String _id;

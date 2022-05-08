@@ -1,7 +1,8 @@
-package com.U2.backend.Search;
+package com.U2.backend.Services.CommandHandlers;
 
-import com.U2.backend.DataObjectContracts.IEvent;
-import com.U2.backend.DataObjectFactories.DataObjectFactory;
+import com.U2.backend.Data.DataObjectContracts.IEvent;
+import com.U2.backend.Data.DataObjectFactory;
+import com.U2.backend.Services.Contracts.ISearchService;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
@@ -16,9 +17,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Search {
+public class SearchService implements ISearchService {
 
-    public static String performSearch(List<IEvent> events, String searchParam) {
+    private List<IEvent> events;
+
+    public SearchService(List<IEvent> events){
+        this.events = events;
+    }
+
+    public String performSearch(String searchParam) {
         StandardAnalyzer analyzer = new StandardAnalyzer();
         Directory index = new ByteBuffersDirectory();
 
@@ -64,7 +71,7 @@ public class Search {
         return null;
     }
 
-    public static void addDoc(IndexWriter w, String name, String id, String description) throws IOException {
+    private void addDoc(IndexWriter w, String name, String id, String description) throws IOException {
         Document doc = new Document();
         doc.add(new TextField("name", name, Field.Store.YES));
         doc.add(new TextField("id", id, Field.Store.YES));

@@ -1,25 +1,31 @@
-package com.U2.backend.EventFiltering;
+package com.U2.backend.Services.CommandHandlers;
 
-import com.U2.backend.DataObjectContracts.IEvent;
-import com.U2.backend.DataObjectFactories.DataObjectFactory;
+import com.U2.backend.Data.DataObjectContracts.IEvent;
+import com.U2.backend.Data.DataObjectFactory;
+import com.U2.backend.Services.Contracts.ICategorizingService;
 import org.json.JSONException;
 
 import java.util.HashMap;
 import java.util.List;
 
-public class EasyCategorization {
+public class CategorizingService implements ICategorizingService {
+
+    private List<IEvent> events;
+
+    public CategorizingService(List<IEvent> events){
+        this.events = events;
+    }
 
     /**
      * Categorizes a list of IEvents into vowels and consonants.
-     * @param events is a list of IEvents.
      * @return a String of a JSONArray containing categories with events.
      */
-    public static String getCategorization(List<IEvent> events){
+    public String getCategories(){
         var categoryMap = new HashMap<String,List<IEvent>>();
-        categoryMap.put("vowels", getVowelEvents(events));
-        categoryMap.put("consonants", getConsonantsEvents(events));
-        categoryMap.put("theatres", getTheatreEvents(events));
-        categoryMap.put("sports", getSportEvents(events));
+        categoryMap.put("vowels", getVowelEvents());
+        categoryMap.put("consonants", getConsonantsEvents());
+        categoryMap.put("theatres", getTheatreEvents());
+        categoryMap.put("sports", getSportEvents());
 
         String s = null;
         try {
@@ -32,10 +38,9 @@ public class EasyCategorization {
 
     /**
      * Filters a List of IEvents by the first letter of their name (only vowels).
-     * @param events is the List of IEvents to be filtered
      * @return a Lists of IEvents which name starts with a vowels
      */
-    private static List<IEvent> getVowelEvents(List<IEvent> events) {
+    private List<IEvent> getVowelEvents() {
         String vowels = "aeiouåäö";
         var t = events.stream().filter(e -> vowels.contains(String.valueOf(e.getName().charAt(0)).toLowerCase())).toList();
 
@@ -44,17 +49,16 @@ public class EasyCategorization {
 
     /**
      * Filters a List of IEvents by the first letter of their name (only consonants).
-     * @param events is the List of IEvents to be filtered
      * @return a Lists of IEvents which name starts with a consonants
      */
-    private static List<IEvent> getConsonantsEvents(List<IEvent> events) {
+    private List<IEvent> getConsonantsEvents() {
         String consonants = "qwrtpsdfghjklzxcvbnm";
         var t = events.stream().filter(e -> consonants.contains(String.valueOf(e.getName().charAt(0)).toLowerCase())).toList();
 
         return t;
     }
 
-    private static List<IEvent> getTheatreEvents(List<IEvent> events) {
+    private List<IEvent> getTheatreEvents() {
         System.out.println("test1");
         String searchString = "teat";
         var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
@@ -62,7 +66,7 @@ public class EasyCategorization {
         return t;
     }
 
-    private static List<IEvent> getSportEvents(List<IEvent> events) {
+    private List<IEvent> getSportEvents() {
         System.out.println("test2");
         String searchString = "sport";
         var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;

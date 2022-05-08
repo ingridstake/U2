@@ -1,4 +1,4 @@
-package com.U2.backend.DataObjectContracts;
+package com.U2.backend.Data.DataObjectContracts;
 
 public interface IVenue {
     String getId();

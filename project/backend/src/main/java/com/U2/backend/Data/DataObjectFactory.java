@@ -1,10 +1,10 @@
-package com.U2.backend.DataObjectFactories;
+package com.U2.backend.Data;
 
-import com.U2.backend.DataObjectContracts.HierarchyType;
-import com.U2.backend.DataObjectContracts.IEvent;
-import com.U2.backend.DataObjectContracts.IVenue;
-import com.U2.backend.DataObjects.Event;
-import com.U2.backend.DataObjects.Venue;
+import com.U2.backend.Data.DataObjectContracts.HierarchyType;
+import com.U2.backend.Data.DataObjectContracts.IEvent;
+import com.U2.backend.Data.DataObjectContracts.IVenue;
+import com.U2.backend.Data.DataObjects.Event;
+import com.U2.backend.Data.DataObjects.Venue;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

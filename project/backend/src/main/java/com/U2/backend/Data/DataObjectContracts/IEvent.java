@@ -1,6 +1,4 @@
-package com.U2.backend.DataObjectContracts;
-
-import java.util.Date;
+package com.U2.backend.Data.DataObjectContracts;
 
 public interface IEvent {
     String getId();

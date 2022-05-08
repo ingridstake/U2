@@ -1,8 +1,9 @@
-package com.U2.backend;
+package com.U2.backend.Services.CommandHandlers;
 
-import com.U2.backend.DataObjectContracts.IEvent;
-import com.U2.backend.DataObjectContracts.IVenue;
-import com.U2.backend.DataObjectFactories.DataObjectFactory;
+import com.U2.backend.Data.DataObjectContracts.IEvent;
+import com.U2.backend.Data.DataObjectContracts.IVenue;
+import com.U2.backend.Data.DataObjectFactory;
+import com.U2.backend.Services.Contracts.IAPIDataService;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -17,7 +18,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
 
-public class APIDataService {
+public class APIDataService implements IAPIDataService {
 
     public APIDataService() {
         try {

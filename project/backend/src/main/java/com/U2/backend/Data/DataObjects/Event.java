@@ -1,10 +1,8 @@
-package com.U2.backend.DataObjects;
+package com.U2.backend.Data.DataObjects;
 
-import com.U2.backend.DataObjectContracts.HierarchyType;
-import com.U2.backend.DataObjectContracts.IEvent;
-import com.U2.backend.DataObjectContracts.IVenue;
-
-import java.util.Date;
+import com.U2.backend.Data.DataObjectContracts.HierarchyType;
+import com.U2.backend.Data.DataObjectContracts.IEvent;
+import com.U2.backend.Data.DataObjectContracts.IVenue;
 
 public class Event implements IEvent {
     private String _id;
