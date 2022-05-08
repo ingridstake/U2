@@ -1,6 +1,7 @@
 package com.U2.backend.Data;
 
 import com.U2.backend.Data.DataObjectContracts.HierarchyType;
+import com.U2.backend.Data.DataObjectContracts.ICategory;
 import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectContracts.IVenue;
 import com.U2.backend.Data.DataObjects.Event;
@@ -15,9 +16,20 @@ import java.util.List;
 
 public class DataObjectFactory {
 
-    private static List<IEvent> _events;
-    private static List<IVenue> _venues;
+    private static List<IEvent> events;
+    private static List<IVenue> venues;
 
+    //region Public Properties
+    public static List<IEvent> getEvents(){
+        return events;
+    }
+
+    public static List<IVenue> getVenues(){
+        return venues;
+    }
+    //endregion
+
+    //region Public methods for reading JSON
     /**
      *Takes in API data and coordinates procedures to create a representation of the data using IEvent and IVenue
      * @param APIData is the JSONObject string containing all data from the API
@@ -33,23 +45,45 @@ public class DataObjectFactory {
             instant.buildVenues(venuesJSON);
             instant.buildEvents(eventJSON);
 
-            return instant._events;
+            return instant.events;
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
         return null;
     }
+    //endregion
 
-    public static List<IEvent> getEvents(){
-        return _events;
+    //region Public methods for writing JSON
+    public static String convertToJSONString(List<IEvent> events){
+        try {
+            return getEventJSON(events).toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
-    public static List<IVenue> getVenues(){
-        return _venues;
+    public static String populatedCategoriesToJSONString(HashMap<String, List<IEvent>> categories){
+        try {
+            return populatedCategoriesToJSON(categories).toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
+    public static String categoriesToJSONString(List<ICategory> categories){
+        try {
+            return categoriesToJSON(categories).toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    //endregion
 
+    //region Private methods for reading JSON
     private DataObjectFactory(){}
 
     /**
@@ -67,7 +101,7 @@ public class DataObjectFactory {
                     venue.get("address").toString(), venue.get("name").toString()));
         }
 
-        _venues = venueList;
+        DataObjectFactory.venues = venueList;
     }
 
     /**
@@ -88,7 +122,7 @@ public class DataObjectFactory {
             }
         }
 
-        _events = eventList;
+        DataObjectFactory.events = eventList;
     }
 
     /**
@@ -101,7 +135,7 @@ public class DataObjectFactory {
      */
     private IEvent readEvent(JSONObject event) throws JSONException {
         var venueId = event.get("venueId").toString();
-        var venue = _venues.stream().filter(v -> v.getId().equals(venueId)).findFirst().orElse(null);
+        var venue = venues.stream().filter(v -> v.getId().equals(venueId)).findFirst().orElse(null);
 
         return new Event(event.getString("id"), event.getBoolean("published"), event.getString("start"),
                 event.getString("end"), event.getString("doorsOpen"), event.getString("infoUri"),
@@ -109,29 +143,16 @@ public class DataObjectFactory {
                 HierarchyType.readHierarchyType(event.getString("hierarchyType")), venue,
                 event.getString("name"), event.getString("imageUrl"));
     }
+    //endregion
 
-    /**
-     * Converts all event attributes to a json array that is returned as a string
-     * @return s string representation of the json array of all event attributes
-     * @throws JSONException
-     */
-    public static String convertToJSONArrayString() throws JSONException {
-        JSONArray jsonArray = new JSONArray();
-        for (IEvent event : _events) {
-            jsonArray.put(event.getId());
-            jsonArray.put(event.getName());
-            jsonArray.put(event.getVenue().getCity());
-        }
-        return jsonArray.toString();
-    }
-
+    //region Private methods for writing JSON
     /**
      * Converts a list of Events to a json array that is then returned as a string.
      * @param events The list of events to be converted
      * @return a string that contains the json array representation of the input list
      * @throws JSONException
      */
-    public static String convertToJSONString(List<IEvent> events) throws JSONException {
+    private static JSONArray getEventJSON(List<IEvent> events) throws JSONException {
 
         JSONArray jsonArray = new JSONArray();
         for (var event : events) {
@@ -141,9 +162,10 @@ public class DataObjectFactory {
             temp.put("city", event.getVenue().getCity());
             temp.put("imageUrl", event.getImageUrl());
             temp.put("date", event.getStart());
+            temp.put("description", event.getDescription());
             jsonArray.put(temp);
         }
-        return jsonArray.toString();
+        return jsonArray;
     }
 
     /**
@@ -152,28 +174,30 @@ public class DataObjectFactory {
      * @return a String that contains the json array
      * @throws JSONException
      */
-    public static String populatedCategoriesToJSONString(HashMap<String, List<IEvent>> categories) throws JSONException {
+    private static JSONArray populatedCategoriesToJSON(HashMap<String, List<IEvent>> categories) throws JSONException {
 
         JSONArray jsonArray = new JSONArray();
 
         for (var category : categories.keySet()) {
             var cat = new JSONObject();
             cat.put("category", category);
-            JSONArray eventArray = new JSONArray();
 
-            for (var event : categories.get(category)) {
-                var temp = new JSONObject();
-                temp.put("name", event.getName());
-                temp.put("id", event.getId());
-                temp.put("city", event.getVenue().getCity());
-                temp.put("imageUrl", event.getImageUrl());
-                temp.put("date", event.getStart());
-                temp.put("description", event.getDescription());
-                eventArray.put(temp);
-            }
-            cat.put("events", eventArray);
+            cat.put("events", getEventJSON(categories.get(category)));
             jsonArray.put(cat);
         }
-        return jsonArray.toString();
+        return jsonArray;
     }
+
+    private static JSONArray categoriesToJSON(List<ICategory> categories) throws JSONException {
+        var categoryArray = new JSONArray();
+
+        for (var category : categories) {
+            var categoryObject = new JSONObject();
+            categoryObject.put("name", category.getName());
+            categoryObject.put("events", getEventJSON(category.getEvents()));
+            categoryArray.put(categoryObject);
+        }
+        return categoryArray;
+    }
+    //endregion
 }

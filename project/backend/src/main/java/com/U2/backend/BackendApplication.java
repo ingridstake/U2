@@ -45,15 +45,10 @@ public class BackendApplication {
 	@CrossOrigin
 	@GetMapping(path = "/ten_events_string")
 	public String tenEventsString() {
-		try {
-			// takes the 100 first events in the events
-			var temp = events.subList(0,100);
-			//sends the list to the DataObjectFactory, which converts it to a json array string
-			 return DataObjectFactory.convertToJSONString(temp);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		return null;
+		// takes the 100 first events in the events
+		var temp = events.subList(0,100);
+		//sends the list to the DataObjectFactory, which converts it to a json array string
+		 return DataObjectFactory.convertToJSONString(temp);
 	}
 
 	@CrossOrigin
