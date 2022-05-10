@@ -153,7 +153,7 @@ public class DataObjectFactory {
                 event.getString("end"), event.getString("doorsOpen"), event.getString("infoUri"),
                 event.getString("description"), event.getString("productionParentId"),
                 HierarchyType.readHierarchyType(event.getString("hierarchyType")), venue,
-                event.getString("name"), event.getString("imageUrl"), tags);
+                event.getString("name"), event.getString("imageUrl"), tags, event.getString("shopUri"));
     }
     //endregion
 
@@ -175,6 +175,8 @@ public class DataObjectFactory {
             temp.put("imageUrl", event.getImageUrl());
             temp.put("date", event.getStart());
             temp.put("description", event.getDescription());
+            temp.put("shopUri", event.getShopUri());
+            temp.put("infoUri", event.getInfoUri());
             jsonArray.put(temp);
         }
         return jsonArray;
