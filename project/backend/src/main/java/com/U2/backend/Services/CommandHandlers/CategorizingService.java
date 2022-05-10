@@ -57,7 +57,6 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private List<IEvent> getTheatreEvents() {
-        System.out.println("test1");
         String searchString = "teat";
         var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
 
@@ -65,7 +64,6 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private List<IEvent> getSportEvents() {
-        System.out.println("test2");
         String searchString = "sport";
         var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
 
