@@ -107,6 +107,10 @@
   cursor: pointer;
 }
 
+.card-link {
+  text-decoration: none;
+}
+
 .card-footer button:hover{
   color: var(--co-accent-text);
   background: var(--co-accent-dark);

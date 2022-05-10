@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 /**
  * A type describing an event.
  */
@@ -6,6 +8,8 @@ export type event = {
     imageUrl: string;
     date: string;
     city: string;
+    shopUri: string;
+    infoUri: string;
 }
 
 /**
