@@ -12,11 +12,11 @@ import { category } from './Models';
  */
 const responsive = {
   desktopBig: {
-    breakpoint: { max: 3000, min: 1520 },
+    breakpoint: { max: 3000, min: 1550 },
     items: 4,
   },
   desktopSmall: {
-    breakpoint: { max: 1520, min: 768 },
+    breakpoint: { max: 1550, min: 768 },
     items: 3,
   },
   tablet: {
