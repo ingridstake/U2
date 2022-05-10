@@ -27,7 +27,6 @@ public class Event implements IEvent {
         this.id = id;
         this.venue = venue;
         this.name = name;
-        this.imageUrl = imageUrl;
         this.published = published;
         this.start = start;
         this.end = end;
@@ -38,6 +37,10 @@ public class Event implements IEvent {
         this.hierarchyType = hierarchyType;
         this.tags = tags;
         this.shopUri = shopUri;
+
+        if (!imageUrl.equals("null")){
+            this.imageUrl = imageUrl;
+        }
     }
 
     @Override
