@@ -73,6 +73,7 @@
   position: relative;
   height: 240px;
   min-width: 230px;
+  justify-content: center;
 }
 .card-footer {
   display: flex;
