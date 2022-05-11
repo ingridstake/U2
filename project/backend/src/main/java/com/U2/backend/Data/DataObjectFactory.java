@@ -16,7 +16,7 @@ import java.util.List;
 public class DataObjectFactory {
 
     private static final String DEFAULT_IMAGE_URL = "https://iconape.com/wp-content/files/wf/50675/svg/chalmers-university-of-technology.svg";
-
+// <3 <3 <3
     private static List<IEvent> events;
     private static List<IVenue> venues;
 
