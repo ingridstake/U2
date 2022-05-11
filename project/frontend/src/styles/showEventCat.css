@@ -1,8 +1,9 @@
 .cat-title{
-    font-weight: 300;
+    font-weight: 350;
     color: var(--blue-lightest);
-    font-size: 30pt;
-    margin: auto 10px 10px 10px;
+    font-size: 36pt;
+    bottom: 0;
+    margin: 0 50px 0 1%;
 }
 
 .cat-title::first-letter{
@@ -13,12 +14,13 @@
     display: flex;
     flex-direction: row;
     margin-top: 55px;
+    padding: 10px 0;
 }
 
 .category-title button {
-    margin: auto 10px 15px 10px;
+    bottom: 0;
+    margin: auto 5px 10px;
     min-width: 45px;
-    height: 30px;
     border: none;
     border-radius: var(--r-xl);
     background-color: var(--co-accent);
@@ -27,10 +29,10 @@
     white-space: nowrap;
     text-decoration: 0;
     border: none;
-    font-size: .85em;
+    font-size: 10.5pt;
     box-shadow: var(--box-shadow-s);
     cursor: pointer;
-    padding: 5px;
+    padding: 6px 8px;
     letter-spacing: 0.35px;
 }
 
@@ -72,8 +74,7 @@
     position:relative;
     transform: translate3d(0px, 0px, 0px);
     backface-visibility:hidden;
-    /*will-change:transform,transition;*/
-}
+    }
 
 .react-multiple-carousel__arrow{
     position:absolute;
@@ -129,44 +130,56 @@
     content:'›';
 }
 
+/*ul*/
 .react-multi-carousel-dot-list{
     position:absolute;
-    bottom: -20px;
+    bottom: 0px;
     display:flex;
     left:0;
     right:0;
     justify-content:center;
-    margin:auto;
+    margin:0;
     padding:0;
     list-style:none;
     text-align:center;
 }
 
+.react-multi-carousel-dot{
+    position: relative;
+    padding: 0 2px;
+}
+
 .react-multi-carousel-dot button{
-    display:inline-block;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    opacity:1;
-    padding:5px 5px 5px 5px;
-    box-shadow:none;
-    transition: .5s;
-    border-width:2px;
-    border-style:solid;
-    border-color:grey;
-    padding:0;
-    margin:0;
-    margin-right:6px;
-    outline:0;
-    cursor:pointer;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: 0 0;
+    cursor: pointer;
+}
+
+.react-multi-carousel-dot button::before{
+    position: absolute;
+    top: 8px;
+    left: 19px;
+    content: '•';
+    color: inherit;
+    font-size: 28px;
+    line-height: 1em;
+    opacity: .25;
 }
 
 .react-multi-carousel-dot button:hover:active{
-    background:#080808;
+    opacity: 1;
+    
 }
 
-.react-multi-carousel-dot--active button{
-    background:#080808;
+.react-multi-carousel-dot--active button::before{
+    opacity: 1;
 }
 
 /*li*/
@@ -174,9 +187,8 @@
     transform-style:preserve-3d;
     backface-visibility:hidden;
     width: 100%;
-    /*max-width: 28rem;
-    min-width: 25rem;
-*/}
+    padding-bottom: 50px;
+}
 
 
 

@@ -1,4 +1,5 @@
 import Carousel from 'react-multi-carousel';
+/*import 'react-multi-carousel/lib/styles.css'*/
 import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -15,18 +16,22 @@ const responsive = {
   desktopBig: {
     breakpoint: { max: 3000, min: 1550 },
     items: 4,
+    slidesToSlide: 4,
   },
   desktopSmall: {
     breakpoint: { max: 1550, min: 1048 },
     items: 3,
+    slidesToSlide: 3,
   },
   tablet: {
-    breakpoint: { max: 1049, min: 576 },
+    breakpoint: { max: 1048, min: 576 },
     items: 2,
+    slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 576, min: 0 },
     items: 1,
+    slidesToSlide: 1,
   }
 };
 
@@ -57,10 +62,16 @@ export default function DataCat() {
         <ListGroupItem>
           <div className="category-title">
             <h1 className="cat-title">{c.category}</h1>
-            {CategoryTagButtons(c.tags)}
+            {CategoryTagButtons(c.tags) }
           </div>
           
-          <Carousel responsive={responsive}>
+          <Carousel 
+          responsive={responsive}
+          showDots={true}
+          /*infinite={true}*/
+          shouldResetAutoplay={false}
+          customTransition="1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s"
+          >
             {EventCards(c.events)}
           </Carousel>
         </ListGroupItem>
