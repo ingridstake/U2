@@ -10,6 +10,7 @@ public interface IEvent {
     String getEnd();
     String getDoorsOpen();
     String getInfoUri();
+    String getShopUri();
     String getDescription();
     String getProductionParentId();
     HierarchyType getHierarchyType();

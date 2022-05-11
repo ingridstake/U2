@@ -20,13 +20,13 @@ public class Event implements IEvent {
     private String imageUrl;
     private HierarchyType hierarchyType;
     private List<String> tags;
+    private String shopUri;
 
     public Event (String id, boolean published, String start, String end, String doorsOpen, String infoUri, String description,
-                  String productionParentId, HierarchyType hierarchyType,  IVenue venue, String name, String imageUrl, List<String> tags){
+                  String productionParentId, HierarchyType hierarchyType,  IVenue venue, String name, String imageUrl, List<String> tags, String shopUri){
         this.id = id;
         this.venue = venue;
         this.name = name;
-        this.imageUrl = imageUrl;
         this.published = published;
         this.start = start;
         this.end = end;
@@ -36,6 +36,11 @@ public class Event implements IEvent {
         this.productionParentId = productionParentId;
         this.hierarchyType = hierarchyType;
         this.tags = tags;
+        this.shopUri = shopUri;
+
+        if (!imageUrl.equals("null")){
+            this.imageUrl = imageUrl;
+        }
     }
 
     @Override
@@ -81,6 +86,11 @@ public class Event implements IEvent {
     @Override
     public String getInfoUri() {
         return infoUri;
+    }
+
+    @Override
+    public String getShopUri() {
+        return shopUri;
     }
 
     @Override

@@ -11,11 +11,15 @@ export const EventCard = (e: event) => {
     <Card>
         <Card.Body>
             <Card.Img variant="top" src={e.imageUrl} />
-            <Card.Title><h5>{e.name}</h5> </Card.Title>
+            <Card.Link href={e.infoUri}>
+                <Card.Title><h5>{e.name}</h5> </Card.Title>
+            </Card.Link>            
         </Card.Body>
 
         <Card.Footer>
-            <Button>Köp</Button>
+            <Card.Link href={e.shopUri}>
+                <Button>Köp</Button>
+            </Card.Link>
             <Card.Text>{e.date}, {e.city}</Card.Text>
         </Card.Footer>
     </Card>
