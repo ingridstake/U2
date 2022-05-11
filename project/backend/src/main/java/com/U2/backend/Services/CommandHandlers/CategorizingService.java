@@ -22,10 +22,17 @@ public class CategorizingService implements ICategorizingService {
      */
     public String getCategories(){
         var categoryMap = new HashMap<String,List<IEvent>>();
-        categoryMap.put("vowels", getVowelEvents());
-        categoryMap.put("consonants", getConsonantsEvents());
-        categoryMap.put("theatres", getTheatreEvents());
-        categoryMap.put("sports", getSportEvents());
+        categoryMap.put("vokaler", getVowelEvents());
+        categoryMap.put("konsonanter", getConsonantsEvents());
+        categoryMap.put("teater", getTheatreEvents());
+        categoryMap.put("sport", getSportEvents());
+        categoryMap.put("konsert", getConsertEvents());
+        categoryMap.put("mat", getFoodEvents());
+        categoryMap.put("utställningar", getExhibitionEvents());
+        categoryMap.put("presentkort", getGiftCardEvents());
+        categoryMap.put("vin", getWineEvents());
+        categoryMap.put("slott", getCastleEvents());
+
 
         String s = null;
 
@@ -40,9 +47,9 @@ public class CategorizingService implements ICategorizingService {
      */
     private List<IEvent> getVowelEvents() {
         String vowels = "aeiouåäö";
-        var t = events.stream().filter(e -> vowels.contains(String.valueOf(e.getName().charAt(0)).toLowerCase())).toList();
+        var vowel = events.stream().filter(e -> vowels.contains(String.valueOf(e.getName().charAt(0)).toLowerCase())).toList();
 
-        return t;
+        return vowel;
     }
 
     /**
@@ -69,5 +76,50 @@ public class CategorizingService implements ICategorizingService {
 
         return t;
     }
+    private List<IEvent> getConsertEvents() {
+        String searchString = "konsert";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+    private List<IEvent> getFoodEvents() {
+        String searchString = "mat";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+    private List<IEvent> getExhibitionEvents() {
+        String searchString = "utst";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+    private List<IEvent> getGiftCardEvents() {
+        String searchString = "presentkort";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+    private List<IEvent> getWineEvents() {
+        System.out.println("Viiiiin");
+        String searchString = " vin";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+    private List<IEvent> getCastleEvents() {
+        String searchString = "slott";
+        var t = events.stream().filter(e -> e.getDescription().toLowerCase().contains(searchString)).toList() ;
+
+        return t;
+    }
+
+
+
 
 }
