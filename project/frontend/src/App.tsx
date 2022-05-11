@@ -1,9 +1,9 @@
 import React from 'react';
+import './app.css';
 import Footer from './components/Footer';
 import GreetingText from './components/GreetingText';
 import Header from './components/Header';
 import DataCat from './components/ShowEventCategories';
-import JsonDataDisplay from './components/ShowEvents';
 import SearchBar from './components/SearchBar';
 
 /**
@@ -14,8 +14,12 @@ export default function App() {
   return (
     <>
       <Header />
-      <GreetingText />
-      <SearchBar />
+      <div className='background'>
+        <div className='b-body'>
+          <GreetingText />
+          <SearchBar />
+        </div>
+      </div>
       <DataCat />
       <Footer />
     </>

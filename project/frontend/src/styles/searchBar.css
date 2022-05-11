@@ -1,31 +1,26 @@
-
-.SearchBar {
-    text-align: left;
-    margin: -200px auto 200px auto;
-    border-radius: 6px;
-    box-shadow: 0 13px 25px rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    height: 45px;
-    background: #fff;
-  
-    font-size: 1rem;
-    cursor: default;
-    vertical-align: baseline;
-    width: 40%; 
+.search-bar {
+  position: relative;
+  margin-top: 25px;
+  display: block;
+  padding: 7px 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  width: 50%;
+  cursor: text;
   }
 
-.InputText {
-    text-align: left;
-    margin-top: 3px;
-    border-radius: 6px;
-    box-shadow: 0 13px 25px rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    height: 45px;
-    background: #fff;
-   
-    font-size: 1rem;
-    cursor: default;
-    vertical-align: baseline;
-    width: 100%;
-    margin: auto;
+.input-text {
+  width: 100%;
+  padding: 14px var(--space-l);
+  border-style: none;
+  border-radius: var(--r-m);
+  color: var(--co-text);
+  background: linear-gradient(to top,rgba(179,179,179,.1),rgba(179,179,179,.05)) no-repeat,var(--co-back-dim);
+  font-size: var(--fs-s);
+  font-family: var(--roboto);
+  box-shadow: inset 2px 2px 0 0 rgb(0 0 0 / 15%), inset -1px -1px 0 0 rgb(255 255 255 / 50%);
+  appearance: none;
+  overflow: visible;
+  margin: 0;
+  writing-mode: horizontal-tb !important;
 }

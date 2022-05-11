@@ -25,8 +25,8 @@ export default function SearchBar() {
         })
 
     return (
-    <div className="SearchBar">
-        <input className="InputText" type="search" placeholder="Sökord..." onChange={getInputValue}  />
+    <div className="search-bar">
+        <input className="input-text" type="search" placeholder="Sökord..." onChange={getInputValue}  />
     </div>
     );
 }
