@@ -1,6 +1,7 @@
 package com.U2.backend.Data;
 
 import com.U2.backend.Data.DataObjectContracts.*;
+import com.U2.backend.Data.DataObjects.Category;
 import com.U2.backend.Data.DataObjects.CategoryTag;
 import com.U2.backend.Data.DataObjects.Event;
 import com.U2.backend.Data.DataObjects.Venue;
@@ -14,7 +15,6 @@ import java.util.List;
 
 public class DataObjectFactory {
 
-    private static final String DEFAULT_IMAGE_URL = "https://iconape.com/wp-content/files/wf/50675/svg/chalmers-university-of-technology.svg";
     private static List<IEvent> events;
     private static List<IVenue> venues;
 
@@ -32,6 +32,9 @@ public class DataObjectFactory {
 
     public static ICategoryTag createCategoryTag(String tagName){
         return new CategoryTag(tagName);
+    }
+    public static ICategory createCategory(String categoryName){
+        return new Category(categoryName);
     }
 
     //endregion
@@ -173,16 +176,9 @@ public class DataObjectFactory {
             temp.put("name", event.getName());
             temp.put("id", event.getId());
             temp.put("city", event.getVenue().getCity());
+            temp.put("imageUrl", event.getImageUrl());
             temp.put("date", event.getStart());
             temp.put("description", event.getDescription());
-            temp.put("shopUri", event.getShopUri());
-            temp.put("infoUri", event.getInfoUri());
-            if (event.getImageUrl() == null){
-                temp.put("imageUrl", DEFAULT_IMAGE_URL);
-            } else {
-                temp.put("imageUrl", event.getImageUrl());
-            }
-
             jsonArray.put(temp);
         }
         return jsonArray;
@@ -213,7 +209,7 @@ public class DataObjectFactory {
 
         for (var category : categories) {
             var categoryObject = new JSONObject();
-            categoryObject.put("name", category.getName());
+            categoryObject.put("category", category.getName());
             categoryObject.put("events", getEventJSON(category.getEvents()));
             categoryObject.put("tags", listOfStringsToJSON(category.getTags()));
             categoryArray.put(categoryObject);

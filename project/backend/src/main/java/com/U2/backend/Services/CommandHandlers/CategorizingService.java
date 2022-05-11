@@ -1,10 +1,12 @@
 package com.U2.backend.Services.CommandHandlers;
 
+import com.U2.backend.Data.DataObjectContracts.ICategory;
 import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectFactory;
 import com.U2.backend.Services.Contracts.ICategorizingService;
 import org.json.JSONException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -22,16 +24,25 @@ public class CategorizingService implements ICategorizingService {
      */
     public String getCategories(){
         var categoryMap = new HashMap<String,List<IEvent>>();
-        categoryMap.put("vowels", getVowelEvents());
-        categoryMap.put("consonants", getConsonantsEvents());
-        categoryMap.put("theatres", getTheatreEvents());
-        categoryMap.put("sports", getSportEvents());
+        var categories = new ArrayList<ICategory>();
 
-        String s = null;
+        var vowels = DataObjectFactory.createCategory("vowels");
+        vowels.addEvents(getVowelEvents());
+        categories.add(vowels);
 
-        s = DataObjectFactory.populatedCategoriesToJSONString(categoryMap);
+        var consonants = DataObjectFactory.createCategory("consonants");
+        consonants.addEvents(getConsonantsEvents());
+        categories.add(consonants);
 
-        return s;
+        var theatres = DataObjectFactory.createCategory("theatres");
+        theatres.addEvents(getTheatreEvents());
+        categories.add(theatres);
+
+        var sports = DataObjectFactory.createCategory("sports");
+        sports.addEvents(getSportEvents());
+        categories.add(sports);
+
+        return DataObjectFactory.categoriesToJSONString(categories);
     }
 
     /**

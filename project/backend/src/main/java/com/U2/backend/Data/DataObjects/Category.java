@@ -19,8 +19,17 @@ public class Category implements ICategory {
         tags = new ArrayList<>();
     }
 
-    public void addEvent(IEvent event){
+    private void addEvent(IEvent event){
         events.add(event);
+        for (var tag: event.getTags()) {
+            addTag(tag);
+        }
+    }
+
+    public void addEvents(List<IEvent> events) {
+        for (var event : events) {
+            addEvent(event);
+        }
     }
 
     public void addTag(String tag){
