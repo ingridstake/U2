@@ -15,6 +15,8 @@ import java.util.List;
 
 public class DataObjectFactory {
 
+    private static final String DEFAULT_IMAGE_URL = "https://iconape.com/wp-content/files/wf/50675/svg/chalmers-university-of-technology.svg";
+
     private static List<IEvent> events;
     private static List<IVenue> venues;
 
@@ -176,9 +178,16 @@ public class DataObjectFactory {
             temp.put("name", event.getName());
             temp.put("id", event.getId());
             temp.put("city", event.getVenue().getCity());
-            temp.put("imageUrl", event.getImageUrl());
             temp.put("date", event.getStart());
             temp.put("description", event.getDescription());
+            temp.put("shopUri", event.getShopUri());
+            temp.put("infoUri", event.getInfoUri());
+            if (event.getImageUrl() == null){
+                temp.put("imageUrl", DEFAULT_IMAGE_URL);
+            } else {
+                temp.put("imageUrl", event.getImageUrl());
+            }
+
             jsonArray.put(temp);
         }
         return jsonArray;
