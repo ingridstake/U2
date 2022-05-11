@@ -35,7 +35,7 @@ public class BackendApplication {
 		return String.format("Hello %s!", name);
 	}
 
-	@CrossOrigin
+	@CrossOrigin(origins = {"*"} )
 	@GetMapping(path = "/search")
 	public String search(@RequestParam(value = "param", defaultValue = "") String param) {
 		var service = ServiceFactory.createSearchService(events);

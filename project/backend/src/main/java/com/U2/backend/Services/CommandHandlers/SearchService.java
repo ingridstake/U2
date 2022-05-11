@@ -57,9 +57,11 @@ public class SearchService implements ISearchService {
             hitsId.add(d.get("id"));
         }
         var eventHits = events.stream().filter(e -> hitsId.contains(e.getId())).toList();
-        DataObjectFactory.convertToJSONString(eventHits);
+        //DataObjectFactory.convertToJSONString(eventHits);
 
         reader.close();
+        return DataObjectFactory.convertToJSONString(eventHits);
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
