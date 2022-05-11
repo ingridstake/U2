@@ -1,10 +1,11 @@
 import Carousel from 'react-multi-carousel';
-import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/showEventCat.css';
 import { EventCards} from './EventCards';
 import { category } from './Models';
+import { CategoryTagButtons } from './CategoryTagButtons';
 
 /**
  * Responsive item settings for different platform sizes.
@@ -53,7 +54,12 @@ export default function DataCat() {
   const categoryList = 
       <ListGroup>
       {appState.cat.map(c => (
-        <ListGroupItem><h1 className="cat-title">{c.category}</h1>
+        <ListGroupItem>
+          <div className="category-title">
+            <h1 className="cat-title">{c.category}</h1>
+            {CategoryTagButtons(c.tags)}
+          </div>
+          
           <Carousel
             //ssr
             //partialVisbile

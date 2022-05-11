@@ -1,3 +1,4 @@
+import internal from "stream";
 import { Url } from "url";
 
 /**
@@ -18,4 +19,5 @@ export type event = {
 export type category = {
     category: string;
     events: event[];
-  }
+    tags: string[];
+}
