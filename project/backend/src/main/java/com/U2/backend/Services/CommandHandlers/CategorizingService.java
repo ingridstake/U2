@@ -1,10 +1,12 @@
 package com.U2.backend.Services.CommandHandlers;
 
+import com.U2.backend.Data.DataObjectContracts.ICategory;
 import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectFactory;
 import com.U2.backend.Services.Contracts.ICategorizingService;
 import org.json.JSONException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -21,24 +23,52 @@ public class CategorizingService implements ICategorizingService {
      * @return a String of a JSONArray containing categories with events.
      */
     public String getCategories(){
-        var categoryMap = new HashMap<String,List<IEvent>>();
-        categoryMap.put("vokaler", getVowelEvents());
-        categoryMap.put("konsonanter", getConsonantsEvents());
-        categoryMap.put("teater", getTheatreEvents());
-        categoryMap.put("sport", getSportEvents());
-        categoryMap.put("konsert", getConsertEvents());
-        categoryMap.put("mat", getFoodEvents());
-        categoryMap.put("utställningar", getExhibitionEvents());
-        categoryMap.put("presentkort", getGiftCardEvents());
-        categoryMap.put("vin", getWineEvents());
-        categoryMap.put("slott", getCastleEvents());
+        
+        var categories = new ArrayList<ICategory>();
+
+        var vowels = DataObjectFactory.createCategory("vokaler");
+        vowels.addEvents(getVowelEvents());
+        categories.add(vowels);
+
+        var consonants = DataObjectFactory.createCategory("konsonanter");
+        consonants.addEvents(getConsonantsEvents());
+        categories.add(consonants);
+
+        var theatres = DataObjectFactory.createCategory("teater");
+        theatres.addEvents(getTheatreEvents());
+        categories.add(theatres);
+
+        var sports = DataObjectFactory.createCategory("sport");
+        sports.addEvents(getSportEvents());
+        categories.add(sports);
 
 
-        String s = null;
+        var concert = DataObjectFactory.createCategory("konsert");
+        concert.addEvents(getConsertEvents());
+        categories.add(concert);
 
-        s = DataObjectFactory.populatedCategoriesToJSONString(categoryMap);
 
-        return s;
+        var food = DataObjectFactory.createCategory("mat");
+        food.addEvents(getFoodEvents());
+        categories.add(food);
+
+        var exhibition = DataObjectFactory.createCategory("utställningar");
+        exhibition.addEvents(getExhibitionEvents());
+        categories.add(exhibition);
+
+        var giftCard = DataObjectFactory.createCategory("presentkort");
+        giftCard.addEvents(getGiftCardEvents());
+        categories.add(giftCard);
+
+        var wine = DataObjectFactory.createCategory("vin");
+        wine.addEvents(getWineEvents());
+        categories.add(wine);
+
+        var castle = DataObjectFactory.createCategory("slott");
+        food.addEvents(getCastleEvents());
+        categories.add(castle);
+
+        return DataObjectFactory.categoriesToJSONString(categories);
     }
 
     /**
