@@ -60,13 +60,7 @@ export default function DataCat() {
             {CategoryTagButtons(c.tags)}
           </div>
           
-          <Carousel
-            //ssr
-            //partialVisbile
-            /*deviceType={deviceType}*/
-            //itemClass="image-item"
-            responsive={responsive}
-          >
+          <Carousel responsive={responsive}>
             {EventCards(c.events)}
           </Carousel>
         </ListGroupItem>
