@@ -107,4 +107,9 @@ public class Event implements IEvent {
     public HierarchyType getHierarchyType() {
         return hierarchyType;
     }
+
+    @Override
+    public List<String> getTags() {
+        return tags;
+    }
 }

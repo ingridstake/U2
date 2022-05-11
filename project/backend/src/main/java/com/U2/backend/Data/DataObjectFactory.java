@@ -1,6 +1,7 @@
 package com.U2.backend.Data;
 
 import com.U2.backend.Data.DataObjectContracts.*;
+import com.U2.backend.Data.DataObjects.Category;
 import com.U2.backend.Data.DataObjects.CategoryTag;
 import com.U2.backend.Data.DataObjects.Event;
 import com.U2.backend.Data.DataObjects.Venue;
@@ -32,6 +33,9 @@ public class DataObjectFactory {
 
     public static ICategoryTag createCategoryTag(String tagName){
         return new CategoryTag(tagName);
+    }
+    public static ICategory createCategory(String categoryName){
+        return new Category(categoryName);
     }
 
     //endregion
@@ -213,7 +217,7 @@ public class DataObjectFactory {
 
         for (var category : categories) {
             var categoryObject = new JSONObject();
-            categoryObject.put("name", category.getName());
+            categoryObject.put("category", category.getName());
             categoryObject.put("events", getEventJSON(category.getEvents()));
             categoryObject.put("tags", listOfStringsToJSON(category.getTags()));
             categoryArray.put(categoryObject);

@@ -1,5 +1,7 @@
 package com.U2.backend.Data.DataObjectContracts;
 
+import java.util.List;
+
 public interface IEvent {
     String getId();
     IVenue getVenue();
@@ -14,4 +16,5 @@ public interface IEvent {
     String getDescription();
     String getProductionParentId();
     HierarchyType getHierarchyType();
+    List<String> getTags();
 }
