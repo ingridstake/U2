@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ICategory {
 
-    void addEvents(List<IEvent> events);
+    void addEvent(IEvent event);
     void addTag(String tag);
     String getName();
     List<IEvent> getEvents();
