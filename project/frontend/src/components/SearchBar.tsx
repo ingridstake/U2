@@ -2,6 +2,7 @@ import {useEffect, useState } from "react";
 import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import '../styles/searchBar.css';
 import {SearchList} from './SearchList';
+import { event } from "./Models";
 import axios from 'axios';
 
 
@@ -15,25 +16,25 @@ export default function SearchBar() {
     
     const [searchParam, setSearchParam] = useState('');
     const [searchResult, setSearchResult] = useState({
-        result: [] as any []
+        result: [] as event[]
     });
 
     const getInputValue = (e: { target: { value: any; }; }) => {
         const userVal = e.target.value;
         setSearchParam(userVal)        
-        console.log(searchParam)
+        //console.log(searchParam)
     }
       
-    const startSearch = 
+    useEffect(() => {
+        const startSearch = 
         axios.get('http://localhost:8080/search?param='+searchParam).then(res => { //searchParam
             const allResults = res.data
-            console.log(allResults)
-            setSearchResult(allResults)
-            return {
-                searchResult
-            }
-        
+            //console.log(allResults)
+            setSearchResult({result: allResults})
+            console.log(searchResult)
+            //SearchList(searchResult.result)
         })
+    })
 
     /*
     const searchList =
@@ -76,11 +77,15 @@ export default function SearchBar() {
 
     );
     */
-
+   // {getInputValue} 
+    
     return (
-        <div className="search">
-          <input className="input-text" type="search" placeholder="Sökord..." onChange={getInputValue} />
-        </div>
+        <section>
+            <div className="search">
+            <input className="input-text" type="search" placeholder="Sökord..." onChange= {(e) => setSearchParam(e.target.value)}/>
+            </div>
+            {SearchList(searchResult.result)} 
+        </section>
       );
     
 

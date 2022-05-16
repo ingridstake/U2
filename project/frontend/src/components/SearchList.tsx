@@ -26,10 +26,10 @@ import { EventCard } from "./EventCard";
     return res
 }*/
 
-export function SearchList(events: event[]) : JSX.Element[] {
-    const res = events.map((e: event) => {
+export function SearchList(events: event[]) : JSX.Element {
+    const res = events?.map((e: event) => {
+
         return SearchItem(e)
     })
-    console.log(res)
-    return res
+    return <>{res}</>
 }
