@@ -1,26 +1,39 @@
+.category-title {
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+    padding: 10px 0;
+    overflow: hidden;
+    width: 88.5vw;
+}
+
 .cat-title{
     font-weight: 350;
+    min-width: fit-content;
     color: var(--blue-lightest);
     font-size: 36pt;
     bottom: 0;
-    margin: 0 50px 0 1%;
+    margin: 0 50px 0 0.5%;
+    cursor: default;
 }
 
 .cat-title::first-letter{
     text-transform: uppercase;
 }
 
-.category-title {
+.cat-tags{
     display: flex;
     flex-direction: row;
-    margin-top: 55px;
-    padding: 10px 0;
+    overflow-x: scroll;    
+}
+.cat-tags::-webkit-scrollbar {
+    display: none;
 }
 
-.category-title button {
+.cat-tags button {
     bottom: 0;
+    min-width: fit-content;
     margin: auto 5px 10px;
-    min-width: 45px;
     border: none;
     border-radius: var(--r-xl);
     background-color: var(--co-accent);
@@ -93,6 +106,7 @@
     opacity: .6;
     transition: opacity var(--timing-fast) var(--ease-cubic),box-shadow var(--timing-fast) var(--ease-cubic),transform var(--timing-fast) var(--ease-cubic);
     outline:0;
+    margin-bottom: 48px;
 }
 
 .react-multiple-carousel__arrow:hover{
