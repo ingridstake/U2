@@ -40,7 +40,11 @@
     color: var(--co-accent-text);
     background: var(--co-accent-dark);
     box-shadow: var(--box-shadow-s);
-    }
+}
+
+.category-title button:selected {
+    background-color: yellow;
+}  
 
 @font-face{
     font-family:"revicons";

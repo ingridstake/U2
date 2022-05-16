@@ -1,4 +1,4 @@
-import { Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 /**
  * Generates a collection of buttons with tags.

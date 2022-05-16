@@ -1,6 +1,3 @@
-import internal from "stream";
-import { Url } from "url";
-
 /**
  * A type describing an event.
  */
