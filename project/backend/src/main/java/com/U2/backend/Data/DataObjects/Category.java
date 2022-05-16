@@ -42,7 +42,7 @@ public class Category implements ICategory {
     }
 
     public List<String> getTags(){
-        return tags.stream().filter(t -> t.getCount()>=2).map(ICategoryTag::getName).toList();
+        return tags.stream().filter(t -> t.getCount()>=5).map(ICategoryTag::getName).toList();
     }
 
     public String getName() {

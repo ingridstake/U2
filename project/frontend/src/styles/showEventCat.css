@@ -55,7 +55,7 @@
     box-shadow: var(--box-shadow-s);
 }
 
-.category-title button:selected {
+.category-title button:active {
     background-color: yellow;
 }  
 

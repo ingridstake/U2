@@ -1,4 +1,5 @@
 import { Button } from 'react-bootstrap';
+import { CategoryTagButton } from './CategoryTagButton';
 
 /**
  * Generates a collection of buttons with tags.
@@ -7,7 +8,7 @@ import { Button } from 'react-bootstrap';
  */
 export function CategoryTagButtons(tags: string[]) : JSX.Element[] {
     const res = tags.map((t : string) => {
-        return <Button>{t}</Button>
+        return CategoryTagButton(t)
       })
     return res
 }
