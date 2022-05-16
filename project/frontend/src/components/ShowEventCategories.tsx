@@ -62,7 +62,7 @@ export default function DataCat() {
         <ListGroupItem>
           <div className="category-title">
             <h1 className="cat-title">{c.category}</h1>
-            {CategoryTagButtons(c.tags) }
+            <div className='cat-tags'>{CategoryTagButtons(c.tags) }</div>
           </div>
           
           <Carousel 
