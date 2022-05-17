@@ -1,9 +1,5 @@
-import { Button } from "react-bootstrap";
-import { event } from "./Models";
-import { useState } from "react";
 
-
-export const CategoryTagButton = (t_name: string) => {
+export const CategoryTagButton = (t_name: string, filterCategory: ((arg0: string) => void)) => {
 
     const shoot = (name: string) => {
         alert(name);
@@ -11,7 +7,7 @@ export const CategoryTagButton = (t_name: string) => {
 
     return (
         <>
-          <button onClick={() => shoot(t_name)}>
+          <button onClick={() => filterCategory(t_name)}>
               {t_name}
             </button>
         </>

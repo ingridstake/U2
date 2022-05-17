@@ -8,6 +8,7 @@ export type event = {
     city: string;
     shopUri: string;
     infoUri: string;
+    e_tags: string;
 }
 
 /**
