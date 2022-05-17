@@ -74,6 +74,9 @@ export default function DataCat() {
           >
             {EventCards(c.events)}
           </Carousel>
+          <div className='more-container'>
+            <a href='' className='more'>Fler</a>
+          </div>
         </ListGroupItem>
       ))}
     </ListGroup>
