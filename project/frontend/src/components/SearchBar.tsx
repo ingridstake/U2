@@ -1,25 +1,13 @@
 import {useEffect, useState } from "react";
-import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import '../styles/searchBar.css';
-//import {SearchList} from './SearchList';
-import { event } from "./Models";
 import axios from 'axios';
-import { render } from "@testing-library/react";
-import { SearchItem } from "./SearchItem";
+import { event } from "./Models";
+import React from "react";
+import { SearchList } from "./SearchList";
+import SearchResultList from "./SearchList";
 
-declare global {
-    var searchResult: [];
-}
-/*
-function useForceUpdate(result : event[]) {
 
-    const [searchResult, setSearchResult] = useState({
-        result: [] as event[]
-    });
 
-    return () => setSearchResult(result => searchResult);
-}
-*/
 /**
  * Search for the search parameter and returns a string of matching events
  * @returns a string of matching events
@@ -29,43 +17,36 @@ function useForceUpdate(result : event[]) {
 export default function SearchBar() {
     
     const [searchParam, setSearchParam] = useState('');
-    const [searchResult, setSearchResult] = useState({
-        result: [] as event[]
-    });
+    const [searchResult, setSearchResults] = useState<event[]>([]);
+    
 
-    //const forceUpdate = useForceUpdate();
+    const getInputValue = (e: { target: { value: any; }; }) => {
+        const userVal = e.target.value;
+        setSearchParam(userVal)        
+        console.log(searchParam)
+    }
 
-    useEffect(() => {
-        const startSearch = 
-        axios.get('http://localhost:8080/search?param='+searchParam).then(res => { //searchParam
-            const allResults = res.data
-            //console.log(allResults)
-            //setSearchResult({result: allResults})
-            //console.log(searchResult)
-            //SearchList(searchResult.result)
-            globalThis.searchResult = allResults
-            //useForceUpdate(allResults);
+    function searchList() {
+        debugger;
+        return (
+            <SearchResultList events={searchResult} />
+        );
+    }
+
+    const startSearch = 
+        axios.get('http://localhost:8080/search?param=hej'/*+searchParam*/).then(res => {
+            const allResults = res.data as event[]
+            setSearchResults(allResults)    
+            console.log(allResults)
+            
         })
-    })
-
 
     return (
         <section>
-            <div className="search">
-            <input className="input-text" type="search" placeholder="Sökord..." onChange= {(e) => setSearchParam(e.target.value)}/>
+            <div className="search-bar">
+                <input className="input-text" type="search" placeholder="Sökord..." onChange={(e) => setSearchParam(e.target.value)}  />
             </div>
-            {SearchList()} 
+            <>{searchList}</>
         </section>
-      );
-    
-
-}
-
-export function SearchList() : JSX.Element[] {
-    
-    const res = globalThis.searchResult?.map((e: event) => {
-
-        return SearchItem(e)
-    })
-    return res
+    );
 }
