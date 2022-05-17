@@ -26,27 +26,21 @@ export default function SearchBar() {
         console.log(searchParam)
     }
 
-    function searchList() {
-        debugger;
-        return (
-            <SearchResultList events={searchResult} />
-        );
-    }
-
     const startSearch = 
-        axios.get('http://localhost:8080/search?param=hej'/*+searchParam*/).then(res => {
+        axios.get('http://localhost:8080/search?param='+searchParam).then(res => {
+            debugger;
             const allResults = res.data as event[]
             setSearchResults(allResults)    
             console.log(allResults)
             
         })
-
+        
     return (
         <section>
             <div className="search-bar">
                 <input className="input-text" type="search" placeholder="Sökord..." onChange={(e) => setSearchParam(e.target.value)}  />
             </div>
-            <>{searchList}</>
+            <SearchResultList events={searchResult} />
         </section>
     );
 }

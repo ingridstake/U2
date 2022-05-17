@@ -44,49 +44,28 @@ export default class SearchResultList extends React.Component<searchResult, sear
     key: React.Key | null = null;
     state: searchResult = {events: []}
 
+    constructor(props: searchResult){
+        super(props);
+        this.state = {
+            events: this.props.events
+        }
+    }
+
     updateSearchResult(newEvents: event[]) {
         this.setState((state => ({
             events : newEvents
         })));
-    }
+    } 
 
     render() {
         const res = this.state.events?.map((e: event) => {
             return SearchItem(e)
         } );
-        
+        debugger;
         return (
             <div>
-                res
+                {res}
             </div>
         );
     }
 }
-
-
-
-
-/*
-export const SearchResultList = (events: event[])  => {
-    return class extends React.Component implements JSX.Element {
-        type: any;
-        key: React.Key | null;
-
-        constructor(){
-            super();
-            this.key
-        }
-
-        
-        readonly res = events?.map((e: event) => {
-            return SearchItem(e)
-        })
-        render(){
-            return (
-                <div>
-                   res
-                </div>
-            )
-        }
-    }
-}*/

@@ -37,6 +37,7 @@ public class SearchService implements ISearchService {
      */
     public String performSearch(String searchParam) {
         if (searchParam.equals("")){
+            return null;
         }
 
         StandardAnalyzer analyzer = new StandardAnalyzer();
