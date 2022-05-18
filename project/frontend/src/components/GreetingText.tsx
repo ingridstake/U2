@@ -1,4 +1,5 @@
 import '../styles/greetingText.css';
+import NrEvents from './NrEvents';
 
 /**
  * A greeting text.
@@ -11,7 +12,7 @@ function GreetingText() {
                 <h1>
                     Hej! 
                 <br />
-                    Just nu har 10 evenemang att välja bland. 
+                    Just nu har vi {NrEvents} evenemang att välja bland. 
                 <br />
                     Vad är du intresserad av?
                 </h1>

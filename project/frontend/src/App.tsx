@@ -5,11 +5,13 @@ import GreetingText from './components/GreetingText';
 import Header from './components/Header';
 import DataCat from './components/ShowEventCategories';
 import SearchBar from './components/SearchBar';
+import NrEvents from './components/NrEvents';
 
 /**
  * Base of application.
  * @returns the application with all its components
  */
+
 export default function App() {
   return (
     <>
