@@ -3,7 +3,7 @@ import '../styles/searchBar.css';
 import axios from 'axios';
 import { event } from "./Models";
 import React from "react";
-import SearchResultList from "./SearchList";
+import {SearchItem} from "./SearchItem";
 
 type search = {
     searchParam: string;
@@ -19,8 +19,7 @@ type search = {
 export default class SearchBar extends Component<search, event[]> implements JSX.Element {
     type: any;
     key: React.Key | null = null;
-    searchResult: search = {searchParam:"", events: []};
-    searchParam: string = "";
+    search: search = {searchParam:"", events: []};
 
     constructor(props: search){
         super(props);
@@ -29,29 +28,37 @@ export default class SearchBar extends Component<search, event[]> implements JSX
     }
 
     setSearchParam(newParam: string){
-        if(newParam.valueOf() != this.searchParam?.valueOf()){
-            this.searchParam = newParam;
+        this.search.searchParam = newParam;
+        this.forceUpdate();
+        if(this.search.searchParam.length > 2){
             this.startSearch();
+                
+            this.render()
+            this.forceUpdate()
         }
     }
     
     startSearch(){
-        axios.get('http://localhost:8080/search?param='+this.searchParam).then(res => {
-            this.searchResult.events = res.data as event[];
+        axios.get('http://localhost:8080/search?param='+this.search.searchParam).then(res => {
+            this.search.events = res.data as event[];
             console.log(res.data);
         })
         this.render();
-        debugger;
         this.forceUpdate();
     }
 
     render(){
+        const res = this.search.events.map((e: event) => {
+            return SearchItem(e)
+        } );
         return (
             <div>
                 <div className="search-bar">
-                    <input className="input-text" type="search" placeholder="Sökord..." value={this.searchParam} onChange={(e) => this.setSearchParam(e.target.value)}  />
+                    <input className="input-text" type="search" placeholder="Sökord..." value={this.search.searchParam} onChange={(e) => this.setSearchParam(e.target.value)}  />
                 </div>
-                <SearchResultList events={this.searchResult.events} />
+                <div>
+                    {res}
+                </div> 
             </div>
         );
     }     
