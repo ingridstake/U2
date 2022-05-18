@@ -32,6 +32,7 @@ public class CategorizingService implements ICategorizingService {
         var concertEvents = DataObjectFactory.createCategory("Konserter & Klubb");
         var artExhibitionEvents = DataObjectFactory.createCategory("Konst & Utställningar");
         var showEvents = DataObjectFactory.createCategory("Show");
+        var educationalEvents = DataObjectFactory.createCategory("Utbildningar, Konferens & Föreläsningar");
         var leftOverEvents = DataObjectFactory.createCategory("Övrigt");
 
         /* Add events to their correct category */
@@ -90,6 +91,13 @@ public class CategorizingService implements ICategorizingService {
                     continue;
             }
 
+            if(isEducationalEvent(ev)) {
+                educationalEvents.addEvent(ev);
+                categoryCount++;
+                if (categoryCount >= categoryCountLimit)
+                    continue;
+            }
+
             if(categoryCount == 0) {
                 leftOverEvents.addEvent(ev);
             }
@@ -102,6 +110,7 @@ public class CategorizingService implements ICategorizingService {
         categories.add(concertEvents);
         categories.add(artExhibitionEvents);
         categories.add(showEvents);
+        categories.add(educationalEvents);
         categories.add(leftOverEvents);
 
         return DataObjectFactory.categoriesToJSONString(categories);
@@ -164,13 +173,15 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private boolean isArtExhibitionEvent(IEvent e){
-        return e.getDescription().toLowerCase().contains("utställning") ||
+        return (e.getDescription().toLowerCase().contains(" utst") ||
                 e.getDescription().toLowerCase().contains("museum") ||
                 e.getDescription().toLowerCase().contains("visning") ||
-                e.getDescription().toLowerCase().contains(" art") ||
-                e.getName().toLowerCase().contains(" art") ||
-                e.getDescription().toLowerCase().contains("konst") ||
-                e.getName().toLowerCase().contains("konst");
+                e.getDescription().toLowerCase().contains(" art ") ||
+                e.getName().toLowerCase().contains(" art ") ||
+                e.getDescription().toLowerCase().contains("konst ") ||
+                e.getName().toLowerCase().contains("konst")) &&
+                !e.getName().toLowerCase().contains("vandring");
+
     }
 
     private boolean isGiftCardEvent(IEvent e){
@@ -187,7 +198,25 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private boolean isShowEvent(IEvent e) {
-        return e.getName().toLowerCase().contains("wallmans") || e.getDescription().toLowerCase().contains("dinnershow");
+        return e.getName().toLowerCase().contains("wallmans") ||
+                e.getDescription().toLowerCase().contains("dinnershow") ||
+                e.getName().toLowerCase().contains("show ") ||
+                e.getDescription().toLowerCase().contains("show ");
+    }
+
+    private boolean isEducationalEvent(IEvent e) {
+        return ((e.getName().toLowerCase().contains("utbildning") ||
+                e.getDescription().toLowerCase().contains("föreläsning") ||
+                e.getName().toLowerCase().contains("föreläsning") ||
+                e.getName().toLowerCase().contains("konferens") ||
+                e.getName().toLowerCase().contains("kurs") ||
+                e.getDescription().toLowerCase().contains(" utbildning") ||
+                e.getDescription().toLowerCase().contains("conference") ||
+                e.getDescription().toLowerCase().contains(" kurs ") ||
+                e.getDescription().toLowerCase().contains("konferens")) &&
+                !e.getName().toLowerCase().contains("handel"));
+
+
     }
     //endregion
 }
