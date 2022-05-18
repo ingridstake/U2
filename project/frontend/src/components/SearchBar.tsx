@@ -1,12 +1,14 @@
-import {useEffect, useState } from "react";
+import {Component} from "react";
 import '../styles/searchBar.css';
 import axios from 'axios';
 import { event } from "./Models";
 import React from "react";
-import { SearchList } from "./SearchList";
 import SearchResultList from "./SearchList";
 
-
+type search = {
+    searchParam: string;
+    events: event[];
+}
 
 /**
  * Search for the search parameter and returns a string of matching events
@@ -14,33 +16,43 @@ import SearchResultList from "./SearchList";
  * getInputValue recives the input from the search bar
  * startSearch sends the search parameter to the backend and return the matching events
  */
-export default function SearchBar() {
-    
-    const [searchParam, setSearchParam] = useState('');
-    const [searchResult, setSearchResults] = useState<event[]>([]);
-    
+export default class SearchBar extends Component<search, event[]> implements JSX.Element {
+    type: any;
+    key: React.Key | null = null;
+    searchResult: search = {searchParam:"", events: []};
+    searchParam: string = "";
 
-    const getInputValue = (e: { target: { value: any; }; }) => {
-        const userVal = e.target.value;
-        setSearchParam(userVal)        
-        console.log(searchParam)
+    constructor(props: search){
+        super(props);
+        this.startSearch = this.startSearch.bind(this);
+        this.setSearchParam = this.setSearchParam.bind(this);
     }
 
-    const startSearch = 
-        axios.get('http://localhost:8080/search?param='+searchParam).then(res => {
-            debugger;
-            const allResults = res.data as event[]
-            setSearchResults(allResults)    
-            console.log(allResults)
-            
+    setSearchParam(newParam: string){
+        if(newParam.valueOf() != this.searchParam?.valueOf()){
+            this.searchParam = newParam;
+            this.startSearch();
+        }
+    }
+    
+    startSearch(){
+        axios.get('http://localhost:8080/search?param='+this.searchParam).then(res => {
+            this.searchResult.events = res.data as event[];
+            console.log(res.data);
         })
-        
-    return (
-        <section>
-            <div className="search-bar">
-                <input className="input-text" type="search" placeholder="Sökord..." onChange={(e) => setSearchParam(e.target.value)}  />
+        this.render();
+        debugger;
+        this.forceUpdate();
+    }
+
+    render(){
+        return (
+            <div>
+                <div className="search-bar">
+                    <input className="input-text" type="search" placeholder="Sökord..." value={this.searchParam} onChange={(e) => this.setSearchParam(e.target.value)}  />
+                </div>
+                <SearchResultList events={this.searchResult.events} />
             </div>
-            <SearchResultList events={searchResult} />
-        </section>
-    );
+        );
+    }     
 }
