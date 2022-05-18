@@ -210,7 +210,7 @@ public class CategorizingService implements ICategorizingService {
                 e.getName().toLowerCase().contains("föreläsning") ||
                 e.getName().toLowerCase().contains("konferens") ||
                 e.getName().toLowerCase().contains("kurs") ||
-                e.getDescription().toLowerCase().contains(" utbildning") ||
+                e.getDescription().toLowerCase().contains("utbildning") ||
                 e.getDescription().toLowerCase().contains("conference") ||
                 e.getDescription().toLowerCase().contains(" kurs ") ||
                 e.getDescription().toLowerCase().contains("konferens")) &&
