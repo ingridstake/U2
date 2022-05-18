@@ -2,7 +2,6 @@ import '../styles/showEvents.css';
 import '../styles/showEventCat.css';
 import {event} from "./Models";
 import { EventCard } from "./EventCard";
-import { useState } from 'react';
 
 /**
  * Creates a list of event cards.

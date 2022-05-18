@@ -5,17 +5,23 @@ import '../styles/showEventCat.css';
 import { EventCards} from './EventCards';
 import { CategoryTagButtons } from './CategoryTagButtons';
 import { category, event } from './Models'
-import { Component, Key, useEffect, useState } from 'react';
+import { Component, Key } from 'react';
 
 type eventsToShow = {
   events : JSX.Element[];
 }
-
+/**
+ * Class component that is a Category item.
+ * Renders a ListGroupItem consisting of category title, category tags and EventCard that belongs to the category.
+ * Takes a category as parameter.
+ */
 export class CategoryItem extends Component <category,eventsToShow> implements JSX.Element {
   type: any;
   key: Key | null = null;
   state: eventsToShow = {events: []}
   allEvents: category = {events: [], category: '', tags: []}
+
+  checkedTags: string[] = [];
 
   constructor(props: category) {
     super(props)
@@ -26,8 +32,20 @@ export class CategoryItem extends Component <category,eventsToShow> implements J
   }
 
   updateEventsToShow(tagName: string){
-    let filteredEvents = this.allEvents.events?.filter((e: event) => e.e_tags.includes(tagName));
-    this.state.events = EventCards(filteredEvents);
+    if(!this.checkedTags.includes(tagName)) {       // check if tag is choosed before or not, if it isn't; it should be added to checkTags
+      this.checkedTags.push(tagName)
+    }
+    else {                                          // else; it should be removed
+      this.checkedTags = this.checkedTags.filter(t => t !== tagName);
+    }
+    
+    if(this.checkedTags.length === 0) {             // if there isn't any tags selected, all events should show
+      this.state.events = EventCards(this.allEvents.events);
+    }
+    else {                                          // else, we only want to show the events with the selected tag
+      var filteredEvents = this.allEvents.events?.filter((e: event) => this.checkedTags?.some((t: string) => e.e_tags.includes(t)));
+      this.state.events = EventCards(filteredEvents);
+    }
     this.forceUpdate();
   }
 

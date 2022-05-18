@@ -1,12 +1,9 @@
-import Carousel from 'react-multi-carousel';
 /*import 'react-multi-carousel/lib/styles.css'*/
-import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/showEventCat.css';
-import { EventCards} from './EventCards';
 import { category } from './Models';
-import { CategoryTagButtons } from './CategoryTagButtons';
 import { CategoryItem } from './CategoryItem';
 
 /**
