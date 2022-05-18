@@ -32,7 +32,6 @@ public class CategorizingService implements ICategorizingService {
         var concertEvents = DataObjectFactory.createCategory("Konserter & Klubb");
         var artExhibitionEvents = DataObjectFactory.createCategory("Konst & Utställningar");
         var showEvents = DataObjectFactory.createCategory("Show");
-        var educationalEvents = DataObjectFactory.createCategory("Utbildningar, Konferens & Föreläsningar");
         var leftOverEvents = DataObjectFactory.createCategory("Övrigt");
 
         /* Add events to their correct category */
@@ -54,12 +53,7 @@ public class CategorizingService implements ICategorizingService {
                 categoryCount++;
             }
 
-            if(isFoodAndWineEvent(ev)) {
-                foodWineEvents.addEvent(ev);
-                categoryCount++;
-                if(categoryCount >= categoryCountLimit)
-                    continue;
-            }
+            
 
             if(isSportEvent(ev)) {
                 sportEvents.addEvent(ev);
@@ -82,17 +76,17 @@ public class CategorizingService implements ICategorizingService {
                     continue;
             }
 
-            if(isShowEvent(ev)) {
-                showEvents.addEvent(ev);
+            if(isFoodAndWineEvent(ev)) {
+                foodWineEvents.addEvent(ev);
                 categoryCount++;
                 if(categoryCount >= categoryCountLimit)
                     continue;
             }
 
-            if(isEducationalEvent(ev)) {
-                educationalEvents.addEvent(ev);
+            if(isShowEvent(ev)) {
+                showEvents.addEvent(ev);
                 categoryCount++;
-                if (categoryCount >= categoryCountLimit)
+                if(categoryCount >= categoryCountLimit)
                     continue;
             }
 
@@ -108,7 +102,6 @@ public class CategorizingService implements ICategorizingService {
         categories.add(concertEvents);
         categories.add(artExhibitionEvents);
         categories.add(showEvents);
-        categories.add(educationalEvents);
         categories.add(leftOverEvents);
 
         return DataObjectFactory.categoriesToJSONString(categories);
@@ -124,7 +117,10 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains("musikalen") ||
                 e.getName().toLowerCase().contains("musikalen") ||
                 e.getDescription().toLowerCase().contains("standup") ||
-                e.getName().toLowerCase().contains("standup")) && !isConcertEvent(e) && !isFoodAndWineEvent(e));
+                e.getName().toLowerCase().contains("standup") ||
+                e.getDescription().toLowerCase().contains("föreställning")) &&
+                !e.getName().toLowerCase().contains("pausbeställning") &&
+                !isConcertEvent(e));
     }
 
     private boolean isSportEvent(IEvent e) {
@@ -138,7 +134,12 @@ public class CategorizingService implements ICategorizingService {
     private boolean isConcertEvent(IEvent e){
         return e.getDescription().toLowerCase().contains("konsert") ||
                 e.getName().toLowerCase().contains("konsert") ||
-                e.getDescription().toLowerCase().contains("komposition");
+                e.getDescription().toLowerCase().contains("komposition") ||
+                e.getDescription().toLowerCase().contains("band") ||
+                e.getDescription().toLowerCase().contains("liveband") ||
+                e.getDescription().toLowerCase().contains("album") ||
+                e.getDescription().toLowerCase().contains("låtar") ||
+                e.getDescription().toLowerCase().contains("lp");
     }
 
     private boolean isFoodAndWineEvent(IEvent e){
@@ -155,26 +156,29 @@ public class CategorizingService implements ICategorizingService {
                 !e.getDescription().toLowerCase().contains("musikalen") &&
                 !e.getName().toLowerCase().contains("loppis") &&
                 !e.getDescription().toLowerCase().contains("loppis") &&
-                !isConcertEvent(e));
+                !e.getDescription().toLowerCase().contains("folkets park") &&
+                !isTheatreEvent(e) && 
+                !isConcertEvent(e) &&
+                !isShowEvent(e) &&
+                !isArtExhibitionEvent(e));
     }
 
     private boolean isArtExhibitionEvent(IEvent e){
-        return (e.getDescription().toLowerCase().contains(" utst") ||
+        return e.getDescription().toLowerCase().contains("utställning") ||
                 e.getDescription().toLowerCase().contains("museum") ||
                 e.getDescription().toLowerCase().contains("visning") ||
-                e.getDescription().toLowerCase().contains(" art ") ||
-                e.getName().toLowerCase().contains(" art ") ||
-                e.getDescription().toLowerCase().contains("konst ") ||
-                e.getName().toLowerCase().contains("konst")) &&
-                !e.getName().toLowerCase().contains("vandring");
+                e.getDescription().toLowerCase().contains(" art") ||
+                e.getName().toLowerCase().contains(" art") ||
+                e.getDescription().toLowerCase().contains("konst") ||
+                e.getName().toLowerCase().contains("konst");
     }
 
     private boolean isGiftCardEvent(IEvent e){
 
-        return e.getDescription().toLowerCase().contains("presentkort") ||
+        return ((e.getDescription().toLowerCase().contains("presentkort") ||
                 e.getName().toLowerCase().contains("presentkort") ||
                 e.getDescription().toLowerCase().contains("gavekort") ||
-                e.getName().toLowerCase().contains("gavekort");
+                e.getName().toLowerCase().contains("gavekort")) && !isShowEvent(e));
     }
 
     private boolean isNotSellable(IEvent e) {
@@ -183,23 +187,7 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private boolean isShowEvent(IEvent e) {
-        return e.getName().toLowerCase().contains("wallmans") ||
-                e.getDescription().toLowerCase().contains("dinnershow") ||
-                e.getName().toLowerCase().contains("show ") ||
-                e.getDescription().toLowerCase().contains("show ");
-    }
-
-    private boolean isEducationalEvent(IEvent e) {
-        return ((e.getName().toLowerCase().contains("utbildning") ||
-                e.getDescription().toLowerCase().contains("föreläsning") ||
-                e.getName().toLowerCase().contains("föreläsning") ||
-                e.getName().toLowerCase().contains("konferens") ||
-                e.getName().toLowerCase().contains("kurs") ||
-                e.getDescription().toLowerCase().contains(" utbildning") ||
-                e.getDescription().toLowerCase().contains(" kurs ") ||
-                e.getDescription().toLowerCase().contains("konferens")) &&
-                !e.getName().toLowerCase().contains("handel"));
-
+        return e.getName().toLowerCase().contains("wallmans") || e.getDescription().toLowerCase().contains("dinnershow");
     }
     //endregion
 }
