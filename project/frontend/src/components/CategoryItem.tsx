@@ -28,38 +28,8 @@ export class CategoryItem extends Component <category,eventsToShow> implements J
   updateEventsToShow(tagName: string){
     let filteredEvents = this.allEvents.events?.filter((e: event) => e.e_tags.includes(tagName));
     this.state.events = EventCards(filteredEvents);
-    this.render();
+    this.forceUpdate();
   }
-  
-  //const [show, setShow] = useState([] as event[]);
-  //var eventsToShow = [] as JSX.Element[];
-  //const [eventsToShowx, setEventsToShowx] = useState<JSX.Element[]>([]);
-  //const [allEvents, setAllEvents] = useState<event[]>([]);
-
-/*
-
-  const filtered = [] as event[];
-
-
-  const FilterCategory = (tag_name : string) => {
-    //alert(tag_name)
-    c.events.forEach( (e : event) => {
-      if(e.e_tags === tag_name) {
-        filtered.push(e)
-      }
-    })
-    setEventsToShowx(EventCards(filtered))
-    
-  }
-
-
-  if(filtered.length === 0) {
-    setEventsToShowx(EventCards(allEvents))
-  }
-  else {
-    setEventsToShowx(EventCards(filtered))
-  }
-  */
 
   render() {
     return (
