@@ -5,37 +5,68 @@ import '../styles/showEventCat.css';
 import { EventCards} from './EventCards';
 import { CategoryTagButtons } from './CategoryTagButtons';
 import { category, event } from './Models'
+import { Component, Key, useEffect, useState } from 'react';
 
+type eventsToShow = {
+  events : JSX.Element[];
+}
 
-export const CategoryItem = ( c : category ) => {
+export class CategoryItem extends Component <category,eventsToShow> implements JSX.Element {
+  type: any;
+  key: Key | null = null;
+  state: eventsToShow = {events: []}
+  allEvents: category = {events: [], category: '', tags: []}
 
-  var eventsToShow = [] as JSX.Element[];
+  constructor(props: category) {
+    super(props)
+    console.log(props)
+    this.allEvents = {events: this.props.events, category: this.props.category, tags: this.props.tags}
+    this.state = {events: EventCards(this.props.events)}
+    this.updateEventsToShow = this.updateEventsToShow.bind(this);
+  }
+
+  updateEventsToShow(tagName: string){
+    let filteredEvents = this.allEvents.events?.filter((e: event) => e.e_tags.includes(tagName));
+    this.state.events = EventCards(filteredEvents);
+    this.render();
+  }
+  
+  //const [show, setShow] = useState([] as event[]);
+  //var eventsToShow = [] as JSX.Element[];
+  //const [eventsToShowx, setEventsToShowx] = useState<JSX.Element[]>([]);
+  //const [allEvents, setAllEvents] = useState<event[]>([]);
+
+/*
 
   const filtered = [] as event[];
 
-  const filterCategory = (tag_name : string) => {
+
+  const FilterCategory = (tag_name : string) => {
     //alert(tag_name)
     c.events.forEach( (e : event) => {
       if(e.e_tags === tag_name) {
         filtered.push(e)
       }
     })
+    setEventsToShowx(EventCards(filtered))
+    
   }
 
 
   if(filtered.length === 0) {
-    eventsToShow = EventCards(c.events);
+    setEventsToShowx(EventCards(allEvents))
   }
   else {
-    eventsToShow = EventCards(filtered);
+    setEventsToShowx(EventCards(filtered))
   }
+  */
 
-
-  const res = (
-    <ListGroupItem>
+  render() {
+    return (
+      <ListGroupItem>
       <div className="category-title">
-        <h1 className="cat-title">{c.category}</h1>
-        <div className='cat-tags'>{CategoryTagButtons(c.tags, filterCategory)}</div>
+        <h1 className="cat-title">{this.allEvents.category}</h1>
+        <div className='cat-tags'>{CategoryTagButtons(this.allEvents.tags, this.updateEventsToShow)}</div>
       </div>
       
       <Carousel 
@@ -45,15 +76,12 @@ export const CategoryItem = ( c : category ) => {
       shouldResetAutoplay={false}
       customTransition="1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s"
       >
-        {eventsToShow}
+        {this.state.events}
 
       </Carousel>
-    </ListGroupItem>
-  )
-
-  return ( 
-      res
-  );
+      </ListGroupItem>
+    )
+  };
 
 }
 

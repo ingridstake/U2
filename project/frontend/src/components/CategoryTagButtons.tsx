@@ -5,7 +5,7 @@ import { CategoryTagButton } from './CategoryTagButton';
  * @param tags is a list of strings that represents the tags for a category
  * @returns a collection of buttons that each represents one of theese tags
  */
-export function CategoryTagButtons(tags: string[], filterCategory: ((arg0: string) => void)) : JSX.Element[] {
+export function CategoryTagButtons(tags: string[], filterCategory: { (tagName: string): void; (arg0: string): void; }) : JSX.Element[] {
     const res = tags.map((t : string) => {
         return CategoryTagButton(t, filterCategory)
       })

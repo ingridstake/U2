@@ -34,10 +34,10 @@ export default function DataCat() {
 
   const categoryList = 
       <ListGroup>
-      {appState.cat.map(c => (
-        CategoryItem(c)
-      ))}
-    </ListGroup>
+        {appState.cat.map(c => (
+          <CategoryItem category={c.category} events={c.events} tags={c.tags}/>
+        ))}
+      </ListGroup >
   
   return (
     categoryList

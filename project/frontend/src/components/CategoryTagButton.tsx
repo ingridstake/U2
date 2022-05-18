@@ -1,10 +1,5 @@
 
-export const CategoryTagButton = (t_name: string, filterCategory: ((arg0: string) => void)) => {
-
-    const shoot = (name: string) => {
-        alert(name);
-    }
-
+export const CategoryTagButton = (t_name: string, filterCategory: { (tagName: string): void; (arg0: string): void; (arg0: string): void; }) => {
     return (
         <>
           <button onClick={() => filterCategory(t_name)}>
