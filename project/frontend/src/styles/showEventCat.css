@@ -24,16 +24,16 @@
 .cat-tags{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;    
+    overflow-x: scroll;
+    justify-content: center;  
 }
 .cat-tags::-webkit-scrollbar {
     display: none;
 }
 
 .cat-tags button {
-    bottom: 0;
     min-width: fit-content;
-    margin: auto 5px 10px;
+    margin: 25px 5px auto;
     border: none;
     border-radius: var(--r-xl);
     background-color: var(--co-accent);
