@@ -39,7 +39,7 @@ public class BackendApplication {
 	@GetMapping(path = "/search")
 	public String search(@RequestParam(value = "param", defaultValue = "") String param) {
 		var service = ServiceFactory.createSearchService(events);
-		return service.performSearch(param);
+		return service.getLimitedNoHits(param, 10);
 	}
 
 	@CrossOrigin
