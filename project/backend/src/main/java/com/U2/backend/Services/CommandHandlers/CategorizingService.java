@@ -141,14 +141,18 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private boolean isConcertEvent(IEvent e){
-        return e.getDescription().toLowerCase().contains("konsert") ||
+        return (e.getDescription().toLowerCase().contains("konsert") ||
                 e.getName().toLowerCase().contains("konsert") ||
-                e.getDescription().toLowerCase().contains("komposition") ||
-                e.getDescription().toLowerCase().contains("band") ||
+                e.getDescription().toLowerCase().contains("komposition ") ||
+                e.getDescription().toLowerCase().contains("band ") ||
                 e.getDescription().toLowerCase().contains("liveband") ||
                 e.getDescription().toLowerCase().contains("album") ||
                 e.getDescription().toLowerCase().contains("låtar") ||
-                e.getDescription().toLowerCase().contains("lp");
+                e.getDescription().toLowerCase().contains(" lp")) &&
+                !e.getDescription().toLowerCase().contains("support") &&
+                !e.getDescription().toLowerCase().contains("historieland") &&
+                !e.getDescription().toLowerCase().contains(" kurs ");
+
     }
 
     private boolean isFoodAndWineEvent(IEvent e){
@@ -174,7 +178,7 @@ public class CategorizingService implements ICategorizingService {
     }
 
     private boolean isArtExhibitionEvent(IEvent e){
-        return e.getDescription().toLowerCase().contains("utställning") ||
+        return (e.getDescription().toLowerCase().contains("utställning") ||
                 e.getName().toLowerCase().contains("utställning") ||
                 e.getDescription().toLowerCase().contains("museum") ||
                 e.getDescription().toLowerCase().contains("visning") ||
@@ -182,7 +186,7 @@ public class CategorizingService implements ICategorizingService {
                 e.getName().toLowerCase().contains(" art ") ||
                 e.getDescription().toLowerCase().contains("konst ") ||
                 e.getName().toLowerCase().contains("konst") &&
-                !e.getName().toLowerCase().contains("vandring");
+                !e.getName().toLowerCase().contains("vandring"));
     }
 
     private boolean isGiftCardEvent(IEvent e){
