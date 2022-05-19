@@ -5,7 +5,6 @@ import GreetingText from './components/GreetingText';
 import Header from './components/Header';
 import DataCat from './components/ShowEventCategories';
 import SearchBar from './components/SearchBar';
-import NrEvents from './components/NrEvents';
 
 /**
  * Base of application.

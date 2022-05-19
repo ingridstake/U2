@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import '../styles/greetingText.css';
 
 
 export default function NrEvents(){
@@ -9,15 +10,18 @@ export default function NrEvents(){
 
     useEffect(() => {
         setNrEvents({nr: ""})
-        const apiUrl = 'http://127.0.0.1:8080/number_events';
+        const apiUrl = 'http://localhost:8080/number_events';
         axios.get(apiUrl).then(res => {
             const result = res.data
             setNrEvents({nr: result})
-            debugger;
         })
     }, [setNrEvents])
 
-    const number = nrEvents.nr
+    const number =
+    <h3 className="nr-events">
+        {nrEvents.nr}
+    </h3>
+    
     
     return (
         number

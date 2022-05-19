@@ -11,3 +11,8 @@
     letter-spacing: -0.25px;
     position:relative;
 }
+
+.nr-events{
+    color: yellow;
+    font-weight: 300;
+}

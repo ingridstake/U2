@@ -11,9 +11,9 @@ function GreetingText() {
             <div className="text">
                 <h1>
                     Hej! 
-                <br />
-                    Just nu har vi {NrEvents} evenemang att välja bland. 
-                <br />
+                
+                    Just nu har vi <NrEvents/> evenemang att välja bland. 
+                
                     Vad är du intresserad av?
                 </h1>
             </div>
