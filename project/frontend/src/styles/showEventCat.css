@@ -55,10 +55,6 @@
     box-shadow: var(--box-shadow-s);
 }
 
-.category-title button:active {
-    background-color: yellow;
-}  
-
 @font-face{
     font-family:"revicons";
     fallback:fallback;

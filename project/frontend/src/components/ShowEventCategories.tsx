@@ -8,7 +8,7 @@ import { CategoryItem } from './CategoryItem';
 
 /**
  * Retrieves data from backend using axios.
- * Creates a list group with different categories as carousels.
+ * Creates a list group with all categories
  * Adds all events as cards to their respective category carousel.
  * @returns a list of categorized carousels with events
  */
@@ -27,15 +27,30 @@ export default function DataCat() {
     })
   }, [])
 
+  const onClickFilterTag = (cat: category, tagName: string) => {
+    let newStateCat = appState.cat
+    const i = newStateCat.findIndex(c => c.category === cat.category)     // find index for right category
+    let catTagsNew = cat.selectedTags ? cat.selectedTags : [] as string[] // if selected tags in category isn't already defined, create new array
+    if (catTagsNew.includes(tagName)) {                                   // check if tag already exists, then remove it
+      catTagsNew = catTagsNew.filter(t => t !== tagName);
+    }
+    else {
+      catTagsNew = [...catTagsNew, tagName]                               // else; add the tag to its category
+    }
+    newStateCat[i].selectedTags = catTagsNew                              // change selected tags
+    setAppState({
+      loading: appState.loading,
+      cat: newStateCat
+    })
+  }
 
+  const categoryList =
+    <ListGroup>
+      {appState.cat.map(c => (
+        CategoryItem(c, onClickFilterTag)
+      ))}
+    </ListGroup >
 
-  const categoryList = 
-      <ListGroup>
-        {appState.cat.map(c => (
-          <CategoryItem category={c.category} events={c.events} tags={c.tags}/>
-        ))}
-      </ListGroup >
-  
   return (
     categoryList
   );

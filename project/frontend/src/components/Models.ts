@@ -18,4 +18,5 @@ export type category = {
     category: string;
     events: event[];
     tags: string[];
+    selectedTags: string[];
 }

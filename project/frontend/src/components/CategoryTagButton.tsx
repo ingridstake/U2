@@ -1,17 +1,18 @@
-
 /**
- * A tag button that uses the filter function when it's clicked.S
+ * A tag button that uses the filter function when it's clicked
  * @param t_name is the name of the button (the tag name)
  * @param filterCategory is the filter function
  * @returns a tag button
  */
-export const CategoryTagButton = (t_name: string, filterCategory: { (tagName: string): void; (arg0: string): void; (arg0: string): void; }) => {
+export const CategoryTagButton = (t_name: string, active: boolean, onTagClick: (tagName: string) => void) => {
     return (
-        <>
-          <button onClick={() => filterCategory(t_name)}>
-              {t_name}
+        <div>
+            <button 
+                style={{"opacity": active ? 1 : .4}}    // if active, opacity is 1, else 0.4
+                onClick={() => onTagClick(t_name)}
+            >
+                    {t_name}
             </button>
-        </>
+        </div>
     );
-
 }
