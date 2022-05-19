@@ -143,6 +143,7 @@ public class CategorizingService implements ICategorizingService {
     private boolean isConcertEvent(IEvent e){
         return (e.getDescription().toLowerCase().contains("konsert") ||
                 e.getName().toLowerCase().contains("konsert") ||
+                e.getName().toLowerCase().contains("nattklubb") ||
                 e.getDescription().toLowerCase().contains("komposition ") ||
                 e.getDescription().toLowerCase().contains("band ") ||
                 e.getDescription().toLowerCase().contains("liveband") ||
@@ -185,8 +186,10 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains(" art ") ||
                 e.getName().toLowerCase().contains(" art ") ||
                 e.getDescription().toLowerCase().contains("konst ") ||
-                e.getName().toLowerCase().contains("konst") &&
-                !e.getName().toLowerCase().contains("vandring"));
+                e.getName().toLowerCase().contains("konst")) &&
+                !e.getName().toLowerCase().contains("vandring") &&
+                !e.getDescription().toLowerCase().contains("tjolöholm") &&
+                !e.getName().toLowerCase().contains("trädgårdsvisning");
     }
 
     private boolean isGiftCardEvent(IEvent e){
