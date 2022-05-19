@@ -56,11 +56,6 @@ export default class SearchBar extends Component<search, searchResult> implement
             this.render();
             this.forceUpdate();
         })
-        /*
-        debugger;
-        this.render();
-        debugger;
-        this.forceUpdate();*/
     }
 
     render(){
