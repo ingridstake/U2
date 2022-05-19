@@ -35,7 +35,7 @@ public class SearchService implements ISearchService {
      * @param searchParam is the search word being sent from frontend.
      * @return a string of all the matching events.
      */
-    public String performSearch(String searchParam) {
+    private List<IEvent> performSearch(String searchParam) {
         if (searchParam.equals("")){
             return null;
         }
@@ -72,7 +72,7 @@ public class SearchService implements ISearchService {
         var eventHits = this.events.stream().filter(e -> hitsId.contains(e.getId())).toList();
 
         reader.close();
-        return DataObjectFactory.convertToJSONString(eventHits);
+        return eventHits;
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -80,6 +80,22 @@ public class SearchService implements ISearchService {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    @Override
+    public String getAllHits(String searchParam) {
+        return DataObjectFactory.convertToJSONString(performSearch(searchParam));
+    }
+
+    @Override
+    public String getLimitedNoHits(String searchParam, int maxNo) {
+        var hits = performSearch(searchParam);
+        if (hits.size() < maxNo ){
+            return DataObjectFactory.convertToJSONString(hits);
+        }
+
+        return DataObjectFactory.convertToJSONString(hits.subList(0, maxNo));
     }
 
     /**
