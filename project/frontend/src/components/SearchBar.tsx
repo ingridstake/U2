@@ -51,8 +51,6 @@ export default class SearchBar extends Component<search, searchResult> implement
             this.state.eventHits = res.data.map((e: event) => {
                 return SearchItem(e)
             });
-
-            console.log(res.data);
             this.render();
             this.forceUpdate();
         })
@@ -64,7 +62,7 @@ export default class SearchBar extends Component<search, searchResult> implement
                 <div className="search-bar">
                     <input className="input-text" type="search" placeholder="Sökord..." value={this.search.searchParam} onChange={(e) => this.setSearchParam(e.target.value)}  />
                 </div>
-                <div>
+                <div className="scrollable-div">
                     {this.state.eventHits}
                 </div> 
             </div>

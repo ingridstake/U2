@@ -5,9 +5,11 @@
   padding: 7px 0;
   box-sizing: border-box;
   font-weight: 400;
-  width: 100%;
+  width: 500px;
   cursor: text;
   }
+
+
 
 .input-text {
   width: 100%;
@@ -23,4 +25,16 @@
   overflow: visible;
   margin: 0;
   writing-mode: horizontal-tb !important;
+}
+.input-text:active {
+  background: #ffec99;
+}
+.input-text:hover {
+  background: #ffec99;
+}
+
+.scrollable-div {
+  height: 200px;
+  overflow-x: scroll;
+  text-align: justify;
 }
