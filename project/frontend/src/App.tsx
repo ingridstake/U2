@@ -3,7 +3,7 @@ import './app.css';
 import Footer from './components/Footer';
 import GreetingText from './components/GreetingText';
 import Header from './components/Header';
-import DataCat from './components/ShowEventCategories';
+import ShowEventCategories from './components/ShowEventCategories';
 import SearchBar from './components/SearchBar';
 
 /**
@@ -20,7 +20,7 @@ export default function App() {
           <SearchBar />
         </div>
       </div>
-      <DataCat />
+      <ShowEventCategories />
       <Footer />
     </>
   );

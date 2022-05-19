@@ -1,12 +1,17 @@
 import Carousel from 'react-multi-carousel';
-/*import 'react-multi-carousel/lib/styles.css'*/
 import { ListGroupItem } from 'react-bootstrap';
 import '../styles/showEventCat.css';
 import { EventCards } from './EventCards';
 import { CategoryTagButtons } from './CategoryTagButtons';
 import { category, event } from './Models'
-import { Component, Key } from 'react';
 
+/**
+ * A Category represented as a ListGroupItem.
+ * Contains a category title, tags as CategoryTagButtons and events in a carousel as EvenCards.
+ * @param c 
+ * @param onClick is the filtering function
+ * @returns a ListGroupItem containing a category and its components; title, tags and events
+ */
 export const CategoryItem = (c: category, onClick: (activeCategory: category, tagName: string) => void) => {
     const onTagClick = (tagName: string) => {
         onClick(c, tagName)
@@ -14,7 +19,7 @@ export const CategoryItem = (c: category, onClick: (activeCategory: category, ta
 
     const filteredData = (): event[] => {
         const selected = c.selectedTags
-        if (!selected || selected.length == 0) return c.events      // if the selectedTags is undefined or empty; return all events
+        if (!selected || selected.length === 0) return c.events      // if the selectedTags is undefined or empty; return all events
         return c.events.filter(e => {                               // otherwise; only return events with selected tags (inclusive)    
             return selected.some(tag => e.e_tags.includes(tag))
         }
@@ -41,7 +46,6 @@ export const CategoryItem = (c: category, onClick: (activeCategory: category, ta
                 customTransition="1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s"
             >
                 {EventCards(filteredData())}
-
             </Carousel>
         </ListGroupItem>
     );
@@ -72,4 +76,4 @@ const responsive = {
         items: 1,
         slidesToSlide: 1,
     }
-};
+}

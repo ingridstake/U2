@@ -8,11 +8,10 @@ import { CategoryItem } from './CategoryItem';
 
 /**
  * Retrieves data from backend using axios.
- * Creates a list group with all categories
- * Adds all events as cards to their respective category carousel.
- * @returns a list of categorized carousels with events
+ * Creates a ListGroup with all categories.
+ * @returns a ListGroup of CategoryItems
  */
-export default function DataCat() {
+export default function ShowEventCategories() {
   const [appState, setAppState] = useState({
     loading: false,
     cat: [] as category[]

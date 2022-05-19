@@ -1,7 +1,8 @@
 /**
- * A tag button that uses the filter function when it's clicked
+ * A tag button that uses the filter function when it's clicked.
  * @param t_name is the name of the button (the tag name)
- * @param filterCategory is the filter function
+ * @param active is the boolean which is true if the tag button is avtivated and false if it isn't
+ * @param onTagClick is the filter function
  * @returns a tag button
  */
 export const CategoryTagButton = (t_name: string, active: boolean, onTagClick: (tagName: string) => void) => {
