@@ -20,6 +20,7 @@ export default function App() {
           <SearchBar searchParam='' events={[]} />
         </div>
       </div>
+      
       <DataCat />
       <Footer />
     </>
