@@ -2,6 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import '../styles/greetingText.css';
 
+/**
+ * Gets the number of events to display in the greeting text
+ * @returns number of events
+ */
 
 export default function NrEvents(){
     const [nrEvents, setNrEvents] = useState({
@@ -21,7 +25,6 @@ export default function NrEvents(){
     <h3 className="nr-events">
         {nrEvents.nr}
     </h3>
-    
     
     return (
         number

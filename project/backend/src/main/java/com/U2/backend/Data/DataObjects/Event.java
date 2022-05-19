@@ -4,8 +4,6 @@ import com.U2.backend.Data.DataObjectContracts.HierarchyType;
 import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectContracts.IVenue;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Event implements IEvent {
