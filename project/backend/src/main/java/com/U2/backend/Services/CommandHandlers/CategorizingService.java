@@ -221,5 +221,5 @@ public class CategorizingService implements ICategorizingService {
                 e.getDescription().toLowerCase().contains("konferens")) &&
                 !e.getName().toLowerCase().contains("handel"));
     }
-    //endregion
+    //endregion1
 }
