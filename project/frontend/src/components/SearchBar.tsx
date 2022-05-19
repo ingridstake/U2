@@ -10,16 +10,21 @@ type search = {
     events: event[];
 }
 
+type searchResult = {
+    eventHits: JSX.Element[]
+}
+
 /**
  * Search for the search parameter and returns a string of matching events
  * @returns a string of matching events
  * getInputValue recives the input from the search bar
  * startSearch sends the search parameter to the backend and return the matching events
  */
-export default class SearchBar extends Component<search, event[]> implements JSX.Element {
+export default class SearchBar extends Component<search, searchResult> implements JSX.Element {
     type: any;
     key: React.Key | null = null;
     search: search = {searchParam:"", events: []};
+    state: searchResult = {eventHits: []};
 
     constructor(props: search){
         super(props);
@@ -35,29 +40,37 @@ export default class SearchBar extends Component<search, event[]> implements JSX
                 
             this.render()
             this.forceUpdate()
+        } else {
+            this.state.eventHits = [];
         }
     }
     
     startSearch(){
         axios.get('http://localhost:8080/search?param='+this.search.searchParam).then(res => {
             this.search.events = res.data as event[];
+            this.state.eventHits = res.data.map((e: event) => {
+                return SearchItem(e)
+            });
+
             console.log(res.data);
+            this.render();
+            this.forceUpdate();
         })
+        /*
+        debugger;
         this.render();
-        this.forceUpdate();
+        debugger;
+        this.forceUpdate();*/
     }
 
     render(){
-        const res = this.search.events.map((e: event) => {
-            return SearchItem(e)
-        } );
         return (
             <div>
                 <div className="search-bar">
                     <input className="input-text" type="search" placeholder="Sökord..." value={this.search.searchParam} onChange={(e) => this.setSearchParam(e.target.value)}  />
                 </div>
                 <div>
-                    {res}
+                    {this.state.eventHits}
                 </div> 
             </div>
         );
