@@ -59,4 +59,11 @@ public class BackendApplication {
 		var service = ServiceFactory.createCategorizingService(temp);
 		return service.getCategories();
 	}
+
+	@CrossOrigin
+	@GetMapping(path = "/number_events")
+	public String numberEvents() {
+		return String.valueOf(events.size());
+	}
+
 }
