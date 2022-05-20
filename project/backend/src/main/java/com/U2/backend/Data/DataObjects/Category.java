@@ -6,6 +6,8 @@ import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectFactory;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Category implements ICategory {
@@ -19,7 +21,7 @@ public class Category implements ICategory {
         tags = new ArrayList<>();
     }
 
-    private void addEvent(IEvent event){
+    public void addEvent(IEvent event){
         events.add(event);
         for (var tag: event.getTags()) {
             addTag(tag);
@@ -35,14 +37,21 @@ public class Category implements ICategory {
     public void addTag(String tag){
         var tagObj = tags.stream().filter(t -> t.getName().equals(tag)).findFirst().orElse(null);
         if (tagObj == null){
-            tags.add(DataObjectFactory.createCategoryTag(tag));
+            if(!tag.contains("#") && !tag.contains("-")){
+                tags.add(DataObjectFactory.createCategoryTag(tag.toLowerCase()));
+            }
         } else {
             tagObj.incrementCount();
         }
     }
 
     public List<String> getTags(){
-        return tags.stream().filter(t -> t.getCount()>=2).map(ICategoryTag::getName).toList();
+        Collections.sort(tags, new CustomComparator());
+        var upperBound = 9;
+        if(tags.size()-1 < upperBound){
+            return tags.stream().map(ICategoryTag::getName).toList();
+        }
+        return tags.subList(0, 9).stream().map(ICategoryTag::getName).toList();
     }
 
     public String getName() {
@@ -51,5 +60,12 @@ public class Category implements ICategory {
 
     public List<IEvent> getEvents(){
         return events;
+    }
+
+    private class CustomComparator implements Comparator<ICategoryTag>{
+        @Override
+        public int compare(ICategoryTag o1, ICategoryTag o2) {
+            return Integer.compare(o1.getCount(), o2.getCount());
+        }
     }
 }

@@ -1,6 +1,3 @@
-import internal from "stream";
-import { Url } from "url";
-
 /**
  * A type describing an event.
  */
@@ -12,6 +9,7 @@ export type event = {
     venue: string;
     shopUri: string;
     infoUri: string;
+    e_tags: string[];
 }
 
 /**
@@ -21,4 +19,5 @@ export type category = {
     category: string;
     events: event[];
     tags: string[];
+    selectedTags: string[];
 }

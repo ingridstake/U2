@@ -1,26 +1,39 @@
+.category-title {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 10px 0;
+    overflow: hidden;
+    width: 88.5vw;
+}
+
 .cat-title{
     font-weight: 350;
+    min-width: fit-content;
     color: var(--blue-lightest);
     font-size: 36pt;
     bottom: 0;
-    margin: 0 50px 0 1%;
+    margin: 0 50px 0 0.5%;
+    cursor: default;
 }
 
 .cat-title::first-letter{
     text-transform: uppercase;
 }
 
-.category-title {
+.cat-tags{
     display: flex;
     flex-direction: row;
-    margin-top: 55px;
-    padding: 10px 0;
+    overflow-x: scroll;
+    justify-content: center;  
+}
+.cat-tags::-webkit-scrollbar {
+    display: none;
 }
 
-.category-title button {
-    bottom: 0;
-    margin: auto 5px 10px;
-    min-width: 45px;
+.cat-tags button {
+    min-width: fit-content;
+    margin: 25px 5px auto;
     border: none;
     border-radius: var(--r-xl);
     background-color: var(--co-accent);
@@ -40,7 +53,34 @@
     color: var(--co-accent-text);
     background: var(--co-accent-dark);
     box-shadow: var(--box-shadow-s);
-    }
+}
+
+.more-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.more{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0.6em 1.1em;
+    border: none;
+    border-radius: var(--r-xl);
+    font: normal normal 400 var(--fs-s)/var(--lh-xl) var(--roboto);
+    text-align: center;
+    text-decoration: none;
+    color: var(--co-accent);
+    background: var(--co-back-dim);
+    box-shadow: var(--box-shadow-s),var(--inset-shadow);
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: var(--ls--s);
+}
 
 @font-face{
     font-family:"revicons";
@@ -93,6 +133,7 @@
     opacity: .6;
     transition: opacity var(--timing-fast) var(--ease-cubic),box-shadow var(--timing-fast) var(--ease-cubic),transform var(--timing-fast) var(--ease-cubic);
     outline:0;
+    margin-bottom: 48px;
 }
 
 .react-multiple-carousel__arrow:hover{
@@ -187,7 +228,8 @@
     transform-style:preserve-3d;
     backface-visibility:hidden;
     width: 100%;
-    padding-bottom: 50px;
+    padding: 8px;
+    margin-bottom: 50px;
 }
 
 

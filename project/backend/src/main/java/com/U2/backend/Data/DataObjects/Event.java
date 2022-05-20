@@ -70,7 +70,7 @@ public class Event implements IEvent {
 
     @Override
     public String getStart() {
-        return start;
+        return start.substring(0,9);
     }
 
     @Override

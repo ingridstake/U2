@@ -3,13 +3,14 @@ import './app.css';
 import Footer from './components/Footer';
 import GreetingText from './components/GreetingText';
 import Header from './components/Header';
-import DataCat from './components/ShowEventCategories';
+import ShowEventCategories from './components/ShowEventCategories';
 import SearchBar from './components/SearchBar';
 
 /**
  * Base of application.
  * @returns the application with all its components
  */
+
 export default function App() {
   return (
     <>
@@ -20,8 +21,7 @@ export default function App() {
           <SearchBar searchParam='' events={[]} />
         </div>
       </div>
-      
-      <DataCat />
+      <ShowEventCategories />
       <Footer />
     </>
   );
