@@ -1,5 +1,4 @@
 .searchResult {
-   
     box-shadow: var(--box-shadow-xl);
     box-sizing: border-box;
     background: white;
@@ -17,6 +16,7 @@
     text-decoration: none;    
     font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
+
 .searchResult:hover {
     background: #ffec99;
 }
@@ -29,7 +29,6 @@
     text-align: left;
     vertical-align: middle;  
     color: #000;
-    
 }
 
 .search-result-location {

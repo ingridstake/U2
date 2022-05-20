@@ -82,7 +82,6 @@ public class SearchService implements ISearchService {
         return null;
     }
 
-
     @Override
     public String getAllHits(String searchParam) {
         return DataObjectFactory.convertToJSONString(performSearch(searchParam));
