@@ -1,18 +1,17 @@
-.search-bar {
+.search-bar .card{
   position: relative;
   margin-top: 25px;
   display: block;
-  padding: 7px 0;
+  padding: 7px 0 3px 0;
   box-sizing: border-box;
   font-weight: 300;
-  width: 500px;
+  width: 30vw;
   cursor: text;
-  }
-
+}
 
 
 .input-text {
-  width: 100%;
+  width: 30vw;
   padding: 14px var(--space-l);
   border-style: none;
   border-radius: var(--r-m);
@@ -27,14 +26,15 @@
   writing-mode: horizontal-tb !important;
 }
 .input-text:active {
-  background: #ffec99;
+  background: var(--yellow-lightest);
 }
 .input-text:hover {
-  background: #ffec99;
+  background: var(--yellow-lightest);
 }
 
 .scrollable-div {
-  border-radius: 5px;
+  margin-top: 3px;
+  border-radius: 5px 0 0 5px;
   height: 300px;
   overflow-x: hidden;
   overflow-y: auto;

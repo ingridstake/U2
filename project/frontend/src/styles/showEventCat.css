@@ -5,6 +5,7 @@
     padding: 10px 0;
     overflow: hidden;
     width: 88.5vw;
+    margin: auto;
 }
 
 .cat-title{
@@ -55,7 +56,7 @@
     box-shadow: var(--box-shadow-s);
 }
 
-.more-container{
+/*.more-container{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -80,7 +81,7 @@
     cursor: pointer;
     white-space: nowrap;
     letter-spacing: var(--ls--s);
-}
+}*/
 
 @font-face{
     font-family:"revicons";
@@ -88,43 +89,52 @@
     src:url("./revicons.woff") format('woff'),url("./revicons.ttf") format('ttf'),url("./revicons.eot") format('ttf')
 }
 
-.list-group-item{
-    width: 90vw;
-    margin: 0 auto;
-}
-
 /*Carousel*/
 .react-multi-carousel-list{
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-    position:relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
     margin: auto;
     margin-top: 0px;
-    /*max-width: 90vw;*/
+    max-width: 92vw;
 }
 
 /*ul*/
 .react-multi-carousel-track{
-    list-style:none;
-    padding:0;
-    margin:0;
-    display:flex;
-    flex-direction:row;
-    position:relative;
+    list-style: none;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
     transform: translate3d(0px, 0px, 0px);
-    backface-visibility:hidden;
-    }
+    backface-visibility: hidden;
+}
+
+/*li*/
+.react-multi-carousel-item{
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    width: 100%;
+    padding: 8px 8px 8px 7px;
+    margin-bottom: 50px;
+    min-width: 360px;
+    max-width: 425px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto 50px auto;
+}
 
 .react-multiple-carousel__arrow{
-    position:absolute;
+    position: absolute;
     display: block;
     width: 48px;
     height: 48px;
     padding: 2px 0 0;
     cursor: pointer;
     border: none;
-    border-radius:50%;
+    border-radius: 50%;
     color: var(--co-accent);
     box-shadow: var(--box-shadow-s),inset 0 -1em 1em -0.2em rgba(72,92,106,.05);
     font-size: 0;
@@ -132,7 +142,7 @@
     overflow: hidden;
     opacity: .6;
     transition: opacity var(--timing-fast) var(--ease-cubic),box-shadow var(--timing-fast) var(--ease-cubic),transform var(--timing-fast) var(--ease-cubic);
-    outline:0;
+    outline: 0;
     margin-bottom: 48px;
 }
 
@@ -144,7 +154,7 @@
 .react-multiple-carousel__arrow::before{
     font-family: var(--roboto-mono);
     font-size: 38px;
-    text-align:center;
+    text-align: center;
     line-height: .2;
 }
 
@@ -159,7 +169,7 @@
 }
 
 .react-multiple-carousel__arrow--left::before{
-    content:'‹';
+    content: '‹';
 }
 
 .react-multiple-carousel__arrow--right{
@@ -168,7 +178,7 @@
 }
 
 .react-multiple-carousel__arrow--right::before{
-    content:'›';
+    content: '›';
 }
 
 /*ul*/
@@ -176,13 +186,13 @@
     position:absolute;
     bottom: 0px;
     display:flex;
-    left:0;
-    right:0;
-    justify-content:center;
-    margin:0;
-    padding:0;
-    list-style:none;
-    text-align:center;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
 }
 
 .react-multi-carousel-dot{
@@ -223,20 +233,12 @@
     opacity: 1;
 }
 
-/*li*/
-.react-multi-carousel-item{
-    transform-style:preserve-3d;
-    backface-visibility:hidden;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 50px;
-}
 
 
 
 @media all and (-ms-high-contrast:none),(-ms-high-contrast:active)
 {
     .react-multi-carousel-item{
-        flex-shrink:0 !important;
+        flex-shrink: 0 !important;
     }
 }

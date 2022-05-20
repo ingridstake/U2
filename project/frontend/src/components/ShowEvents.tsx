@@ -30,7 +30,7 @@ export default function JsonDataDisplay() {
                 <Row xs={1} md={2}>
                     {Array.from({ length: 1 }).map((_, index) => (
                         <Col>
-                            <Card  key={e.id}>
+                            <Card  key={e.id} className='c-card'>
                                 <Card.Body>
                                     <Card.Img variant="top" src={e.imageUrl} />
                                     <Card.Title><h1>{e.name}</h1> </Card.Title>

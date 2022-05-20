@@ -1,28 +1,28 @@
 .background{
-    background: #172b29 url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp) no-repeat 50%;
-    background-size: cover;
-    min-height: 66.66vh;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    color: var(--co-text);
-  }
+  background: #172b29 url(https://d2achxtbi7ezvk.cloudfront.net/images/crowd.webp) no-repeat 50%;
+  background-size: cover;
+  height: 66.66vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--co-text);
+}
 
-  .b-body{
-    display: flex;
-    width: 100%;
-    max-width: calc(920px + 20vw);
-    flex-direction: column;
-    flex: 1 0 auto;
-    align-self: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding: var(--space-xl) 2vw;
-    padding-right: calc(2vw + env(safe-area-inset-right));
-    padding-left: calc(2vw + env(safe-area-inset-left));
-    letter-spacing: normal;
-    word-spacing: normal;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.b-body{
+  display: flex;
+  width: 100%;
+  max-width: calc(920px + 20vw);
+  flex-direction: column;
+  flex: 1 0 auto;
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--space-xl) 2vw;
+  padding-right: calc(2vw + env(safe-area-inset-right));
+  padding-left: calc(2vw + env(safe-area-inset-left));
+  letter-spacing: normal;
+  word-spacing: normal;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}

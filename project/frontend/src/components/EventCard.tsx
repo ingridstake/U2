@@ -8,7 +8,7 @@ import { event } from "./Models";
  */
 export const EventCard = (e: event) => {
     return (
-    <Card>
+    <Card className="c-card">
         <Card.Body>
             <Card.Img variant="top" src={e.imageUrl} />
             <Card.Link href={e.infoUri}>

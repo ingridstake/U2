@@ -16,6 +16,29 @@ export const CategoryItem = (c: category, onClick: (activeCategory: category, ta
     const onTagClick = (tagName: string) => {
         onClick(c, tagName)
     }
+    
+    const responsive = {
+        desktopBig: {
+            breakpoint: { max: 3000, min: 1550 },
+            items: 4,
+            slidesToSlide: 4,
+        },
+        desktopSmall: {
+            breakpoint: { max: 1550, min: 1048 },
+            items: 3,
+            slidesToSlide: 3,
+        },
+        tablet: {
+            breakpoint: { max: 1048, min: 576 },
+            items: 2,
+            slidesToSlide: 2,
+        },
+        mobile: {
+            breakpoint: { max: 576, min: 0 },
+            items: 1,
+            slidesToSlide: 1,
+        }
+    }
 
     const filteredData = (): event[] => {
         const selected = c.selectedTags
@@ -55,25 +78,3 @@ export const CategoryItem = (c: category, onClick: (activeCategory: category, ta
  * Responsive item settings for different platform sizes.
  * Used in Carousel.
  */
-const responsive = {
-    desktopBig: {
-        breakpoint: { max: 3000, min: 1550 },
-        items: 4,
-        slidesToSlide: 4,
-    },
-    desktopSmall: {
-        breakpoint: { max: 1550, min: 1048 },
-        items: 3,
-        slidesToSlide: 3,
-    },
-    tablet: {
-        breakpoint: { max: 1048, min: 576 },
-        items: 2,
-        slidesToSlide: 2,
-    },
-    mobile: {
-        breakpoint: { max: 576, min: 0 },
-        items: 1,
-        slidesToSlide: 1,
-    }
-}
