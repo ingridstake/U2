@@ -1,34 +1,24 @@
 //skapa en en rad i lisatan med namn
 
 //import { Button, Card } from "react-bootstrap";
-import { ListGroup } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 import { event } from "./Models";
 import '../styles/searchResult.css';
 
 export const SearchItem = (e: event) => {
-
-    /*
-    <div>
-            <p>
-                {e.name}
-            </p>
-        </div>
-                <ListGroup className="searchResult">
-            <ListGroup.Item className="searchResultItem">{e.name}</ListGroup.Item>
-        </ListGroup>
-
-         <div className="searchResult">
-            <p className="searchResultItem">{e.name}</p>
-        </div>
-
-        <p className="searchResultItem">{e.name}</p>
-        */
     return (
-        <a href={e.infoUri}>
-            <ListGroup className="searchResult" horizontal>
-                <ListGroup.Item className="search-result-name">{e.name}</ListGroup.Item>
-                <ListGroup.Item className="search-result-city"> {e.city}</ListGroup.Item>
-            </ListGroup>
-        </a>
+        <Card className="searchResult">
+            <Card.Link href={e.infoUri}>
+                <Card.Text className="row">
+                    <div className="column"> 
+                        <p className="search-result-name">{e.name} </p> 
+                    </div>
+                    <div className="column"> 
+                        <p className="search-result-location"> {e.venue}</p>
+                    </div>
+                </Card.Text>
+                <Card.Text> <p className="search-result-date">{e.date}</p>   </Card.Text>
+            </Card.Link>
+        </Card>
     )
 }

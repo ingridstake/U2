@@ -9,6 +9,7 @@ export type event = {
     imageUrl: string;
     date: string;
     city: string;
+    venue: string;
     shopUri: string;
     infoUri: string;
 }

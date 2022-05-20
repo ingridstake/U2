@@ -181,6 +181,7 @@ public class DataObjectFactory {
             temp.put("description", event.getDescription());
             temp.put("shopUri", event.getShopUri());
             temp.put("infoUri", event.getInfoUri());
+            temp.put("venue", event.getVenue().getName());
             if (event.getImageUrl() == null){
                 temp.put("imageUrl", DEFAULT_IMAGE_URL);
             } else {
