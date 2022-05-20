@@ -54,8 +54,6 @@ public class CategorizingService implements ICategorizingService {
                 categoryCount++;
             }
 
-            
-
             if(isSportEvent(ev)) {
                 sportEvents.addEvent(ev);
                 categoryCount++;
