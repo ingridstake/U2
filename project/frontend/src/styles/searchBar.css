@@ -4,10 +4,12 @@
   display: block;
   padding: 7px 0;
   box-sizing: border-box;
-  font-weight: 400;
-  width: 50%;
+  font-weight: 300;
+  width: 500px;
   cursor: text;
   }
+
+
 
 .input-text {
   width: 100%;
@@ -17,10 +19,25 @@
   color: var(--co-text);
   background: linear-gradient(to top,rgba(179,179,179,.1),rgba(179,179,179,.05)) no-repeat,var(--co-back-dim);
   font-size: var(--fs-s);
-  font-family: var(--roboto);
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   box-shadow: inset 2px 2px 0 0 rgb(0 0 0 / 15%), inset -1px -1px 0 0 rgb(255 255 255 / 50%);
   appearance: none;
   overflow: visible;
   margin: 0;
   writing-mode: horizontal-tb !important;
+}
+.input-text:active {
+  background: #ffec99;
+}
+.input-text:hover {
+  background: #ffec99;
+}
+
+.scrollable-div {
+  border-radius: 5px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  padding: 0px;
 }

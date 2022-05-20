@@ -18,7 +18,7 @@ export default function App() {
       <div className='background'>
         <div className='b-body'>
           <GreetingText />
-          <SearchBar />
+          <SearchBar searchParam='' events={[]} />
         </div>
       </div>
       <ShowEventCategories />
