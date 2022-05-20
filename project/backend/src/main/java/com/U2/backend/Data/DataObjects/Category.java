@@ -66,7 +66,6 @@ public class Category implements ICategory {
         @Override
         public int compare(ICategoryTag o1, ICategoryTag o2) {
             return Integer.compare(o1.getCount(), o2.getCount());
-
         }
     }
 }
