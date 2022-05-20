@@ -10,6 +10,7 @@ import SearchBar from './components/SearchBar';
  * Base of application.
  * @returns the application with all its components
  */
+
 export default function App() {
   return (
     <>
