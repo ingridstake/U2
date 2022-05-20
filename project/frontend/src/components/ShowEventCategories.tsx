@@ -1,47 +1,17 @@
-import Carousel from 'react-multi-carousel';
 /*import 'react-multi-carousel/lib/styles.css'*/
-import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/showEventCat.css';
-import { EventCards} from './EventCards';
 import { category } from './Models';
-import { CategoryTagButtons } from './CategoryTagButtons';
-
-/**
- * Responsive item settings for different platform sizes.
- * Used in Carousel.
- */
-const responsive = {
-  desktopBig: {
-    breakpoint: { max: 3000, min: 1550 },
-    items: 4,
-    slidesToSlide: 4,
-  },
-  desktopSmall: {
-    breakpoint: { max: 1550, min: 1048 },
-    items: 3,
-    slidesToSlide: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1048, min: 576 },
-    items: 2,
-    slidesToSlide: 2,
-  },
-  mobile: {
-    breakpoint: { max: 576, min: 0 },
-    items: 1,
-    slidesToSlide: 1,
-  }
-};
+import { CategoryItem } from './CategoryItem';
 
 /**
  * Retrieves data from backend using axios.
- * Creates a list group with different categories as carousels.
- * Adds all events as cards to their respective category carousel.
- * @returns a list of categorized carousels with events
+ * Creates a ListGroup with all categories.
+ * @returns a ListGroup of CategoryItems
  */
-export default function DataCat() {
+export default function ShowEventCategories() {
   const [appState, setAppState] = useState({
     loading: false,
     cat: [] as category[]
@@ -54,33 +24,32 @@ export default function DataCat() {
       const allCategories = res.data
       setAppState({ loading: false, cat: allCategories });
     })
-  }, [setAppState])
+  }, [])
 
-  const categoryList = 
-      <ListGroup>
+  const onClickFilterTag = (cat: category, tagName: string) => {
+    let newStateCat = appState.cat
+    const i = newStateCat.findIndex(c => c.category === cat.category)     // find index for right category
+    let catTagsNew = cat.selectedTags ? cat.selectedTags : [] as string[] // if selected tags in category isn't already defined, create new array
+    if (catTagsNew.includes(tagName)) {                                   // check if tag already exists, then remove it
+      catTagsNew = catTagsNew.filter(t => t !== tagName);
+    }
+    else {
+      catTagsNew = [...catTagsNew, tagName]                               // else; add the tag to its category
+    }
+    newStateCat[i].selectedTags = catTagsNew                              // change selected tags
+    setAppState({
+      loading: appState.loading,
+      cat: newStateCat
+    })
+  }
+
+  const categoryList =
+    <ListGroup>
       {appState.cat.map(c => (
-        <ListGroupItem>
-          <div className="category-title">
-            <h1 className="cat-title">{c.category}</h1>
-            <div className='cat-tags'>{CategoryTagButtons(c.tags) }</div>
-          </div>
-          
-          <Carousel 
-          responsive={responsive}
-          showDots={true}
-          /*infinite={true}*/
-          shouldResetAutoplay={false}
-          customTransition="1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s"
-          >
-            {EventCards(c.events)}
-          </Carousel>
-          <div className='more-container'>
-            <a href='' className='more'>Fler</a>
-          </div>
-        </ListGroupItem>
+        CategoryItem(c, onClickFilterTag)
       ))}
-    </ListGroup>
-  
+    </ListGroup >
+
   return (
     categoryList
   );
