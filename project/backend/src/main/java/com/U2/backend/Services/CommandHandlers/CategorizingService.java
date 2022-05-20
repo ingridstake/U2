@@ -232,5 +232,5 @@ public class CategorizingService implements ICategorizingService {
                 !isSportEvent(e) && 
                 !isShowEvent(e));
     }
-    //endregion1
+    //endregion
 }
