@@ -17,7 +17,7 @@ export default function JsonDataDisplay() {
 
     useEffect(() => {
         setAppState({loading: true, events: []});
-        const apiUrl = 'http://127.0.0.1:8080/ten_events_string';
+        const apiUrl = 'http://localhost:8080/ten_events_string';
         axios.get(apiUrl).then(res => {
             const allEvents = res.data
             setAppState({ loading: false, events: allEvents });

@@ -19,7 +19,7 @@ export default function ShowEventCategories() {
 
   useEffect(() => {
     setAppState({ loading: true, cat: [] });
-    const apiUrl = 'http://127.0.0.1:8080/vowel_events';
+    const apiUrl = 'http://localhost:8080/vowel_events';
     axios.get(apiUrl).then(res => {
       const allCategories = res.data
       setAppState({ loading: false, cat: allCategories });
