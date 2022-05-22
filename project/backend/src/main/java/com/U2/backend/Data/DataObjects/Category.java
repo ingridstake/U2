@@ -75,7 +75,7 @@ public class Category implements ICategory {
         if(tagsToDisplay.size()-1 < upperBound){
             return tagsToDisplay.stream().map(ICategoryTag::getName).toList();
         }
-        return tagsToDisplay.stream().map(ICategoryTag::getName).toList();
+        return tagsToDisplay.stream().map(ICategoryTag::getName).toList().subList(0, upperBound);
     }
 
     public List<IEvent> getEventsToDisplay() {

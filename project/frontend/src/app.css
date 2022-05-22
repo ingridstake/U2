@@ -6,6 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   color: var(--co-text);
+  margin-bottom: 50px;
 }
 
 .b-body{

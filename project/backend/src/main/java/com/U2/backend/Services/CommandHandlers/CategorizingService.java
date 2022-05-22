@@ -1,5 +1,6 @@
 package com.U2.backend.Services.CommandHandlers;
 
+import com.U2.backend.Data.DataObjectContracts.HierarchyType;
 import com.U2.backend.Data.DataObjectContracts.ICategory;
 import com.U2.backend.Data.DataObjectContracts.IEvent;
 import com.U2.backend.Data.DataObjectFactory;
@@ -40,7 +41,7 @@ public class CategorizingService implements ICategorizingService {
             var categoryCount = 0;
             var categoryCountLimit = 2;
 
-            if(isNotSellable(ev)) {
+            if(isNotSellable(ev) || ev.getHierarchyType() == HierarchyType.PRODUCTION_CHILD) {
                 continue;
             }
 
@@ -101,14 +102,14 @@ public class CategorizingService implements ICategorizingService {
             }
         }
 
-        categories.add(giftCardEvents);
-        categories.add(theatreEvents);
-        categories.add(foodWineEvents);
-        categories.add(sportEvents);
         categories.add(concertEvents);
-        categories.add(artExhibitionEvents);
+        categories.add(theatreEvents);
         categories.add(showEvents);
+        categories.add(sportEvents);
+        categories.add(foodWineEvents);
+        categories.add(artExhibitionEvents);
         categories.add(educationalEvents);
+        categories.add(giftCardEvents);
         categories.add(leftOverEvents);
 
         return DataObjectFactory.categoriesToJSONString(categories);
@@ -118,7 +119,8 @@ public class CategorizingService implements ICategorizingService {
     // evaluates events from their descriptions/names/organizer's names
     private boolean isNotSellable(IEvent e) {
         return e.getName().toLowerCase().contains("slutsål") ||
-                e.getName().toLowerCase().contains("mall");
+                e.getName().toLowerCase().contains("mall") ||
+                e.getName().toLowerCase().contains("gammel");
     }
 
     private boolean isGiftCardEvent(IEvent e){
