@@ -10,7 +10,7 @@ function Header() {
     return (
         <>
         <Navbar className="header" >
-            <Navbar.Brand href="#home" className="logo">
+            <Navbar.Brand href="/home" className="logo">
                 <img alt="Tickster logo" src={ticksterLogo}/>
             </Navbar.Brand>
         </Navbar>

@@ -1,10 +1,9 @@
 import React from 'react';
 import './app.css';
-import Footer from './components/Footer';
-import GreetingText from './components/GreetingText';
-import Header from './components/Header';
-import ShowEventCategories from './components/ShowEventCategories';
-import SearchBar from './components/SearchBar';
+import AllEvents from './pages/allEvents'
+import Home from './pages/home'
+import Layout from './pages/layout'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 /**
  * Base of application.
@@ -13,16 +12,14 @@ import SearchBar from './components/SearchBar';
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <div className='background'>
-        <div className='b-body'>
-          <GreetingText />
-          <SearchBar searchParam='' events={[]} />
-        </div>
-      </div>
-      <ShowEventCategories />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home/>}/>
+          <Route path='home' element={<Home/>}/>
+          <Route path="allEvents" element={<AllEvents/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

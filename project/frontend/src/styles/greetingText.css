@@ -1,5 +1,5 @@
 .text h1 {
-    margin-top: 3vh;
+    margin-top: 15vh;
     text-align: center;
     font-size: max(min(2vw, 1.8em), 1.2333em);
     color: white;
@@ -13,7 +13,6 @@
     position: relative;
 }
 
-.nr-events{
-    color: yellow;
-    font-weight: 300;
+.yellow{
+    color: var(--yellow-lighter);
 }

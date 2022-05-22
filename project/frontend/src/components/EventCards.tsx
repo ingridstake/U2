@@ -3,6 +3,7 @@ import '../styles/showEventCat.css';
 import {event} from "./Models";
 import { EventCard } from "./EventCard";
 
+
 /**
  * Creates a list of event cards.
  * @param events is the list of the events

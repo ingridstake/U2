@@ -1,5 +1,27 @@
 @import "variables.css";
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 92vw;
+  margin: 50px auto auto auto;
+  justify-content:center;
+}
 
+.row{
+  margin: 10px 0;
+}
+
+.col{
+  margin: 0 10px;
+}
+
+.allaEvent{
+margin: 50px auto 0;
+color: #fff;
+text-align: center;
+font-size: 32pt;
+font-weight: 400;
+}
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +41,10 @@
   overflow: hidden;
   align-self: center;
   justify-self: center;
+}
+
+.cc-card{
+  width: 420px !important;
 }
 .card-title:hover{
   background: linear-gradient(190deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.12),rgba(0, 0, 0, 0.9)),

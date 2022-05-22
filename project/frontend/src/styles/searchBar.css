@@ -1,17 +1,19 @@
-.search-bar .card{
+.search-bar, .search-bar .card{
   position: relative;
-  margin-top: 25px;
+  margin: 25px auto 0 auto;
   display: block;
   padding: 7px 0 3px 0;
   box-sizing: border-box;
   font-weight: 300;
   width: 30vw;
+  min-width: 500px;
   cursor: text;
 }
 
 
 .input-text {
   width: 30vw;
+  min-width: 500px;
   padding: 14px var(--space-l);
   border-style: none;
   border-radius: var(--r-m);
@@ -40,4 +42,5 @@
   overflow-y: auto;
   text-align: justify;
   padding: 0px;
+  min-width: 500px;
 }

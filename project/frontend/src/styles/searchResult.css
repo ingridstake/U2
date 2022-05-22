@@ -11,7 +11,6 @@
 .card-text {
     display: flex;
     flex-direction: row;
-    width: 25vw;
     justify-content: space-between;
 }
 

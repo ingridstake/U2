@@ -1,9 +1,9 @@
 import Carousel from 'react-multi-carousel';
-import { ListGroupItem } from 'react-bootstrap';
+import { Button, ListGroupItem } from 'react-bootstrap';
 import '../styles/showEventCat.css';
 import { EventCards } from './EventCards';
 import { CategoryTagButtons } from './CategoryTagButtons';
-import { category, event } from './Models'
+import { category, event } from './Models';
 
 /**
  * A Category represented as a ListGroupItem.
@@ -57,7 +57,8 @@ export const CategoryItem = (c: category, onClick: (activeCategory: category, ta
     return (
         <ListGroupItem>
             <div className="category-title">
-                <h1 className="cat-title">{c.category}</h1>
+                <a href='/allEvents' className="cat-title">{c.category}
+                </a>
                 <div className='cat-tags'>{CategoryTagButtons(c.tags, c.selectedTags, onTagClick)}</div>
             </div>
 
@@ -70,6 +71,11 @@ export const CategoryItem = (c: category, onClick: (activeCategory: category, ta
             >
                 {EventCards(filteredData())}
             </Carousel>
+            <div className='more-container'>
+                <Button href='/allEvents' className='more'>
+                    Fler
+                </Button>
+            </div>
         </ListGroupItem>
     );
 }
