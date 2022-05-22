@@ -218,10 +218,11 @@ public class DataObjectFactory {
         var categoryArray = new JSONArray();
 
         for (var category : categories) {
+            category.updateElementsToDisplay();
             var categoryObject = new JSONObject();
             categoryObject.put("category", category.getName());
-            categoryObject.put("events", getEventJSON(category.getEvents()));
-            categoryObject.put("tags", listOfStringsToJSON(category.getTags()));
+            categoryObject.put("events", getEventJSON(category.getEventsToDisplay()));
+            categoryObject.put("tags", listOfStringsToJSON(category.getTagsToDisplay()));
             categoryArray.put(categoryObject);
         }
         return categoryArray;
