@@ -14,3 +14,7 @@ code {
     monospace;
 }
 
+#root{
+  overflow: hidden;
+}
+
