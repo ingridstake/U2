@@ -11,9 +11,13 @@ https://github.com/ingridstake/U2/tree/main/Documentation/IndividualReflections
 The individual reflections of each member is found in the folder that holds the member's name.
 
 Team members:
+
 Julia Ekeblad - juliaeke and itggot-julia-ekeblad (on github)
+
 Elvina Fahlgren - elvinafalgren (on github)
+
 Olivia Månström - olimanstrom (on github)
+
 Tove Nilsson - ToveNilsson6569 (on github)
 Ingrid Stake - ingridstake (on github)
 Martin Toremark - toremark (on github)
