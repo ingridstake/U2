@@ -25,14 +25,16 @@ Everybody worked together, we started utilizing the co-author feature some time 
 
 # Path to Team Reflections:
 
-https://github.com/ingridstake/U2/tree/main/Documentation/TeamReflections
+https://github.com/ingridstake/U2/tree/main/Documentation/TeamReflections (U2/Documentation/TeamReflections)
 
 each team reflection is named after the sprint in question
 
 # Path to Individual Reflections:
 
-https://github.com/ingridstake/U2/tree/main/Documentation/IndividualReflections
+https://github.com/ingridstake/U2/tree/main/Documentation/IndividualReflections (U2/Documentation/IndividualReflections)
+
 The individual reflections of each member is found in the folder that holds the member's name.
 
-Our Scrum board is found at Trello:
+# Path to Scrumboard:
+
 https://trello.com/b/K8JLEl0z/scrum-board
