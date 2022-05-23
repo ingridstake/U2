@@ -1,0 +1,36 @@
+*************
+Frontend Guide
+*************
+
+This document contains a description of the basic structure of the front for this project. It aims to facilitate
+development of future features and explain some design decisions made.
+
+TLDR
+****
+    * necessary libraries to run the application:
+		* npm
+			* if you are missing node_modules folder in the frontend folder, run:
+				* npm install
+		* react-bootstrap 
+			* npm install react-bootstrap bootstrap
+		* react-multi-carousel
+			* npm install react-multi-carousel
+		* axios
+			* npm install axios
+		* npm install react-router-dom
+    * there should be no data handling in frontend
+
+
+Structure of the project
+************************
+
+    +components (folder): contains all components used in the application
+
+    +styles (folder) : contains all css files
+
+	+pages (folder): contains the different pages
+
+    +resources (folder) : contains necessary modules recived from tickster
+
+    +util (folder): contains all utility files used in the application
+
