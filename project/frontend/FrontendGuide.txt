@@ -19,18 +19,24 @@ TLDR
 			* npm install axios
 		* npm install react-router-dom
     * there should be no data handling in frontend
+	* to run the program, write:
+		* npm start
+	* for the application to work, the backend must be running
 
 
-Structure of the project
+Structure of the project (relevant files)
 ************************
 
-    +components (folder): contains all components used in the application
+	+src (folder): 
 
-    +styles (folder) : contains all css files
+		+components (folder): contains all components used in the application
 
-	+pages (folder): contains the different pages
+		+styles (folder) : contains all css files
 
-    +resources (folder) : contains necessary modules recived from tickster
+		+pages (folder): contains the different pages
 
-    +util (folder): contains all utility files used in the application
+		+resources (folder) : contains necessary modules recived from tickster
 
+		+util (folder): contains all utility files used in the application
+	
+	+public (folder): contains ticksters browser tab icon, index.html and maifest.json
