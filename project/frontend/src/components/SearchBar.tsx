@@ -11,6 +11,7 @@ type search = {
 }
 
 type searchResult = {
+    searchP : search;
     eventHits: JSX.Element[]
 }
 
@@ -24,7 +25,7 @@ export default class SearchBar extends Component<search, searchResult> implement
     type: any;
     key: React.Key | null = null;
     search: search = {searchParam:"", events: []};
-    state: searchResult = {eventHits: []};
+    state: searchResult = {eventHits: [], searchP: this.search};
 
     constructor(props: search){
         super(props);

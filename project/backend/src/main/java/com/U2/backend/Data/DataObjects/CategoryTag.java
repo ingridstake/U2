@@ -7,7 +7,7 @@ public class CategoryTag implements ICategoryTag, Comparable<ICategoryTag>{
     private int count;
 
     public CategoryTag(String name){
-        this.name = name;
+        this.name = name.toLowerCase();
         this.count = 1;
     }
 

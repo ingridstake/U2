@@ -33,11 +33,18 @@ p{
     font-size: 15pt;
     color: var(--black);
     margin: 3px 0;
+    margin-left: 10px;
 }
+
+.search-result-date{
+    margin-left: 10px;
+}
+
 
 .search-result-city{
     text-transform: lowercase;
     font-size: 13pt;
+    margin-right: 10px;
 }
 
 .search-result-city::first-letter{

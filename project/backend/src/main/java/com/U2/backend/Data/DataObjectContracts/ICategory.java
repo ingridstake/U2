@@ -9,4 +9,8 @@ public interface ICategory {
     String getName();
     List<IEvent> getEvents();
     List<String> getTags();
+    List<String> getTagsToDisplay();
+    List<IEvent> getEventsToDisplay();
+
+    void updateElementsToDisplay();
 }

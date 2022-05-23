@@ -19,7 +19,7 @@
   border-radius: var(--r-m);
   color: var(--co-text);
   background: linear-gradient(to top,rgba(179,179,179,.1),rgba(179,179,179,.05)) no-repeat,var(--co-back-dim);
-  font-size: var(--fs-s);
+  font-size: 15pt;
   font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   box-shadow: inset 2px 2px 0 0 rgb(0 0 0 / 15%), inset -1px -1px 0 0 rgb(255 255 255 / 50%);
   appearance: none;
