@@ -27,7 +27,7 @@ Everybody worked together, we started utilizing the co-author feature some time 
 
 https://github.com/ingridstake/U2/tree/main/Documentation/TeamReflections (U2/Documentation/TeamReflections)
 
-Each team reflection is named after the sprint in question
+Each team reflection is named after the sprint in question.
 
 # Path to Individual Reflections:
 
@@ -54,14 +54,14 @@ https://trello.com/b/K8JLEl0z/scrum-board
   - Open the frontend in Visual Studio Code (./U2/project/frontend)
   - Necessary libraries to run the application:
     - npm
-		- if you are missing node_modules folder in the frontend folder, run:
-		  - npm install
-		- react-bootstrap 
-		  - npm install react-bootstrap bootstrap
-		- react-multi-carousel
-			- npm install react-multi-carousel
-		- axios
-			- npm install axios
-		- npm install react-router-dom
+    - if you are missing node_modules folder in the frontend folder, run:
+    	- npm install
+    - react-bootstrap
+    	- npm install react-bootstrap bootstrap
+    - react-multi-carousel
+    	- npm install react-multi-carousel
+    - axios
+    	- npm install axios
+    - npm install react-router-dom
   - Run by typing "npm start" in terminal
   - For more information, see FrontendGuide.txt
